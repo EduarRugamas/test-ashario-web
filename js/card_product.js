@@ -1,4 +1,4 @@
-import * as searchClient from './config.js'
+import { searchClient } from './config';
 
 function card_product_view() {
     const search = instantsearch({
