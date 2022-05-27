@@ -1,6 +1,5 @@
-import { searchClient } from './config';
+import { searchClient } from './config.js';
 
-function card_product_view() {
     const search = instantsearch({
         indexName: 'menu-products-demo',
         searchClient
@@ -17,4 +16,4 @@ function card_product_view() {
     ]);
 
     search.start();
-}
+
