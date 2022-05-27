@@ -1,3 +1,11 @@
-.texto {
-    color: darkgreen;
+.full-width-layout{
+    display: block;
+    margin: 0 auto;
+    overflow-x: hidden;
+    padding: 0 36px;
+    width: 100%;
+    background-color: rgb(51,51,51);
+}
+.div-caja{
+    margin-top: 24px;
 }
