@@ -50,3 +50,12 @@
     font-size: 14px;
     color: rgb(206, 52, 154);
 }
+
+.icon-div-title {
+    margin-right: 8px;
+}
+
+.div-texto-subtitle {
+    padding-right: 16px;
+    padding-left: 16px;
+}
