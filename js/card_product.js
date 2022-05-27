@@ -1,6 +1,6 @@
-import searchClient from "./config";
+import * as searchClient from './config.js'
 
-function card_product() {
+function card_product_view() {
     const search = instantsearch({
         indexName: 'menu-products-demo',
         searchClient
