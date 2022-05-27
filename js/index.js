@@ -11,14 +11,14 @@ search.addWidgets([
         container: '#searchbox'
     }),
 
-    instantsearch.widgets.hits({
-        container: '#hits',
-        templates: {
-            item: `
-                <p class="texto"> {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</p>
-              `
-        }
-    })
+    // instantsearch.widgets.hits({
+    //     container: '#hits',
+    //     templates: {
+    //         item: `
+    //             <p class="texto"> {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</p>
+    //           `
+    //     }
+    // })
 ]);
 
 search.start();
