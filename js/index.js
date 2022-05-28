@@ -19,8 +19,8 @@ search.addWidgets([
     instantsearch.widgets.rangeSlider({
         container: '#rangeSlider-thc-potency',
         attribute: 'percent_thc',
-        min: 6,
-        max: 30
+        min: 0,
+        max: 90
     }),
 
     instantsearch.widgets.hits({
