@@ -11,6 +11,11 @@ search.addWidgets([
         container: '#searchbox'
     }),
 
+    instantsearch.widgets.refinementList({
+        container: '#search-lineage',
+        attribute: 'brand'
+    }),
+
     instantsearch.widgets.hits({
         container: '#hits',
         templates: {

@@ -1,0 +1,33 @@
+.div-2 {
+    display: flex;
+}
+
+.panel-colum-left {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.panel-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.panel-search {
+    display: flex;
+    flex-direction: column;
+    margin-right: 32px;
+}
+
+.css-lineage {
+    margin-top: 0;
+}
+
+.title-lineage-css {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

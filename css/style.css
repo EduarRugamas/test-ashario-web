@@ -29,10 +29,6 @@
     overflow-x: auto;
 }
 
-.div-2 {
-    display: flex;
-}
-
 .title-div {
     display: flex;
     -webkit-box-align: center;
