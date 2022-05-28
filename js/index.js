@@ -16,6 +16,8 @@ search.addWidgets([
         attribute: 'category'
     }),
 
+
+
     instantsearch.widgets.hits({
         container: '#hits',
         templates: {

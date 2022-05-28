@@ -31,3 +31,38 @@
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.panel-left-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-general {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 24px;
+}
+
+.container-text-thc-potency {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.text-thc-potency {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container-rating-thc-potency {
+    align-self: flex-start;
+    width: 100%;
+}
