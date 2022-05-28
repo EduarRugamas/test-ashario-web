@@ -13,7 +13,7 @@ search.addWidgets([
 
     instantsearch.widgets.refinementList({
         container: '#search-lineage',
-        attribute: 'kind'
+        attribute: 'category'
     }),
 
     instantsearch.widgets.hits({
