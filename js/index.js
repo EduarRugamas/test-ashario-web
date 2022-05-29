@@ -57,9 +57,15 @@ search.addWidgets([
              }
          ]
     }),
+    //preguntar ya que no hay parametro para filtrar por los gramos
+    // instantsearch.widgets.refinementList({
+    //     container: '#numericMenu-available-weights',
+    //     attribute: 'root_types',
+    // }),
+
     instantsearch.widgets.refinementList({
-        container: '#numericMenu-available-weights',
-        attribute: 'root_types',
+       container: '#refinementList-brands',
+       attribute: 'brand'
     }),
 
     instantsearch.widgets.hits({
