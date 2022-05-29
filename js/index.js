@@ -28,6 +28,11 @@ search.addWidgets([
         min: 0
     }),
 
+    instantsearch.widgets.refinementList({
+        container: '#refinementList-categories',
+        attribute: 'kind'
+    }),
+
     instantsearch.widgets.hits({
         container: '#hits',
         templates: {
