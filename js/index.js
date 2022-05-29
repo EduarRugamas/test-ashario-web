@@ -59,12 +59,7 @@ search.addWidgets([
     }),
     instantsearch.widgets.numericMenu({
         container: '#numericMenu-available-weights',
-        attribute: 'available_weights',
-        items : [
-            {
-                label: 'All'
-            },
-        ]
+        attribute: 'available_weights'
     }),
 
     instantsearch.widgets.hits({
