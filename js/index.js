@@ -33,6 +33,11 @@ search.addWidgets([
         attribute: 'kind'
     }),
 
+    instantsearch.widgets.refinementList({
+        container: '#refinementList-price',
+        attribute: 'bucket_price'
+    }),
+
     instantsearch.widgets.hits({
         container: '#hits',
         templates: {
