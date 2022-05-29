@@ -59,7 +59,7 @@ search.addWidgets([
     }),
     instantsearch.widgets.refinementList({
         container: '#numericMenu-available-weights',
-        attribute: 'activities',
+        attribute: 'root_types',
     }),
 
     instantsearch.widgets.hits({
