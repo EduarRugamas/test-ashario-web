@@ -34,7 +34,7 @@ search.addWidgets([
     }),
 
     instantsearch.widgets.numericMenu({
-        container: '#refinementList-price',
+        container: '#numericMenu-price',
         attribute: 'bucket_price',
          items : [
              {
@@ -56,6 +56,30 @@ search.addWidgets([
                  label: '$80 & above', start: 80
              }
          ]
+    }),
+    instantsearch.widgets.numericMenu({
+        container: '#numericMenu-available-weights',
+        attribute: 'available_weights',
+        // items : [
+        //     {
+        //         label: 'All'
+        //     },
+        //     {
+        //         label: '0.5g'
+        //     },
+        //     {
+        //         label: '$20 - $40', start: 20, end: 40
+        //     },
+        //     {
+        //         label: '$40 - $60', start: 40, end: 60
+        //     },
+        //     {
+        //         label: '$60 - $80', start: 60, end: 80
+        //     },
+        //     {
+        //         label: '$80 & above', start: 80
+        //     }
+        // ]
     }),
 
     instantsearch.widgets.hits({

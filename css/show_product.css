@@ -140,3 +140,23 @@
     width: 100%;
 }
 
+.container-available-weights {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.container-available-weights-interno {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.text-available-weights {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
