@@ -57,32 +57,9 @@ search.addWidgets([
              }
          ]
     }),
-    instantsearch.widgets.numericMenu({
+    instantsearch.widgets.refinementList({
         container: '#numericMenu-available-weights',
-        attribute: 'available_weights',
-        items: [
-            {
-                label: 'All'
-            },
-            {
-                label: '0.5g'
-            },
-            {
-                label: '1g'
-            },
-            {
-                label: '3.5g'
-            },
-            {
-                label: '7g'
-            },
-            {
-                label: '14g'
-            },
-            {
-                label: '28g'
-            }
-        ]
+        attribute: 'available_weights'
     }),
 
     instantsearch.widgets.hits({
