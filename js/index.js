@@ -41,14 +41,20 @@ search.addWidgets([
                  label: 'All'
              },
              {
-                label: 'Less than $500', end: 500
+                label: 'Under $20', end: 20
              },
              {
-                 label: 'Between 500$ - 1000$', start: 500, end: 1000
+                 label: '$20 - $40', start: 20, end: 40
              },
-             {},
-             {},
-             {}
+             {
+                 label: '$40 - $60', start: 40, end: 60
+             },
+             {
+                 label: '$60 - $80', start: 60, end: 80
+             },
+             {
+                 label: '$80 & above', start: 80
+             }
          ]
     }),
 
