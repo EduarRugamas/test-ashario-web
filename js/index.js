@@ -64,11 +64,11 @@ search.addWidgets([
 
     instantsearch.widgets.hits({
         container: '#hits',
-        templates: {
-            item: `
-                <p class="texto"> {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</p>
-              `
-        }
+        // templates: {
+        //     item: `
+        //         <p class="texto"> {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</p>
+        //       `
+        // }
     })
 ]);
 
