@@ -65,7 +65,7 @@ search.addWidgets([
 
     instantsearch.widgets.refinementList({
        container: '#refinementList-brands',
-       attribute: 'brand'
+       attribute: 'brand_subtype'
     }),
 
     instantsearch.widgets.hits({
