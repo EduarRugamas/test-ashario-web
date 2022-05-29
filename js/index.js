@@ -57,18 +57,41 @@ search.addWidgets([
              }
          ]
     }),
-    instantsearch.widgets.refinementList({
+    instantsearch.widgets.numericMenu({
         container: '#numericMenu-available-weights',
-        attribute: 'available_weights'
+        attribute: 'available_weights',
+        items: [
+            {
+                label: 'All'
+            },
+            {
+                label: '0.5g'
+            },
+            {
+                label: '1g'
+            },
+            {
+                label: '3.5g'
+            },
+            {
+                label: '7g'
+            },
+            {
+                label: '14g'
+            },
+            {
+                label: '28g'
+            }
+        ]
     }),
 
     instantsearch.widgets.hits({
         container: '#hits',
-        // templates: {
-        //     item: `
-        //         <p class="texto"> {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</p>
-        //       `
-        // }
+        templates: {
+            item: `
+                <p class="texto"> {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}</p>
+              `
+        }
     })
 ]);
 
