@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css"/>
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/show_product.css">
+<link rel="stylesheet" href="./css/panel_products_view.css">
 
 <body>
 
@@ -89,25 +90,34 @@
 <!--                                        <div id="numericMenu-available-weights"></div>-->
 <!--                                    </div>-->
 <!--                                </div>-->
-                                <div class="container-brands">
-                                    <div class="container-brands-interno">
-                                        <h2 class="text-brands">Brands</h2>
-                                        <div id="refinementList-brands"></div>
-                                    </div>
-                                </div>
-                            </div>
+                                    <!-- preguntar por estos filtros -->
+<!--                                <div class="container-brands">-->
+<!--                                    <div class="container-brands-interno">-->
+<!--                                        <h2 class="text-brands">Brands</h2>-->
+<!--                                        <div id="refinementList-brands"></div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
                             <!-- Fin de la parte 3 de los filtros -->
                         </div>
                     </div>
                 </div>
-                <div class="panel-right"></div>
+                <div class="panel-right">
+                    <div class="panel-searchBox-css">
+                        <div class="container-panel-searchBox">
+                            <div id="searchbox" class="css-searchBox"></div>
+                        </div>
+                    </div>
+                    <div class="panel-total-products-view"></div>
+                    <div class="panel-products-cards-views"></div>
+                </div>
             </div>
         </div>
     </div>
 
 
     <div>
-        <div id="searchbox"></div>
+
         <div id="hits"></div>
     </div>
 </body>

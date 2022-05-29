@@ -63,10 +63,11 @@ search.addWidgets([
     //     attribute: 'root_types',
     // }),
 
-    instantsearch.widgets.refinementList({
-       container: '#refinementList-brands',
-       attribute: 'brand_subtype'
-    }),
+    //preguntar ya que no hay parametro para filtrar por los brands
+    // instantsearch.widgets.refinementList({
+    //    container: '#refinementList-brands',
+    //    attribute: 'brand_subtype'
+    // }),
 
     instantsearch.widgets.hits({
         container: '#hits',

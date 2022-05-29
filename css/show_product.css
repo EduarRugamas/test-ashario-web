@@ -8,13 +8,6 @@
     margin-bottom: 24px;
 }
 
-.panel-right {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    min-width: 0;
-}
-
 .panel-search {
     display: flex;
     flex-direction: column;
