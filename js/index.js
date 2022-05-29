@@ -59,7 +59,7 @@ search.addWidgets([
     }),
     instantsearch.widgets.refinementList({
         container: '#numericMenu-available-weights',
-        attribute: 'at_visible_store'
+        attribute: 'available_weights'
     }),
 
     instantsearch.widgets.hits({
