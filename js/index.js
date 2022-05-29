@@ -20,7 +20,12 @@ search.addWidgets([
         container: '#rangeSlider-thc-potency',
         attribute: 'percent_thc',
         min: 0,
-        max: 90
+    }),
+
+    instantsearch.widgets.rangeSlider({
+        container: '#rangeSlider-cbd-potency',
+        attribute: 'percent_cbd',
+        min: 0
     }),
 
     instantsearch.widgets.hits({

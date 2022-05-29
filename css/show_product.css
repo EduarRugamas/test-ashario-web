@@ -55,6 +55,7 @@
     justify-content: space-between;
     cursor: pointer;
 }
+
 .text-thc-potency {
     margin-bottom: 8px;
     font-size: 14px;
@@ -65,4 +66,26 @@
 .container-rating-thc-potency {
     align-self: flex-start;
     width: 100%;
+}
+
+.container-cbd-potency {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+}
+
+.container-text-cbd-potency{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.text-cbd-potency {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
