@@ -59,7 +59,7 @@ search.addWidgets([
     }),
     instantsearch.widgets.refinementList({
         container: '#numericMenu-available-weights',
-        attribute: 'aggregate_rating'
+        attribute: 'applicable_special_ids'
     }),
 
     instantsearch.widgets.hits({
