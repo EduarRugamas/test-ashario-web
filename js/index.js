@@ -33,9 +33,23 @@ search.addWidgets([
         attribute: 'kind'
     }),
 
-    instantsearch.widgets.refinementList({
+    instantsearch.widgets.numericMenu({
         container: '#refinementList-price',
-        attribute: 'bucket_price'
+        attribute: 'bucket_price',
+         items : [
+             {
+                 label: 'All'
+             },
+             {
+                label: 'Less than $500', end: 500
+             },
+             {
+                 label: 'Between 500$ - 1000$', start: 500, end: 1000
+             },
+             {},
+             {},
+             {}
+         ]
     }),
 
     instantsearch.widgets.hits({
