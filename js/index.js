@@ -30,7 +30,7 @@ search.addWidgets([
 
     instantsearch.widgets.refinementList({
         container: '#refinementList-categories',
-        attribute: 'kind'
+        attribute: 'activities'
     }),
 
     instantsearch.widgets.hits({
