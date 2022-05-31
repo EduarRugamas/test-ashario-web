@@ -10,11 +10,8 @@ search.addWidgets([
     instantsearch.widgets.searchBox({
         container: '#searchBox',
         placeholder: 'Search for Products',
-        showSubmit: true,
-        showReset: true,
-        searchAsYouType: true,
         cssClasses: {
-            input: 'bg-transparent mt-5'
+            input: 'form-control bg-transparent mt-5'
         }
     })
 ]);
