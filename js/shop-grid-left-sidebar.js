@@ -22,14 +22,14 @@ search.addWidgets([
             item:
             `
                  <li>
-                     <a href="${{url}}">
+                     <a href="" style="{{#isRefined}}font-weight: bold{{/isRefined}}">
                      {{label}}
                      <span class="float-end badge rounded-pill bg-primary">{{count}}</span></a>
                  </li>
             
             `,
             cssClasses: {
-                checkbox: false
+                checkbox: 'disable'
             }
         }
     })
