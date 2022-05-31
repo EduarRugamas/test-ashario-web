@@ -6,7 +6,7 @@ const search = instantsearch({
 });
 
 search.addWidgets([
-    instantsearch.addWidgets({
+    instantsearch.widgets.searchBox({
         container: '#searchBox',
         template: {
             item: `<input type="text" class="form-control w-100" placeholder="Search for Products">
