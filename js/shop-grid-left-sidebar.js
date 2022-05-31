@@ -22,11 +22,15 @@ search.addWidgets([
             item:
             `
                  <li>
-                     <a href="{{url}}">{{label}}
+                     <a href="${{url}}">
+                     {{label}}
                      <span class="float-end badge rounded-pill bg-primary">{{count}}</span></a>
                  </li>
             
-            `
+            `,
+            cssClasses: {
+                checkbox: false
+            }
         }
     })
 ]);
