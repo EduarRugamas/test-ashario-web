@@ -13,7 +13,7 @@ search.addWidgets([
         showLoadingIndicator: false,
         showSubmit: false,
         cssClasses: {
-            input: 'form-control search-input bg-transparent mt-5'
+            input: 'form-control bg-transparent mt-5'
         }
     })
 ]);
