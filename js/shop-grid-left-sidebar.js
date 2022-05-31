@@ -13,8 +13,7 @@ search.addWidgets([
         showLoadingIndicator: false,
         showSubmit: false,
         cssClasses: {
-            root: 'searchBox-css',
-            input: 'form-control search-input cursor-pointer bg-transparent p-1'
+            input: 'form-control search-input bg-transparent mt-5'
         }
     })
 ]);
