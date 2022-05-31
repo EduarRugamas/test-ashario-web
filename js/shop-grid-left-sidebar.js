@@ -21,9 +21,9 @@ search.addWidgets([
         templates: {
             item:
             `
-                 <li>
+                 <li style="list-style: none; font-size: 14px; ">
                      <a href="{{url}}">{{label}}
-                     <span class="float-end badge rounded-pill bg-primary">({{count}})</span></a>
+                     <span class="float-end badge rounded-pill bg-primary">{{count}}</span></a>
                  </li>
             
             `
