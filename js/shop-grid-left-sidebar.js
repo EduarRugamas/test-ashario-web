@@ -13,6 +13,21 @@ search.addWidgets([
         cssClasses: {
             input: 'form-control bg-transparent mt-5'
         }
+    }),
+
+    instantsearch.widgets.refinementList({
+        container: '#RefinementList-container',
+        attribute: '',
+        templates: {
+            item:
+            `
+                 <li>
+                     <a href="{{url}}">{{label}}
+                     <span class="float-end badge rounded-pill bg-primary">({{count}})</span></a>
+                 </li>
+            
+            `
+        }
     })
 ]);
 
