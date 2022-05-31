@@ -14,7 +14,7 @@ search.addWidgets([
         showReset: true,
         searchAsYouType: true,
         cssClasses: {
-            input: 'form-control bg-transparent mt-5'
+            input: 'bg-transparent mt-5'
         }
     })
 ]);
