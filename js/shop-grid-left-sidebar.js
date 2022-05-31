@@ -1,7 +1,7 @@
 import { searchClient } from '../config/config.js'
 
 const search = instantsearch({
-    indexName: '',
+    indexName: 'menu-products-demo',
     searchClient
 });
 
@@ -17,7 +17,7 @@ search.addWidgets([
 
     instantsearch.widgets.refinementList({
         container: '#RefinementList-container',
-        attribute: '',
+        attribute: 'category',
         templates: {
             item:
             `
