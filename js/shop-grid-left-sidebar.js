@@ -14,7 +14,7 @@ search.addWidgets([
         showSubmit: false,
         cssClasses: {
             root: 'searchBox-css',
-            input: 'form-control search-input'
+            input: 'form-control search-input cursor-pointer bg-transparent p-1'
         }
     })
 ]);
