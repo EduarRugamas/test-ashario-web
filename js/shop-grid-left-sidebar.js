@@ -10,8 +10,12 @@ search.addWidgets([
     instantsearch.widgets.searchBox({
         container: '#searchBox',
         placeholder: 'Search for Products',
-        showLoadingIndicator: true,
-        showSubmit: true
+        showLoadingIndicator: false,
+        showSubmit: false,
+        cssClasses: {
+            root: 'searchBox-css',
+            input: 'form-control search-input'
+        }
     })
 ]);
 
