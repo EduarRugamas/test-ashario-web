@@ -83,7 +83,7 @@ search.addWidgets([
 
     instantsearch.widgets.hits({
        container: '#container-hits',
-       template: {
+       templates: {
            item: `
            <div class="tarjetas">
               <div class="">
