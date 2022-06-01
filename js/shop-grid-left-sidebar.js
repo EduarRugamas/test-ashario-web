@@ -7,6 +7,11 @@ const search = instantsearch({
 
 
 search.addWidgets([
+
+    instantsearch.widgets.configure({
+        enablePersonalization: true
+    }),
+
     instantsearch.widgets.searchBox({
         container: '#searchBox',
         placeholder: 'Search for Products',
@@ -81,7 +86,7 @@ search.addWidgets([
     //     }
     // }),
 
-    instantsearch.widgets.hits({
+    instantsearch.widgets.infiniteHits({
        container: '#container-hits',
        templates: {
            item: `
