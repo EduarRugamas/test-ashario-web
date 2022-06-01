@@ -6,8 +6,8 @@
 
 
 .container-card-general {
-    width: 85%;
-    margin: 40px auto;
+    width: 90%;
+    margin: 50px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 25px;
@@ -20,7 +20,7 @@
 
 .imagen-section {
     height: 225px;
-    background-color: red;
+    background-color: white;
 }
 
 .tarjetas .img-one {
