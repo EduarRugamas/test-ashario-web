@@ -55,6 +55,14 @@ search.addWidgets([
             </div>
             `
         }
+    }),
+
+    instantsearch.widgets.pagination({
+        container: '#pagination-container',
+        templates: {
+            first: `<a class="page-link" href="javascript:;" aria-label="Prev"> <i class='bx bx-chevron-left'></i> Prev</a>`,
+            next: `<a class="page-link" href="javascript:;" aria-label="Next"><i class='bx bx-chevron-right'></i>  Next </a>`
+        }
     })
 
 ]);
