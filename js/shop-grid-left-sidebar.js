@@ -81,6 +81,26 @@ search.addWidgets([
     //     }
     // }),
 
+    instantsearch.widgets.hits({
+       container: '#container-hits',
+       template: {
+           item: `
+           <div class="tarjetas">
+              <div class="">
+                 <img class="img-one imagen-section" src="../assets/images/categories/03.png" alt="">
+              </div>
+              <div class="content">
+                   <h2 class="string-name-product">Texto aqui del name</h2>
+                   <h4 class="string-brand-product">title o brand </h4>
+                   <h4 class="string-brand-sub-type-product">sub title o brand-sub-type </h4>
+                   <p class="string-description-product">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt harum iste non repudiandae sapiente.</p>
+                   <a href="#">Quick View</a>
+              </div>
+           </div>
+           `
+       }
+    }),
+
     instantsearch.widgets.pagination({
         container: '#pagination-container',
         // templates: {
