@@ -21,6 +21,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="../assets/css/app.css" rel="stylesheet">
     <link href="../assets/css/icons.css" rel="stylesheet">
+
+<!--  Link de css de card views de algolia  -->
+    <link rel="stylesheet" href="../css/card_view_css.css">
+
     <title>Shopingo - eCommerce HTML Template</title>
 </head>
 
@@ -287,67 +291,22 @@
                                 </div>
                                 <div class="product-grid">
                                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3" >
-                                        <div id="container-hits"></div>
-<!--                                        <div class="col">-->
-<!--                                            <div class="card rounded-0 product-card">-->
-<!--                                                <div class="card-header bg-transparent border-bottom-0">-->
-<!--                                                    <div class="d-flex align-items-center justify-content-end gap-3">-->
-<!--                                                        <a href="javascript:;">-->
-<!--                                                            <div class="product-compare"><span><i-->
-<!--                                                                    class="bx bx-git-compare"></i> Compare</span>-->
-<!--                                                            </div>-->
-<!--                                                        </a>-->
-<!--                                                        <a href="javascript:;">-->
-<!--                                                            <div class="product-wishlist"><i class="bx bx-heart"></i>-->
-<!--                                                            </div>-->
-<!--                                                        </a>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                                <img src="../assets/images/products/02.png" class="card-img-top"-->
-<!--                                                     alt="...">-->
-<!--                                                <div class="card-body">-->
-<!--                                                    <div class="product-info">-->
-<!--                                                        <a href="javascript:;">-->
-<!--                                                            <p class="product-catergory font-13 mb-1">Catergory Name</p>-->
-<!--                                                        </a>-->
-<!--                                                        <a href="javascript:;">-->
-<!--                                                            <h6 class="product-name mb-2">Product Short Name</h6>-->
-<!--                                                        </a>-->
-<!--                                                        <div class="d-flex align-items-center">-->
-<!--                                                            <div class="mb-1 product-price"><span-->
-<!--                                                                    class="me-1 text-decoration-line-through">$99.00</span>-->
-<!--                                                                <span class="fs-5">$49.00</span>-->
-<!--                                                            </div>-->
-<!--                                                            <div class="cursor-pointer ms-auto"><i-->
-<!--                                                                    class="bx bxs-star text-warning"></i>-->
-<!--                                                                <i class="bx bxs-star text-warning"></i>-->
-<!--                                                                <i class="bx bxs-star text-warning"></i>-->
-<!--                                                                <i class="bx bxs-star text-light-4"></i>-->
-<!--                                                                <i class="bx bxs-star text-light-4"></i>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
-<!--                                                        <div class="product-action mt-2">-->
-<!--                                                            <div class="d-grid gap-2">-->
-<!--                                                                <a href="javascript:;" class="btn btn-dark btn-ecomm">-->
-<!--                                                                    <i class="bx bxs-cart-add"></i>Add to Cart</a>-->
-<!--                                                                <a href="javascript:;" class="btn btn-light btn-ecomm"-->
-<!--                                                                   data-bs-toggle="modal"-->
-<!--                                                                   data-bs-target="#QuickViewProduct"><i-->
-<!--                                                                        class="bx bx-zoom-in"></i>Quick View</a>-->
-<!--                                                            </div>-->
-<!--                                                        </div>-->
-<!--                                                    </div>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                        </div>-->
-
+                                        <div class="container-card-views" id="container-hits">
+                                            <div class="card-views">
+                                                <figure>
+                                                    <img src="#">
+                                                </figure>
+                                                <div class="contenido">
+                                                    <h3 class="text-title"></h3>
+                                                    <p class="text-contenido"></p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <!--end row-->
                                 </div>
                                 <hr>
-                                <div class="d-flex justify-content-between" aria-label="Page navigation" id="pagination-container">
-
-                                </div>
+                                <div id="pagination-container"></div>
                             </div>
                         </div>
                     </div>
