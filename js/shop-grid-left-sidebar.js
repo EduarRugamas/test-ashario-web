@@ -87,13 +87,13 @@ search.addWidgets([
            item: `
            <div class="tarjetas">
               <div class="">
-                 <img class="img-one imagen-section" src="../assets/images/categories/03.png" alt="">
+                 <img class="img-one imagen-section" src="{{image_urls}}" alt="">
               </div>
               <div class="content">
-                   <h2 class="string-name-product">Texto aqui del name</h2>
-                   <h4 class="string-brand-product">title o brand </h4>
-                   <h4 class="string-brand-sub-type-product">sub title o brand-sub-type </h4>
-                   <p class="string-description-product">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deserunt harum iste non repudiandae sapiente.</p>
+                   <h2 class="string-name-product">{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h2>
+                   <h4 class="string-brand-product">{{brand}}</h4>
+                   <h4 class="string-brand-sub-type-product">{{brand_subtype}}</h4>
+                   <p class="string-description-product">{{description}}</p>
                    <a href="#">Quick View</a>
               </div>
            </div>
