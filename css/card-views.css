@@ -28,3 +28,12 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.content {
+    padding: 20px 10px;
+
+}
+
+.content h2 {
+    text-align: center;
+}
