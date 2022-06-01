@@ -60,10 +60,11 @@ search.addWidgets([
     instantsearch.widgets.hits({
         container: '#container-hits',
         templates: {
+            empty: 'No results for <q>{{ query }}</q>',
             item: `
             <div class="card-views">
                 <figure>
-                    <img src="{{image_urls}}">
+                    <img src="{{image_urls}}" width="100" height="210">
                 </figure>
                 <div class="contenido">
                    <h3 class="text-brand">{{brand}}</h3>
