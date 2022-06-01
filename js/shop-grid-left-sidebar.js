@@ -19,11 +19,11 @@ search.addWidgets([
         container: '#menuList-container',
         attribute: 'category',
         template: {
-            item(data) {
-                const { label, count, url  } = data;
-
-                return `<a href="${url}">${label} <span class="float-end badge rounded-pill bg-primary">${count}</span> </a>`;
-            }
+            item: `
+                
+                <a href="{{url}}">{{label}} <span class="float-end badge rounded-pill bg-primary">{{count}}</span></a>
+               
+            `
         }
     })
 
