@@ -95,13 +95,17 @@ search.addWidgets([
                     <figure>
                          <img src="{{image_urls}}" width="100" height="210">
                     </figure>
-<!--                <img src="{{image_urls}}" alt="{{name}}" />-->
+                    
                   <div class="hit-name">
                     {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}
                   </div>
-                  <div class="hit-description">
-                    {{description}}
+                  
+                  <div class="contenido"> 
+                        <p class="description">{{description}}</p>
                   </div>
+<!--                  <div class="hit-description">-->
+<!--                    {{description}}-->
+<!--                  </div>-->
                   <div class="hit-price">\$ {{bucket_price}}</div>
         </div>
     
