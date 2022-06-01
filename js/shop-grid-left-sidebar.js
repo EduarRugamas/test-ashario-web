@@ -22,10 +22,7 @@ search.addWidgets([
             item(data) {
                 const { label, count, url  } = data;
 
-                return `<a href="${url}">
-                ${label}
-                <span class="float-end badge rounded-pill bg-primary">${count.toLocaleString()}</span>
-</a>`;
+                return `<a href="${url}">${label} <span class="float-end badge rounded-pill bg-primary">${count}</span> </a>`;
             }
         }
     })
