@@ -18,15 +18,18 @@ search.addWidgets([
     instantsearch.widgets.menu({
         container: '#menuList-container',
         attribute: 'category',
-        templates: {
-            item:
-            `
-                     <a href="{{url}}" style="{{#isRefined}}font-weight: bold{{/isRefined}}">
-                     {{label}}
-                     <span class="float-end badge rounded-pill bg-primary">{{count}}</span></a>
-            `
+        template: {
+            item(data) {
+                const { label, count, url  } = data;
+
+                return `<a href="${url}">
+                ${label}
+                <span class="float-end badge rounded-pill bg-primary">${count.toLocaleString()}</span>
+</a>`;
+            }
         }
     })
+
 ]);
 
 search.start();
