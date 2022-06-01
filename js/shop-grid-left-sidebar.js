@@ -58,8 +58,7 @@ search.addWidgets([
     // }),
 
     instantsearch.widgets.hits({
-        container: '',
-        attribute: '',
+        container: '#container-hits',
         templates: {
             item: `
             <div class="card-views">
