@@ -7,7 +7,7 @@
 
 .container-card-general {
     width: 85%;
-    margin: 50px auto;
+    margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 25px;
