@@ -91,9 +91,9 @@ search.addWidgets([
        templates: {
            item: `
            <div class="tarjetas">
-              <div class="">
-                 <img class="img-one imagen-section" src="{{image_urls}}" alt="">
-              </div>
+             
+                 <img src="{{image_urls}}" alt="">
+             
               <div class="content">
                    <h2 class="string-name-product">{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h2>
                    <h4 class="string-brand-product">{{brand}}</h4>
@@ -108,10 +108,10 @@ search.addWidgets([
 
     instantsearch.widgets.pagination({
         container: '#pagination-container',
-        // templates: {
-        //     first: `<a class="page-link" href="javascript:;" aria-label="Prev"> <i class='bx bx-chevron-left'></i> Prev</a>`,
-        //     next: `<a class="page-link" href="javascript:;" aria-label="Next"><i class='bx bx-chevron-right'></i>  Next </a>`
-        // }
+        templates: {
+            first: `<a class="page-link" href="javascript:;" aria-label="Prev"> <i class='bx bx-chevron-left'></i> Prev</a>`,
+            next: `<a class="page-link" href="javascript:;" aria-label="Next"><i class='bx bx-chevron-right'></i>  Next </a>`
+        }
     })
 
 ]);
