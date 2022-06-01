@@ -15,21 +15,7 @@ search.addWidgets([
         }
     }),
 
-    instantsearch.widgets.refinementList({
-        container: '#menuList-container',
-        attribute: 'category',
-        template: {
-            item:
-            `
-            <li>
-            <a href="javascript:;">
-            {{label}} 
-            <span class="float-end badge rounded-pill bg-primary">{{count}}</span>
-            </a>
-            </li>
-            `
-        }
-    })
+
 
 ]);
 
