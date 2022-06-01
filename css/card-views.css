@@ -36,5 +36,12 @@
 
 .content .string-name-product {
     text-align: center;
-    font-size: 12px;
+    font-size: 25px;
+}
+
+.content .string-brand-product {
+    font-size: 18px;
+}
+.content .string-brand-sub-type-product {
+    font-size: 18px;
 }
