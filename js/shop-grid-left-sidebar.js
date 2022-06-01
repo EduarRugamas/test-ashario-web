@@ -53,9 +53,6 @@ search.addWidgets([
                                                 </div>
                                             </div>  
             </div>
-            
-
-            
             `
         }
     })
