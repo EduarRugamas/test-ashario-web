@@ -92,7 +92,10 @@ search.addWidgets([
            item: `
             
        <div>
-                <img src="{{image_urls}}" alt="{{name}}" />
+                    <figure>
+                         <img src="{{image_urls}}" width="100" height="210">
+                    </figure>
+<!--                <img src="{{image_urls}}" alt="{{name}}" />-->
                   <div class="hit-name">
                     {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}
                   </div>
