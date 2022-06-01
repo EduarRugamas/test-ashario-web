@@ -24,7 +24,7 @@
     box-shadow: 0 12px 16px rgba(0,0,0,0.2);
 }
 
-.card-container .card-body-custom img {
+.card-container .card-body-custom .imagen {
     width: 330px;
     height: 220px;
 }
