@@ -15,7 +15,7 @@ search.addWidgets([
         }
     }),
 
-    instantsearch.widgets.menu({
+    instantsearch.widgets.refinementList({
         container: '#menuList-container',
         attribute: 'category',
         template: {
@@ -24,7 +24,8 @@ search.addWidgets([
             <li>
             <a href="javascript:;">
             {{label}} 
-            <span class="float-end badge rounded-pill bg-primary">{{count}}</span></a>
+            <span class="float-end badge rounded-pill bg-primary">{{count}}</span>
+            </a>
             </li>
             `
         }
