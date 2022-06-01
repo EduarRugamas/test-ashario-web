@@ -57,29 +57,29 @@ search.addWidgets([
     //     }
     // }),
 
-    instantsearch.widgets.hits({
-        container: '#container-hits',
-        templates: {
-            empty: 'No results for <q>{{ query }}</q>',
-            item: `
-            <div class="card-views">
-                <figure>
-                    <img src="{{image_urls}}" width="100" height="210">
-                </figure>
-                <div class="contenido">
-                   <h3 class="text-brand">{{brand}}</h3>
-                   <h3 class="text-bran-sub-type">{{brand_subtype}}</h3>
-                   <div>
-                        <h6>{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h6>
-                   </div>
-                  <p class="description">{{description}}</p>
-                  <span class="text-bucket_price">\$ {{bucket_price}}</span>
-               </div>
-            </div>
-            
-            `
-        }
-    }),
+    // instantsearch.widgets.hits({
+    //     container: '#container-hits',
+    //     templates: {
+    //         empty: 'No results for <q>{{ query }}</q>',
+    //         item: `
+    //         <div class="card-views">
+    //             <figure>
+    //                 <img src="{{image_urls}}" width="100" height="210">
+    //             </figure>
+    //             <div class="contenido">
+    //                <h3 class="text-brand">{{brand}}</h3>
+    //                <h3 class="text-bran-sub-type">{{brand_subtype}}</h3>
+    //                <div>
+    //                     <h6>{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h6>
+    //                </div>
+    //               <p class="description">{{description}}</p>
+    //               <span class="text-bucket_price">\$ {{bucket_price}}</span>
+    //            </div>
+    //         </div>
+    //
+    //         `
+    //     }
+    // }),
 
     instantsearch.widgets.pagination({
         container: '#pagination-container',
