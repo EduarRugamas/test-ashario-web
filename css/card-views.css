@@ -6,7 +6,7 @@
 
 
 .container-card-general {
-    width: 90%;
+    width: 100%;
     margin: 50px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -19,7 +19,6 @@
 }
 
 .imagen-section {
-    width: 85%;
     height: 225px;
     background-color: white;
 }
