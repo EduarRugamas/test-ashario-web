@@ -27,3 +27,17 @@
     width: 100%;
     height: 210px;
 }
+
+.card-views .contenido {
+    padding: 15px;
+}
+
+.card-views .contenido p{
+    line-height: 1.5;
+    color: #0c4128;
+}
+
+.card-views .contenido .text-brand .text-bran-sub-type{
+    font-size: 13px;
+    margin-bottom: 15px;
+}
