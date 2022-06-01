@@ -43,3 +43,12 @@
 .content .string-brand-sub-type-product {
     font-size: 18px;
 }
+
+.container-card-views img {
+    width: 100%;
+    height: 220px;
+}
+
+.ais-Hits-item {
+    width: calc(50% - 1rem);
+}

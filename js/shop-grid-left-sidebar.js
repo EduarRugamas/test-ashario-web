@@ -90,20 +90,17 @@ search.addWidgets([
        container: '#container-hits',
        templates: {
            item: `
-            <div class="card-views">
-                <figure>
-                    <img src="{{image_urls}}" width="100" height="210">
-                </figure>
-                 <div class="contenido">
-                    <h3 class="text-brand">{{brand}}</h3>
-                    <h3 class="text-bran-sub-type">{{brand_subtype}}</h3>
-                    <div>
-                         <h6>{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h6>
-                    </div>
-                   <p class="description">{{description}}</p>
-                   <span class="text-bucket_price">\\$ {{bucket_price}}</span>
-               </div>
-             </div>
+            
+       <div>
+                <img src="{{image}}" alt="{{name}}" />
+                  <div class="hit-name">
+                    {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}
+                  </div>
+                  <div class="hit-description">
+                    {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
+                  </div>
+                  <div class="hit-price">\$ {{price}}</div>
+        </div>
     
            `
        }
