@@ -15,8 +15,8 @@ search.addWidgets([
         }
     }),
 
-    instantsearch.widgets.refinementList({
-        container: '#RefinementList-container',
+    instantsearch.widgets.menu({
+        container: '#menuList-container',
         attribute: 'category',
         templates: {
             item:
@@ -27,10 +27,7 @@ search.addWidgets([
                      <span class="float-end badge rounded-pill bg-primary">{{count}}</span></a>
                  </li>
             
-            `,
-            cssClasses: {
-                checkbox: 'd-none'
-            }
+            `
         }
     })
 ]);
