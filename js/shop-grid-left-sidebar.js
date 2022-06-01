@@ -19,10 +19,13 @@ search.addWidgets([
         container: '#menuList-container',
         attribute: 'category',
         template: {
-            item: `
-                
-                <a href="{{url}}">{{label}} <span class="float-end badge rounded-pill bg-primary">{{count}}</span></a>
-               
+            item:
+            `
+            <li>
+            <a href="javascript:;">
+            {{label}} 
+            <span class="float-end badge rounded-pill bg-primary">{{count}}</span></a>
+            </li>
             `
         }
     })
