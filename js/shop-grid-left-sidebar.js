@@ -92,14 +92,14 @@ search.addWidgets([
            item: `
             
        <div>
-                <img src="{{image}}" alt="{{name}}" />
+                <img src="{{image_urls}}" alt="{{name}}" />
                   <div class="hit-name">
                     {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}
                   </div>
                   <div class="hit-description">
-                    {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
+                    {{description}}
                   </div>
-                  <div class="hit-price">\$ {{price}}</div>
+                  <div class="hit-price">\$ {{bucket_price}}</div>
         </div>
     
            `
@@ -108,10 +108,7 @@ search.addWidgets([
 
     instantsearch.widgets.pagination({
         container: '#pagination-container',
-        templates: {
-            first: ` <i class='bx bx-chevron-left'></i>`,
-            next: `<i class='bx bx-chevron-right'></i>`
-        }
+
     })
 
 ]);
