@@ -86,7 +86,7 @@ search.addWidgets([
     //     }
     // }),
 
-    instantsearch.widgets.infiniteHits({
+    instantsearch.widgets.hits({
        container: '#container-hits',
        templates: {
            item: `
