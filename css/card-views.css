@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .card-container {
     width: 100%;
     max-width: 1200px;
@@ -24,7 +28,7 @@
     box-shadow: 0 12px 16px rgba(0,0,0,0.2);
 }
 
-.card-container .card-body-custom .imagen {
+.card-container .card-body-custom .imagen-custom {
     width: 330px;
     height: 220px;
 }
