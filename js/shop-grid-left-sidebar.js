@@ -100,10 +100,13 @@ search.addWidgets([
 <!--                    {{#helpers.highlight}}{ "attribute": "name" }{{/helpers.highlight}}-->
 <!--                  </div>-->
                   <div class="contenido"> 
+                        <h3 class="text-brand">{{brand}}</h3>
+                        <h3 class="text-bran-sub-type">{{brand_subtype}}</h3>
                         <div>
                             <h6>{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h6>
                         </div>
                         <p class="description">{{description}}</p>
+                        <span class="text-bucket_price">\${{bucket_price}}</span>
                   </div>
 <!--                  <div class="hit-description">-->
 <!--                    {{description}}-->
