@@ -21,12 +21,9 @@ search.addWidgets([
         templates: {
             item:
             `
-                 <li style="list-style-type: none">
-                     <a href="" style="{{#isRefined}}font-weight: bold{{/isRefined}}">
+                     <a href="{{url}}" style="{{#isRefined}}font-weight: bold{{/isRefined}}">
                      {{label}}
                      <span class="float-end badge rounded-pill bg-primary">{{count}}</span></a>
-                 </li>
-            
             `
         }
     })
