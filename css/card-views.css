@@ -7,13 +7,11 @@
 
 .container-card-general {
     width: 100%;
-    margin: 50px auto;
-
+    margin: auto;
 }
 
 .tarjetas {
     background-color: #FFFFFF;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     margin: 20px;
     border-radius: 6px;
 }
