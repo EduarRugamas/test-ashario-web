@@ -23,12 +23,13 @@ search.addWidgets([
             <div class="col">
                                            <div class="card rounded-0 product-card">
                                                
-                                                <img src="../assets/images/products/01.png" class="card-img-top"
+                                                <img src="{{image_urls}}" class="card-img-top"
                                                      alt="...">
                                                 <div class="card-body">
                                                     <div class="product-info">
                                                         <a href="javascript:;">
-                                                            <p class="product-catergory font-13 mb-1">Catergory Name</p>
+                                                            <p class="product-catergory font-13 mb-1">{{brand}}</p>
+                                                            <p class="product-catergory font-13 mb-1">{{brand_subtype}}</p>
                                                         </a>
                                                         <a href="javascript:;">
                                                             <h6 class="product-name mb-2">{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h6>
