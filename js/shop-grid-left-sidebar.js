@@ -29,7 +29,7 @@ search.addWidgets([
             
             `,
             cssClasses: {
-                checkbox: 'disable'
+                checkbox: 'd-none'
             }
         }
     })
