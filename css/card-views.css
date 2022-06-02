@@ -42,6 +42,7 @@
 }
 
  .container-card-views .container-button-learn-more a {
+     margin-top: 5px;
      margin-bottom: 5px;
      text-decoration: none;
  }
