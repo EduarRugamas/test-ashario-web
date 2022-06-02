@@ -22,7 +22,17 @@ search.addWidgets([
 
     instantsearch.widgets.menu({
         container: '#menuList-container',
-        attribute: 'category'
+        attribute: 'category',
+        template: {
+            item: `
+            <li>
+            <a href="{{url}}">
+                {{label}} 
+                <span class="float-end badge rounded-pill bg-primary">{{count}}</span>
+            </a>
+            </li>
+            `
+        }
     }),
 
     // instantsearch.widgets.hits({
