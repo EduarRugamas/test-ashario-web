@@ -21,9 +21,9 @@ search.addWidgets([
     }),
 
     instantsearch.widgets.menu({
-        container: '#menuList-container',
+        container: '#container-menu',
         attribute: 'category',
-        template: {
+        templates: {
             item: `
             <li>
             <a href="{{url}}">
