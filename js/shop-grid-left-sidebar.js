@@ -16,7 +16,7 @@ search.addWidgets([
         container: '#searchBox',
         placeholder: 'Search for Products',
         cssClasses: {
-            input: 'form-control bg-transparent mt-5'
+            input: 'form-control bg-transparent'
         }
     }),
 
