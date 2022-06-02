@@ -107,7 +107,9 @@ search.addWidgets([
                             <p class="description">{{description}}</p>
                             <span class="text-bucket_price">\${{bucket_price}}</span>  
                         </div>
-                                
+                        <div class="container-button-learn-more">
+                            <a href="#">Quick View</a>
+                        </div>      
         
     
            `
