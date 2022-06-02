@@ -91,7 +91,7 @@ search.addWidgets([
        templates: {
            item: `
             
-       <div>
+       
                   <figure>
                       <img src="{{image_urls}}">
                   </figure>
@@ -103,9 +103,12 @@ search.addWidgets([
                         <div>
                             <h6>{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h6>
                         </div>
-                        <p class="description">{{description}}</p>
-                        <span class="text-bucket_price">\${{bucket_price}}</span>          
-        </div>
+                        <div class="content-details-d-p">
+                            <p class="description">{{description}}</p>
+                            <span class="text-bucket_price">\${{bucket_price}}</span>  
+                        </div>
+                                
+        
     
            `
        }

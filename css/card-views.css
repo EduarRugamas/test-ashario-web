@@ -29,3 +29,13 @@
 .container-card-views .content-subtype h6 {
     font-size: 18px;
 }
+
+.container-card-views .content-details-d-p p{
+    text-align: justify;
+    font-size: 15px;
+}
+
+.container-card-views .content-details-d-p span{
+    font-weight: bold;
+    font-size: 15px;
+}
