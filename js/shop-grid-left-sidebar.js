@@ -20,6 +20,11 @@ search.addWidgets([
         }
     }),
 
+    instantsearch.widgets.menu({
+        container: '#menuList-container',
+        attribute: 'category'
+    }),
+
     // instantsearch.widgets.hits({
     //     container: '#container-hits',
     //     templates: {
