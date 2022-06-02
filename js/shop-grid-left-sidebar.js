@@ -71,6 +71,21 @@ search.addWidgets([
         ]
     }),
 
+    instantsearch.widgets.menu({
+        container: '#container-brands',
+        attribute: 'brand',
+        templates: {
+            item: `
+            <li>
+            <a href="{{url}}">
+                {{label}} 
+                <span class="float-end badge rounded-pill bg-primary">{{count}}</span>
+            </a>
+            </li>
+            `
+        }
+    }),
+
     // instantsearch.widgets.hits({
     //     container: '#container-hits',
     //     templates: {
@@ -161,15 +176,12 @@ search.addWidgets([
                         <div class="container-button-learn-more">
                             <a href="#">Quick View</a>
                         </div>      
-        
-    
            `
        }
     }),
 
     instantsearch.widgets.pagination({
         container: '#pagination-container',
-
     })
 
 ]);
