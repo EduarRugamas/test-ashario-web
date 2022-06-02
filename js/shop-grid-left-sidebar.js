@@ -34,6 +34,17 @@ search.addWidgets([
             `
         }
     }),
+    instantsearch.widgets.rangeSlider({
+        container: '#container-slider-thc',
+        attribute: 'percent_thc',
+        min: 0,
+    }),
+
+    instantsearch.widgets.rangeSlider({
+        container: '#container-slider-cbd',
+        attribute: 'percent_cbd',
+        min: 0
+    }),
 
     instantsearch.widgets.numericMenu({
         container: '#container-price',
