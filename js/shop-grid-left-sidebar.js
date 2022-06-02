@@ -20,6 +20,17 @@ search.addWidgets([
         }
     }),
 
+    instantsearch.widgets.sortBy({
+        container: '#container-sortby-A-Z',
+        items: [
+            {label: 'A-Z', value: ''},
+            {label: 'Price Low to High', value: 'menu-products-by-price-demo'},
+            {label: 'Price High to Low', value: 'menu-products-by-price-desc-demo'},
+            {label: 'THC Low to High', value: 'menu-products-by-thc-potency-desc-demo'},
+            {label: 'THC High to Low', value: 'menu-products-by-thc-potency-asc-demo'}
+        ]
+    }),
+
     instantsearch.widgets.menu({
         container: '#container-menu',
         attribute: 'category',
@@ -156,8 +167,6 @@ search.addWidgets([
        container: '#container-hits',
        templates: {
            item: `
-            
-       
                   <figure>
                       <img src="{{image_urls}}">
                   </figure>
