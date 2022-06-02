@@ -18,11 +18,14 @@
 }
 
 .container-card-views .content-subtype p{
-      font-size: 16px;
+      font-size: 12px;
       font-weight: bold;
       color: #000000;
 }
 
 .container-card-views .content-subtype .text-brand {
      margin-bottom: 5px;
+}
+.container-card-views .content-subtype h6 {
+    font-size: 18px;
 }
