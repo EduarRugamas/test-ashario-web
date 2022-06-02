@@ -18,5 +18,10 @@
 }
 
 .container-card-views .content-subtype p{
-      font-size: 15px;
+      font-size: 18px;
+}
+
+.container-card-views .content-subtype .text-brand {
+     margin-bottom: 5px;
+
 }
