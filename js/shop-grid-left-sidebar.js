@@ -93,7 +93,7 @@ search.addWidgets([
             
        <div>
                   <figure>
-                      <img src="{{image_urls}}" width="100" height="210">
+                      <img src="{{image_urls}}" width="300" height="300">
                   </figure>
                     
                   <div class="contenido"> 
