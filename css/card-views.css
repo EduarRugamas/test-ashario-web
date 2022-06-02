@@ -4,46 +4,6 @@
     box-sizing: border-box;
 }
 
-
-.container-card-general {
-    width: 100%;
-    margin: auto;
-}
-
-.tarjetas {
-    background-color: #FFFFFF;
-    margin: 20px;
-    border-radius: 6px;
-}
-
-.imagen-section {
-    height: 225px;
-    background-color: white;
-}
-
-.tarjetas .img-one {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.content {
-    padding: 20px 10px;
-
-}
-
-.content .string-name-product {
-    text-align: center;
-    font-size: 25px;
-}
-
-.content .string-brand-product {
-    font-size: 18px;
-}
-.content .string-brand-sub-type-product {
-    font-size: 18px;
-}
-
 .container-card-views img {
     width: 100%;
     height: 220px;
