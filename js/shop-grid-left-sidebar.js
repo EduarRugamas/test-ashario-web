@@ -93,18 +93,17 @@ search.addWidgets([
             
        <div>
                   <figure>
-                      <img src="{{image_urls}}" width="300" height="300">
+                      <img src="{{image_urls}}">
                   </figure>
                     
-                  <div class="contenido"> 
-                        <h3 class="text-brand">{{brand}}</h3>
-                        <h3 class="text-bran-sub-type">{{brand_subtype}}</h3>
+                        <h5 class="text-brand">{{brand}}</h5>
+                        <h5 class="text-bran-sub-type">{{brand_subtype}}</h5>
                         <div>
-                            <h6>{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h6>
+                            <h4>{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h4>
                         </div>
                         <p class="description">{{description}}</p>
                         <span class="text-bucket_price">\${{bucket_price}}</span>
-                  </div>
+                        
         </div>
     
            `
