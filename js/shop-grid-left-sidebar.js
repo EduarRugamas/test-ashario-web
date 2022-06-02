@@ -101,7 +101,7 @@ search.addWidgets([
                              <p class="text-bran-sub-type">{{brand_subtype}}</p>
                         </div>
                         <div>
-                            <h4>{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h4>
+                            <h6>{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h6>
                         </div>
                         <p class="description">{{description}}</p>
                         <span class="text-bucket_price">\${{bucket_price}}</span>          
