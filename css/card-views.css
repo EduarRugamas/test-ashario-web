@@ -40,3 +40,8 @@
     font-size: 15px;
     color: #000000;
 }
+
+ .container-card-views .container-button-learn-more a {
+     margin-bottom: 5px;
+     text-decoration: none;
+ }
