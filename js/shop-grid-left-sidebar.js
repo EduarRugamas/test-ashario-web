@@ -36,7 +36,7 @@ search.addWidgets([
     }),
 
     instantsearch.widgets.numericMenu({
-        container: '#container-slider',
+        container: '#container-price',
         attribute: 'bucket_price',
         items : [
             {
