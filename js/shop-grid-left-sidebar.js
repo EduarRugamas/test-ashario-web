@@ -6,6 +6,38 @@ const search = instantsearch({
 });
 
 
+const HitsRender = (renderOptions, isFirstRender) => {
+    const { hits, results, sendEvent, widgetParams } = renderOptions;
+    document.querySelector('#container-hits').innerHTML = `
+    
+        <div class="product-info">
+        
+            ${hits.map( item =>
+        `<a href="">
+            <p class="product-catergory font-13 mb-1">Catergory Name</p>
+        </a>
+        <a href="">
+            <h6 class="product-name mb-2">${item.name}</h6>
+        </a>
+            <div class="d-flex align-items-center">
+                <div class="mb-1 product-price">    
+                    <span class="me-1 text-decoration-line-through">$99.00</span>
+                    <span class="fs-5">$49.00</span>
+                </div>
+            </div>
+        <div class="product-action mt-2">
+            <div class="d-grid gap-2">
+                <a href="" class="btn btn-dark btn-ecomm">    <i class="bx bxs-cart-add"></i>Add to Cart</a>
+                <a href="" class="btn btn-light btn-ecomm" data-bs-toggle="modal" data-bs-target="#QuickViewProduct"><i class="bx bx-zoom-in"></i>Quick View</a>
+            </div>
+        </div>`
+            ).join('')}
+        </div>
+    `;
+};
+
+const CustomHits = instantsearch.connectors.connectHits(HitsRender);
+
 search.addWidgets([
 
     instantsearch.widgets.configure({
@@ -163,31 +195,33 @@ search.addWidgets([
     //     }
     // }),
 
-    instantsearch.widgets.hits({
-       container: '#container-hits',
-       templates: {
-           item: `
-                  <figure>
-                      <img src="{{image_urls}}">
-                  </figure>
-                    
-                        <div class="content-subtype">
-                             <p class="text-brand">{{brand}}</p>
-                             <p class="text-bran-sub-type">{{brand_subtype}}</p>
-                        </div>
-                        <div>
-                            <h6>{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h6>
-                        </div>
-                        <div class="content-details-d-p">
-                            <p class="description">{{description}}</p>
-                            <span class="text-bucket_price">\${{bucket_price}}</span>  
-                        </div>
-                        <div class="container-button-learn-more">
-                            <a href="#">Quick View</a>
-                        </div>      
-           `
-       }
-    }),
+    // instantsearch.widgets.hits({
+    //    container: '#container-hits',
+    //    templates: {
+    //        item: `
+    //               <figure>
+    //                   <img src="{{image_urls}}">
+    //               </figure>
+    //
+    //                     <div class="content-subtype">
+    //                          <p class="text-brand">{{brand}}</p>
+    //                          <p class="text-bran-sub-type">{{brand_subtype}}</p>
+    //                     </div>
+    //                     <div>
+    //                         <h6>{{#helpers.highlight}}{"attribute": "name"}{{/helpers.highlight}}</h6>
+    //                     </div>
+    //                     <div class="content-details-d-p">
+    //                         <p class="description">{{description}}</p>
+    //                         <span class="text-bucket_price">\${{bucket_price}}</span>
+    //                     </div>
+    //                     <div class="container-button-learn-more">
+    //                         <a href="#">Quick View</a>
+    //                     </div>
+    //        `
+    //    }
+    // }),
+
+    CustomHits({}),
 
     instantsearch.widgets.pagination({
         container: '#pagination-container',

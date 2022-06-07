@@ -5,7 +5,7 @@ Email: codervent@gmail.com
 File: app.css
 */
 
-/* 
+/*
 
   - General
   - Header
@@ -119,7 +119,7 @@ a {
 	margin: 0;
 }
 
-.primary-menu .dropdown-large-menu a { 
+.primary-menu .dropdown-large-menu a {
 	color: #292929;
 }
 
@@ -229,7 +229,7 @@ body.offcanvas-active {
 /* Product Effect */
 
 
-.product-grid .card.product-card {
+.product-grid .card .product-card {
 	background-color: #ffffff;
 	box-shadow: none;
 	border-radius: 0%;
