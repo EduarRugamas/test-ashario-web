@@ -7,7 +7,7 @@ const search = instantsearch({
 });
 
 const img = document.getElementById('imagen-product');
-if (img === undefined) {
+if (img === null) {
     img.src="../assets/images/errors-images/image-not-found.jpeg"
 }
 
