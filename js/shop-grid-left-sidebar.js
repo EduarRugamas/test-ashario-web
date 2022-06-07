@@ -6,10 +6,7 @@ const search = instantsearch({
     searchClient
 });
 
-const img = document.getElementById('imagen-product');
-if (img === null) {
-    img.src="../assets/images/errors-images/image-not-found.jpeg"
-}
+document.getElementById('imagen-product').src="../assets/images/errors-images/image-not-found.jpeg";
 
 const HitsRender = (renderOptions, isFirstRender) => {
     const { hits, results, sendEvent, widgetParams } = renderOptions;
