@@ -10,29 +10,31 @@ const HitsRender = (renderOptions, isFirstRender) => {
     const { hits, results, sendEvent, widgetParams } = renderOptions;
     document.querySelector('#container-hits').innerHTML = `
     
-        <div class="product-info">
+        
         
             ${hits.map( item =>
-        `<a href="">
-            <p class="product-catergory font-13 mb-1">Catergory Name</p>
-        </a>
-        <a href="">
-            <h6 class="product-name mb-2">${item.name}</h6>
-        </a>
+        `
+        <div class="product-info">
+            <a href="">
+                <p class="product-catergory font-13 mb-1">Catergory Name</p>
+            </a>
+            <a href="">
+                <h6 class="product-name mb-2">${item.name}</h6>
+            </a>
             <div class="d-flex align-items-center">
                 <div class="mb-1 product-price">    
                     <span class="me-1 text-decoration-line-through">$99.00</span>
                     <span class="fs-5">$49.00</span>
                 </div>
             </div>
-        <div class="product-action mt-2">
-            <div class="d-grid gap-2">
-                <a href="" class="btn btn-dark btn-ecomm">    <i class="bx bxs-cart-add"></i>Add to Cart</a>
-                <a href="" class="btn btn-light btn-ecomm" data-bs-toggle="modal" data-bs-target="#QuickViewProduct"><i class="bx bx-zoom-in"></i>Quick View</a>
+            <div class="product-action mt-2">
+                <div class="d-grid gap-2">
+                    <a href="" class="btn btn-dark btn-ecomm">    <i class="bx bxs-cart-add"></i>Add to Cart</a>
+                    <a href="" class="btn btn-light btn-ecomm" data-bs-toggle="modal" data-bs-target="#QuickViewProduct"><i class="bx bx-zoom-in"></i>Quick View</a>
+                </div>
             </div>
-        </div>`
-            ).join('')}
-        </div>
+       </div>`
+    ).join('')}
     `;
 };
 
