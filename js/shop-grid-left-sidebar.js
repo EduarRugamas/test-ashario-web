@@ -14,16 +14,16 @@ const HitsRender = (renderOptions, isFirstRender) => {
         `
         <div class="col">
             <div class="card rounded-0 product-card">
-                <div class="card-header bg-transparent border-bottom-0">
-                    <div class="d-flex align-items-center justify-content-end gap-3">
-                        <a href="javascript:;">
-                            <div class="product-compare"><span><i class="bx bx-git-compare"></i> Compare</span></div>
-                        </a>
-                        <a href="javascript:;">
-                        <div class="product-wishlist"> <i class="bx bx-heart"></i></div>
-                        </a>
-                    </div>
-                </div>
+<!--                <div class="card-header bg-transparent border-bottom-0">-->
+<!--                    <div class="d-flex align-items-center justify-content-end gap-3">-->
+<!--                        <a href="javascript:;">-->
+<!--                            <div class="product-compare"><span><i class="bx bx-git-compare"></i> Compare</span></div>-->
+<!--                        </a>-->
+<!--                        <a href="javascript:;">-->
+<!--                        <div class="product-wishlist"> <i class="bx bx-heart"></i></div>-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
                 <img src="${item.image_urls}" class="card-img-top" alt="..." id="imagen-product">
                 <div class="card-body">
                     <div class="product-info">
