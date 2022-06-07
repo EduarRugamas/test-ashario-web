@@ -359,6 +359,9 @@ body.offcanvas-active {
 	border-radius: 4px;
 	border: 1px solid #dadcde;
 }
+.img {
+	background-image: url("../images/errors-images/image-not-found.jpeg");
+}
 
 .list-group-item.active {
 	background-color: #212529;
