@@ -6,7 +6,6 @@ const search = instantsearch({
     searchClient
 });
 
-document.getElementById('imagen-product').src="assets/imagenes/errors-imagenes/image-not-found.jpeg";
 
 const HitsRender = (renderOptions, isFirstRender) => {
     const { hits, results, sendEvent, widgetParams } = renderOptions;
