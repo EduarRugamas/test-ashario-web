@@ -84,6 +84,27 @@ const RenderMenu = (renderOptions, isFirstRender) => {
 
 const CustomMenu = instantsearch.connectors.connectMenu(RenderMenu);
 
+
+const RenderRangeSlider = (renderOptions, isFirstRender) => {
+    const { start, range, canRefine, refine, sendEvent, widgetParams } = renderOptions;
+
+    // const slider = document.getElementById('container-slider-thc');
+
+    const slider = document.querySelector('#container-slider-thc');
+
+    noUiSlider.create(slider, {
+        start: [0],
+        connect: true,
+        range: {
+            'min': range.min,
+            'max': range.max
+        }
+    })
+
+};
+
+const CustomRangeSlider = instantsearch.connectors.connectRange(RenderRangeSlider)
+
 search.addWidgets([
 
     instantsearch.widgets.configure({
@@ -123,11 +144,12 @@ search.addWidgets([
             `
         }
     }),
-    instantsearch.widgets.rangeSlider({
-        container: '#container-slider-thc',
-        attribute: 'percent_thc',
-        min: 0,
-    }),
+    // instantsearch.widgets.rangeSlider({
+    //     container: '#container-slider-thc',
+    //     attribute: 'percent_thc',
+    //     min: 0,
+    // }),
+    CustomRangeSlider({attribute: 'percent_thc'}),
 
     instantsearch.widgets.rangeSlider({
         container: '#container-slider-cbd',
