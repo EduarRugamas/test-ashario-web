@@ -93,7 +93,7 @@ const RenderRangeSlider = (renderOptions, isFirstRender) => {
     const slider = document.querySelector('#container-slider-thc');
 
     noUiSlider.create(slider, {
-        start: [0],
+        start: [start],
         connect: true,
         range: {
             'min': range.min,
