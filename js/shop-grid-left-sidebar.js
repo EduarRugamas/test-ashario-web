@@ -27,14 +27,16 @@ const HitsRender = (renderOptions, isFirstRender) => {
                 <div class="card-body">
                     <div class="product-info">
                         <a href="javascript:;">
-                            <p class="product-catergory font-13 mb-1">Catergory Name</p>
+                            <p class="product-catergory font-13 mb-1">${item.brand}</p>
+                            <p class="product-catergory font-13 mb-1">${item.brand_subtype}</p>
                         </a>
                         <a href="javascript:;">
-                            <h6 class="product-name mb-2">Product Short Name</h6>
+                            <h6 class="product-name mb-2">${instantsearch.highlight({ attribute: 'name', hit: item })}</h6>
                         </a>
                         <div class="d-flex align-items-center">
-                            <div class="mb-1 product-price">\t<span class="me-1 text-decoration-line-through">$99.00</span>
-                                <span class="fs-5">$49.00</span>
+                            <div class="mb-1 product-price">
+                                <!--  <span class="me-1 text-decoration-line-through">$99.00</span> -->
+                                <span class="fs-5">\$ ${item.bucket_price}</span>
                             </div>
                             <div class="cursor-pointer ms-auto">
                                 <i class="bx bxs-star text-warning"></i>
