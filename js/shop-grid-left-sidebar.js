@@ -6,8 +6,8 @@ const search = instantsearch({
     searchClient
 });
 
-const img = document.getElementById('imagen-product').src;
-if (img === null) {
+const img = document.getElementById('imagen-product');
+if (img === undefined) {
     img.src="../assets/images/errors-images/image-not-found.jpeg"
 }
 
