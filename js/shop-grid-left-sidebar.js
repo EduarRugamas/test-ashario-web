@@ -91,6 +91,7 @@ const RenderRangeSlider = (renderOptions, isFirstRender) => {
         
         <div class="range-input">
             <input type="range" class="range-min" min="${range.min}" max="${range.max}" value="${Number.isFinite(start[0]) ? start[0] : '0'}" >
+            <input type="range" class="range-max" min="${range.max}" max="${range.min}" value="${Number.isFinite(start[0]) ? start[0] : '0'}" >
         </div>
     
     `;
