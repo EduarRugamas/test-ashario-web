@@ -87,20 +87,13 @@ const CustomMenu = instantsearch.connectors.connectMenu(RenderMenu);
 
 const RenderRangeSlider = (renderOptions, isFirstRender) => {
     const { start, range, canRefine, refine, sendEvent, widgetParams } = renderOptions;
-
-    // const slider = document.getElementById('container-slider-thc');
-
-    const slider = document.querySelector('#container-slider-thc');
-
-    noUiSlider.create(slider, {
-        start: [start],
-        connect: true,
-        range: {
-            'min': range.min,
-            'max': range.max
-        }
-    })
-
+    document.querySelector('#container-slider-thc').innerHTML = `
+        
+        <div class="range-input">
+            <input type="range" class="range-min" min="${range.min}" max="${range.max}" value="${Number.isFinite(start[0]) ? start[0] : '0'}" >
+        </div>
+    
+    `;
 };
 
 const CustomRangeSlider = instantsearch.connectors.connectRange(RenderRangeSlider)
