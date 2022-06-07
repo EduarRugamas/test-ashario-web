@@ -1,10 +1,15 @@
-import { searchClient } from '../config/config.js'
+import { searchClient } from '../config/config.js';
+
 
 const search = instantsearch({
     indexName: 'menu-products-demo',
     searchClient
 });
 
+const img = document.getElementById('imagen-product').src;
+if (img === null) {
+    img.src="../assets/images/errors-images/image-not-found.jpeg"
+}
 
 const HitsRender = (renderOptions, isFirstRender) => {
     const { hits, results, sendEvent, widgetParams } = renderOptions;
@@ -23,7 +28,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
                         </a>
                     </div>
                 </div>
-                <img src="${item.image_urls}" class="card-img-top" alt="...">
+                <img src="${item.image_urls}" class="card-img-top" alt="..." id="imagen-product">
                 <div class="card-body">
                     <div class="product-info">
                         <a href="javascript:;">
