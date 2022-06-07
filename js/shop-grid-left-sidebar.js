@@ -23,7 +23,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
                         </a>
                     </div>
                 </div>
-                <img src="{{image_urls}}" class="card-img-top" alt="...">
+                <img src="${item.image_urls}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <div class="product-info">
                         <a href="javascript:;">
