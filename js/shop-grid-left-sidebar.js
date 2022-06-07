@@ -64,6 +64,26 @@ const HitsRender = (renderOptions, isFirstRender) => {
 
 const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 
+
+const RenderMenu = (renderOptions, isFirstRender) => {
+
+    const { items, canRefine, refine, sendEvent, createUrl, isShowingMore, canTogglesShowMore, toggleShowMore, widgetParams } = renderOptions;
+
+    document.querySelector('#container-menu').innerHTML = `
+        ${items.map( item => 
+        `
+        <li>
+            <a href="${createUrl(item.value)}"> ${item.label} 
+                <span class="float-end badge rounded-pill bg-primary">${item.count}</span>
+            </a>
+        </li>   
+        `).join('')}
+    `;
+
+};
+
+const CustomMenu = instantsearch.connectors.connectMenu(RenderMenu);
+
 search.addWidgets([
 
     instantsearch.widgets.configure({
@@ -140,20 +160,22 @@ search.addWidgets([
         ]
     }),
 
-    instantsearch.widgets.menu({
-        container: '#container-brands',
-        attribute: 'brand',
-        templates: {
-            item: `
-            <li>
-            <a href="{{url}}">
-                {{label}} 
-                <span class="float-end badge rounded-pill bg-primary">{{count}}</span>
-            </a>
-            </li>
-            `
-        }
-    }),
+    // instantsearch.widgets.menu({
+    //     container: '#container-brands',
+    //     attribute: 'brand',
+    //     templates: {
+    //         item: `
+    //         <li>
+    //         <a href="{{url}}">
+    //             {{label}}
+    //             <span class="float-end badge rounded-pill bg-primary">{{count}}</span>
+    //         </a>
+    //         </li>
+    //         `
+    //     }
+    // }),
+
+    CustomMenu({attribute: 'brand'}),
 
     // instantsearch.widgets.hits({
     //     container: '#container-hits',
