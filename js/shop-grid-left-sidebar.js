@@ -177,6 +177,8 @@ search.addWidgets([
 
     CustomMenu({attribute: 'brand'}),
 
+    CustomHits({}),
+
     // instantsearch.widgets.hits({
     //     container: '#container-hits',
     //     templates: {
@@ -269,7 +271,6 @@ search.addWidgets([
     //    }
     // }),
 
-    CustomHits({}),
 
     instantsearch.widgets.pagination({
         container: '#pagination-container',
