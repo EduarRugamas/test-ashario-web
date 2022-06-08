@@ -150,10 +150,8 @@ index.search(objectID).then(({hits}) => {
             </div>
             </div>
        </section>
-    
-    
-    
-    
     `
 });
+
+index.start();
 
