@@ -69,7 +69,9 @@ search.addWidgets([
         CustomHits({})
     ]),
     instantsearch.widgets.index({ indexName: 'menu-products-demo', indexId: '4435' }).addWidgets([
-        CustomHits({})
+        instantsearch.widgets.hits({
+            container: '#container-hits-demo'
+        })
     ])
 ]);
 
