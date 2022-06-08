@@ -9,7 +9,7 @@ const search = instantsearch({
 const HitsRender = (renderOptions, isFirstRender) => {
     const { hits, results, sendEvent, widgetParams } = renderOptions;
 
-    document.querySelector('#container-hits').innerHTML = `
+    widgetParams.container.innerHTML = `
             ${hits.map( item =>
         `
         <div class="col">
