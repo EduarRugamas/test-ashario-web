@@ -8,7 +8,7 @@ const index = searchClient.initIndex(indexName);
 index.search(objectID).then( ({hits}) => {
     // codigo de html de el modal
     // usando el hits[0].name etc
-    document.getElementById('').innerHTML = `
+    document.getElementById('QuickViewProduct').innerHTML = `
         <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-xl-down">
             <div class="modal-content rounded-0 border-0">
                 <div class="modal-body">
