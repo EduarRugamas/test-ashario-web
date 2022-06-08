@@ -7,9 +7,10 @@ const search = instantsearch({
 
 const HitsRender = (renderOptions, isFirstRender) => {
     const { hits, results, sendEvent, widgetParams } = renderOptions;
-    const url = 'shop-grid-left-sidebar.html?objectID=' + hits.objectID;
+
     document.querySelector('#container-hits').innerHTML = `
             ${hits.map( item =>
+            
         `
         <div class="col">
             <div class="card rounded-0 product-card">
@@ -38,7 +39,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
                         <div class="product-action mt-2">
                             <div class="d-grid gap-2">
                                 <a href="javascript:;" class="btn btn-dark btn-ecomm"><i class="bx bxs-cart-add"></i>Add to Cart</a>
-                                <a href="${url}" class="btn btn-light btn-ecomm" data-bs-toggle="modal" data-bs-target="#QuickViewProduct"><i class="bx bx-zoom-in"></i>Quick View</a>
+                                <a href="shop-grid-left-sidebar.html?objectID=${item.objectID}" class="btn btn-light btn-ecomm" data-bs-toggle="modal" data-bs-target="#QuickViewProduct"><i class="bx bx-zoom-in"></i>Quick View</a>
                             </div>
                         </div>
                     </div>
