@@ -27,7 +27,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
     widgetParams.container.innerHTML = `
             ${hits.map( item =>
         `
-        <div class="col" href="product-details.html?objectID=${item.objectID}">
+        <div class="col">
             <div class="card rounded-0 product-card">
                 <img src="${item.image_urls}" class="card-img-top" alt="..." id="imagen-product">
                 <div class="card-body">
@@ -54,7 +54,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
                         </div>
                         <div class="product-action mt-2">
                             <div class="d-grid gap-2">
-                                <a href="javascript:;" class="btn btn-dark btn-ecomm"><i class="bx bxs-cart-add"></i>Add to Cart</a>
+                                <a href="product-details.html?objectID=${item.objectID}" class="btn btn-dark btn-ecomm">Product Details</a>
                                 <a href="" class="btn btn-light btn-ecomm" data-bs-toggle="modal" data-bs-target="#QuickViewProduct" id="QuickViewModalBtn" onclick="QuickViewModal(item)"><i class="bx bx-zoom-in"></i>Quick View</a>
                             </div>
                         </div>
