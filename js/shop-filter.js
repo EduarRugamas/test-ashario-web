@@ -11,7 +11,7 @@ search.addWidgets([
         container: '#container-hits-demo'
     }),
 
-    instantsearch.widgets.index({indexName: 'menu-products-demo'}).addWidgets([
+    instantsearch.widgets.index({indexName: 'menu-products-demo', indexId: '4434'}).addWidgets([
         instantsearch.widgets.hits({
             container: '#container-hits',
             templates: {
