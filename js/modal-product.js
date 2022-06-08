@@ -48,7 +48,7 @@ index.search(objectID).then( ({hits}) => {
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="product-info-section p-3">
-                                <h3 class="mt-3 mt-lg-0 mb-0">${hits[0].name}</h3>
+                                <h3 class="mt-3 mt-lg-0 mb-0">${hits.name}</h3>
 <!--                                <div class="product-rating d-flex align-items-center mt-2">-->
 <!--                                    <div class="rates cursor-pointer font-13"><i class="bx bxs-star text-warning"></i>-->
 <!--                                        <i class="bx bxs-star text-warning"></i>-->
