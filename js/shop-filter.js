@@ -27,7 +27,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
     widgetParams.container.innerHTML = `
             ${hits.map( item =>
         `
-        <div class="col">
+        <div class="col" href="product-details.html?objectID=${item.objectID}">
             <div class="card rounded-0 product-card">
                 <img src="${item.image_urls}" class="card-img-top" alt="..." id="imagen-product">
                 <div class="card-body">
