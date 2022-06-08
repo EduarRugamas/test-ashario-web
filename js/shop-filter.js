@@ -6,13 +6,16 @@ const search = instantsearch({
     routing: true
 });
 
-function QuickViewModal (name, bucket_price, description, objectID) {
-    $('#text-modal-product-name').val(name);
-    $('#text-modal-product-price').val(bucket_price);
-    $('#text-modal-product-description').val(description);
-    $('#text-modal-product-objectID').val(objectID);
+function QuickViewModal (items) {
+
+    $('#QuickViewModalBtn').click( function () {
+        $('#text-modal-product-name').val(items.name);
+        $('#text-modal-product-price').val(items.bucket_price);
+        $('#text-modal-product-description').val(items.description);
+        $('#text-modal-product-objectID').val(items.objectID);
+    });
     // $('#text-modal-product-name').val(item_hits.name);
-};
+}
 
 const HitsRender = (renderOptions, isFirstRender) => {
     const { hits, results, sendEvent, widgetParams } = renderOptions;
@@ -48,7 +51,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
                         <div class="product-action mt-2">
                             <div class="d-grid gap-2">
                                 <a href="javascript:;" class="btn btn-dark btn-ecomm"><i class="bx bxs-cart-add"></i>Add to Cart</a>
-                                <a href="" class="btn btn-light btn-ecomm" data-bs-toggle="modal" data-bs-target="#QuickViewProduct" onclick="QuickViewModal(item.name, item.bucket_price, item.description, item.objectID)" ><i class="bx bx-zoom-in"></i>Quick View</a>
+                                <a href="" class="btn btn-light btn-ecomm" data-bs-toggle="modal" data-bs-target="#QuickViewProduct" id="QuickViewModalBtn" onclick="QuickViewModal(item)"><i class="bx bx-zoom-in"></i>Quick View</a>
                             </div>
                         </div>
                     </div>
