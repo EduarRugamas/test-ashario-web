@@ -7,7 +7,7 @@ const search = instantsearch({
 });
 
 function openModal(hits) {
-    document.querySelector('#QuickViewProduct').innerHTML = `
+   return document.querySelector('#QuickViewProduct').innerHTML = `
         <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-xl-down">
             <div class="modal-content rounded-0 border-0">
                 <div class="modal-body">
@@ -159,7 +159,8 @@ const HitsRender = (renderOptions, isFirstRender) => {
                         <div class="product-action mt-2">
                             <div class="d-grid gap-2">
                                 <a href="javascript:;" class="btn btn-dark btn-ecomm"><i class="bx bxs-cart-add"></i>Add to Cart</a>
-                                <a href="" class="btn btn-light btn-ecomm" ><i class="bx bx-zoom-in" onclick="javascript:openModal(item)"></i>Quick View</a>
+                                <button type="submit" onclick="javascript:openModal(item)"> <i class="bx bx-zoom-in"></i>Quick View</button>
+                                <!--<a href="" class="btn btn-light btn-ecomm" ><i class="bx bx-zoom-in" onclick="javascript:openModal(item)"></i>Quick View</a>-->
                             </div>
                         </div>
                     </div>
