@@ -48,65 +48,63 @@ index.search(objectID).then( ({hits}) => {
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="product-info-section p-3">
-                                <h3 class="mt-3 mt-lg-0 mb-0">Allen Solly Men's Polo T-Shirt</h3>
-                                <div class="product-rating d-flex align-items-center mt-2">
-                                    <div class="rates cursor-pointer font-13"><i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-light-4"></i>
-                                    </div>
-                                    <div class="ms-1">
-                                        <p class="mb-0">(24 Ratings)</p>
-                                    </div>
-                                </div>
+                                <h3 class="mt-3 mt-lg-0 mb-0">${hits[0].name}</h3>
+<!--                                <div class="product-rating d-flex align-items-center mt-2">-->
+<!--                                    <div class="rates cursor-pointer font-13"><i class="bx bxs-star text-warning"></i>-->
+<!--                                        <i class="bx bxs-star text-warning"></i>-->
+<!--                                        <i class="bx bxs-star text-warning"></i>-->
+<!--                                        <i class="bx bxs-star text-warning"></i>-->
+<!--                                        <i class="bx bxs-star text-light-4"></i>-->
+<!--                                    </div>-->
+<!--                                    <div class="ms-1">-->
+<!--                                        <p class="mb-0">(24 Ratings)</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
                                 <div class="d-flex align-items-center mt-3 gap-2">
-                                    <h5 class="mb-0 text-decoration-line-through text-light-3">$98.00</h5>
-                                    <h4 class="mb-0">$49.00</h4>
+<!--                                    <h5 class="mb-0 text-decoration-line-through text-light-3">$98.00</h5>-->
+                                    <h4 class="mb-0">\$ ${hits[0].bucket_price}</h4>
                                 </div>
                                 <div class="mt-3">
                                     <h6>Discription :</h6>
-                                    <p class="mb-0">Virgil Abloh’s Off-White is a streetwear-inspired collection that
-                                        continues to break away from the conventions of mainstream fashion. Made in
-                                        Italy, these black and brown Odsy-1000 low-top sneakers.</p>
+                                    <p class="mb-0">${hits[0].description}</p>
                                 </div>
                                 <dl class="row mt-3">
                                     <dt class="col-sm-3">Product id</dt>
-                                    <dd class="col-sm-9">#BHU5879</dd>
+                                    <dd class="col-sm-9">${hits[0].objectID}</dd>
                                     <dt class="col-sm-3">Delivery</dt>
                                     <dd class="col-sm-9">Russia, USA, and Europe</dd>
                                 </dl>
-                                <div class="row row-cols-auto align-items-center mt-3">
-                                    <div class="col">
-                                        <label class="form-label">Quantity</label>
-                                        <select class="form-select form-select-sm">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </div>
-                                    <div class="col">
-                                        <label class="form-label">Size</label>
-                                        <select class="form-select form-select-sm">
-                                            <option>S</option>
-                                            <option>M</option>
-                                            <option>L</option>
-                                            <option>XS</option>
-                                            <option>XL</option>
-                                        </select>
-                                    </div>
-                                    <div class="col">
-                                        <label class="form-label">Colors</label>
-                                        <div class="color-indigators d-flex align-items-center gap-2">
-                                            <div class="color-indigator-item bg-primary"></div>
-                                            <div class="color-indigator-item bg-danger"></div>
-                                            <div class="color-indigator-item bg-success"></div>
-                                            <div class="color-indigator-item bg-warning"></div>
-                                        </div>
-                                    </div>
-                                </div>
+<!--                                <div class="row row-cols-auto align-items-center mt-3">-->
+<!--                                    <div class="col">-->
+<!--                                        <label class="form-label">Quantity</label>-->
+<!--                                        <select class="form-select form-select-sm">-->
+<!--                                            <option>1</option>-->
+<!--                                            <option>2</option>-->
+<!--                                            <option>3</option>-->
+<!--                                            <option>4</option>-->
+<!--                                            <option>5</option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                    <div class="col">-->
+<!--                                        <label class="form-label">Size</label>-->
+<!--                                        <select class="form-select form-select-sm">-->
+<!--                                            <option>S</option>-->
+<!--                                            <option>M</option>-->
+<!--                                            <option>L</option>-->
+<!--                                            <option>XS</option>-->
+<!--                                            <option>XL</option>-->
+<!--                                        </select>-->
+<!--                                    </div>-->
+<!--                                    <div class="col">-->
+<!--                                        <label class="form-label">Colors</label>-->
+<!--                                        <div class="color-indigators d-flex align-items-center gap-2">-->
+<!--                                            <div class="color-indigator-item bg-primary"></div>-->
+<!--                                            <div class="color-indigator-item bg-danger"></div>-->
+<!--                                            <div class="color-indigator-item bg-success"></div>-->
+<!--                                            <div class="color-indigator-item bg-warning"></div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
                                 <!--end row-->
                                 <div class="d-flex gap-2 mt-3">
                                     <a href="javascript:;" class="btn btn-dark btn-ecomm"> <i
