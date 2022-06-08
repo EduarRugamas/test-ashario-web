@@ -8,12 +8,16 @@ const search = instantsearch({
 
 function QuickViewModal (items) {
 
-    $('#QuickViewModalBtn').click( function () {
-        $('#text-modal-product-name').val(items.name);
-        $('#text-modal-product-price').val(items.bucket_price);
-        $('#text-modal-product-description').val(items.description);
-        $('#text-modal-product-objectID').val(items.objectID);
-    });
+    console.log(items.name);
+
+
+
+    // $('#QuickViewModalBtn').click( function () {
+    //     $('#text-modal-product-name').val(items.name);
+    //     $('#text-modal-product-price').val(items.bucket_price);
+    //     $('#text-modal-product-description').val(items.description);
+    //     $('#text-modal-product-objectID').val(items.objectID);
+    // });
     // $('#text-modal-product-name').val(item_hits.name);
 }
 
