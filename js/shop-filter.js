@@ -30,3 +30,5 @@ search.addWidgets([
         })
     ])
 ]);
+
+search.start();
