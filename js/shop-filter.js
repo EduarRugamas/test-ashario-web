@@ -6,7 +6,7 @@ const search = instantsearch({
 });
 
 search.addWidgets([
-    instantsearch.widgets.index({indexName: 'menu-products-demo', indexId: '4434'}).addWidgets([
+    instantsearch.widgets.index({indexName: 'menu-products-demo'}).addWidgets([
         instantsearch.widgets.hits({
             container: '#container-hits',
             templates: {
