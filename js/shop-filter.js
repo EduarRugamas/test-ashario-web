@@ -58,7 +58,7 @@ const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 search.addWidgets([
 
     instantsearch.widgets.index({indexName: 'menu-products-demo', indexId: '4434'}).addWidgets([
-        CustomHits({})
+        CustomHits({container: document.querySelector('#container-hits')})
     ]),
     instantsearch.widgets.index({ indexName: 'menu-products-demo', indexId: '4435' }).addWidgets([
         instantsearch.widgets.hits({
