@@ -6,6 +6,11 @@ const search = instantsearch({
 });
 
 search.addWidgets([
+
+    instantsearch.widgets.hits({
+        container: '#container-hits-demo'
+    }),
+
     instantsearch.widgets.index({indexName: 'menu-products-demo'}).addWidgets([
         instantsearch.widgets.hits({
             container: '#container-hits',
