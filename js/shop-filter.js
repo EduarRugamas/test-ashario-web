@@ -19,6 +19,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
                         <a href="javascript:;">
                             <p class="product-catergory font-13 mb-1">${item.brand}</p>
                             <p class="product-catergory font-13 mb-1">${item.brand_subtype}</p>
+                            <p class="product-catergory font-13 mb-1">${item.objectID}</p>
                         </a>
                         <a href="javascript:;">
                             <h6 class="product-name mb-2">${instantsearch.highlight({ attribute: 'name', hit: item })}</h6>
