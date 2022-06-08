@@ -15,40 +15,40 @@ index.search(objectID).then( ({hits}) => {
                     <button type="button" class="btn-close float-end" data-bs-dismiss="modal"></button>
                     <div class="row g-0">
                         <div class="col-12 col-lg-6">
-                            <div class="image-zoom-section">
-                                <div class="product-gallery owl-carousel owl-theme border mb-3 p-3" data-slider-id="1">
-                                    <div class="item">
-                                        <img src="../assets/images/product-gallery/01.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="../assets/images/product-gallery/02.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="../assets/images/product-gallery/03.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="../assets/images/product-gallery/04.png" class="img-fluid" alt="">
-                                    </div>
-                                </div>
-                                <div class="owl-thumbs d-flex justify-content-center" data-slider-id="1">
-                                    <button class="owl-thumb-item">
-                                        <img src="../assets/images/product-gallery/01.png" class="" alt="">
-                                    </button>
-                                    <button class="owl-thumb-item">
-                                        <img src="../assets/images/product-gallery/02.png" class="" alt="">
-                                    </button>
-                                    <button class="owl-thumb-item">
-                                        <img src="../assets/images/product-gallery/03.png" class="" alt="">
-                                    </button>
-                                    <button class="owl-thumb-item">
-                                        <img src="../assets/images/product-gallery/04.png" class="" alt="">
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+<!--                            <div class="image-zoom-section">-->
+<!--                                <div class="product-gallery owl-carousel owl-theme border mb-3 p-3" data-slider-id="1">-->
+<!--                                    <div class="item">-->
+<!--                                        <img src="../assets/images/product-gallery/01.png" class="img-fluid" alt="">-->
+<!--                                    </div>-->
+<!--                                    <div class="item">-->
+<!--                                        <img src="../assets/images/product-gallery/02.png" class="img-fluid" alt="">-->
+<!--                                    </div>-->
+<!--                                    <div class="item">-->
+<!--                                        <img src="../assets/images/product-gallery/03.png" class="img-fluid" alt="">-->
+<!--                                    </div>-->
+<!--                                    <div class="item">-->
+<!--                                        <img src="../assets/images/product-gallery/04.png" class="img-fluid" alt="">-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="owl-thumbs d-flex justify-content-center" data-slider-id="1">-->
+<!--                                    <button class="owl-thumb-item">-->
+<!--                                        <img src="../assets/images/product-gallery/01.png" class="" alt="">-->
+<!--                                    </button>-->
+<!--                                    <button class="owl-thumb-item">-->
+<!--                                        <img src="../assets/images/product-gallery/02.png" class="" alt="">-->
+<!--                                    </button>-->
+<!--                                    <button class="owl-thumb-item">-->
+<!--                                        <img src="../assets/images/product-gallery/03.png" class="" alt="">-->
+<!--                                    </button>-->
+<!--                                    <button class="owl-thumb-item">-->
+<!--                                        <img src="../assets/images/product-gallery/04.png" class="" alt="">-->
+<!--                                    </button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                         <div class="col-12 col-lg-6">
                             <div class="product-info-section p-3">
-                                <h3 class="mt-3 mt-lg-0 mb-0">${hits[0].name}</h3>
+                                <h3 class="mt-3 mt-lg-0 mb-0">${hits.name}</h3>
 <!--                                <div class="product-rating d-flex align-items-center mt-2">-->
 <!--                                    <div class="rates cursor-pointer font-13"><i class="bx bxs-star text-warning"></i>-->
 <!--                                        <i class="bx bxs-star text-warning"></i>-->
@@ -107,10 +107,12 @@ index.search(objectID).then( ({hits}) => {
 <!--                                </div>-->
                                 <!--end row-->
                                 <div class="d-flex gap-2 mt-3">
-                                    <a href="javascript:;" class="btn btn-dark btn-ecomm"> <i
-                                            class="bx bxs-cart-add"></i>Add to Cart</a> <a href="javascript:;"
-                                                                                           class="btn btn-light btn-ecomm"><i
-                                        class="bx bx-heart"></i>Add to Wishlist</a>
+                                    <a href="javascript:;" class="btn btn-dark btn-ecomm"> 
+                                    <i class="bx bxs-cart-add"></i> Add to Cart
+                                    </a> 
+                                    <a href="javascript:;" class="btn btn-light btn-ecomm">
+                                    <i class="bx bx-heart"></i> Add to Wishlist
+                                    </a>
                                 </div>
                             </div>
                         </div>
