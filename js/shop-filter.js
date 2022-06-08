@@ -2,7 +2,8 @@ import { searchClient } from '../config/config.js';
 
 const search = instantsearch({
     indexName: 'menu-products-demo',
-    searchClient
+    searchClient,
+    routing: true
 });
 
 const HitsRender = (renderOptions, isFirstRender) => {
