@@ -55,7 +55,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
                         </div>
                         <div class="product-action mt-2">
                             <div class="d-grid gap-2">
-                                <a href="product-details.html?objectID=${item.objectID}" ${sendEvent('click', item, 'search Result clicked')} class="btn btn-dark btn-ecomm">Product Details</a>
+                                <a href="product-details.html?objectID=${item.objectID}" ${sendEvent('click', hits, 'search Result clicked')} class="btn btn-dark btn-ecomm">Product Details</a>
                                 <a href="" class="btn btn-light btn-ecomm" data-bs-toggle="modal" data-bs-target="#QuickViewProduct" id="QuickViewModalBtn" onclick="QuickViewModal(item)"><i class="bx bx-zoom-in"></i>Quick View</a>
                             </div>
                         </div>
