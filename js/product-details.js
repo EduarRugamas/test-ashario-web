@@ -9,6 +9,8 @@ const index = client.initIndex(indexName);
 console.log('el objecto id', objectID);
 
 index.search(objectID).then( ( {hits} ) => {
+
+    console.log(hits);
     // usando el hits[0].name etc
     const contenedor = document.getElementById('product-details');
 
