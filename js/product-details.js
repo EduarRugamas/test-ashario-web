@@ -10,7 +10,7 @@ console.log('el objecto id', objectID);
 
 index.search(objectID).then(({hits}) => {
     // usando el hits[0].name etc
-    document.getElementById('product-details').innerHTML = `
+    document.querySelector('#product-details').innerHTML = `
     
     <!--start breadcrumb-->
        <section class="py-3 border-bottom border-top d-none d-md-flex bg-light">
