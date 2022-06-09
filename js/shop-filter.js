@@ -10,26 +10,12 @@ const search = instantsearch({
 
 search.use(
     instantsearch.middlewares.createInsightsMiddleware({
-        insightsClient: aa
+        insightsClient: window.aa
     })
 );
 
 aa('setUserToken', 'user-1')
 
-function QuickViewModal (items) {
-
-    console.log(items.name);
-
-
-
-    // $('#QuickViewModalBtn').click( function () {
-    //     $('#text-modal-product-name').val(items.name);
-    //     $('#text-modal-product-price').val(items.bucket_price);
-    //     $('#text-modal-product-description').val(items.description);
-    //     $('#text-modal-product-objectID').val(items.objectID);
-    // });
-    // $('#text-modal-product-name').val(item_hits.name);
-}
 
 const HitsRender = (renderOptions, isFirstRender) => {
     const { hits, results, sendEvent, widgetParams } = renderOptions;
