@@ -1,14 +1,14 @@
-import {searchClient} from '../config/config.js';
 
 const urlParams = new URLSearchParams(window.location.search);
 const objectID = urlParams.get('objectID');
 
 const indexName = 'menu-products-demo';
-const index = searchClient.initIndex(indexName);
+const client = algoliasearch('VFM4X0N23A', 'd16d4804f78c38777368ea8ced79e56e');
+const index = client.initIndex(indexName);
 
 console.log('el objecto id', objectID);
 
-index.search(objectID).then(({hits}) => {
+index.search(objectID).then( ( {hits} ) => {
     // usando el hits[0].name etc
     document.querySelector('#product-details').innerHTML = `
     
@@ -150,7 +150,7 @@ index.search(objectID).then(({hits}) => {
             </div>
             </div>
        </section>
-    `
+    `;
 });
 
 
