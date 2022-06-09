@@ -24,7 +24,7 @@ function QuickViewModal (items) {
 const HitsRender = (renderOptions, isFirstRender) => {
     const { hits, results, sendEvent, widgetParams } = renderOptions;
 
-    const url = 'product-details.html?objectID=' + hits.objectID;
+    const url = '' + hits.objectID;
 
     widgetParams.container.innerHTML = `
             ${hits.map( item =>
@@ -56,7 +56,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
                         </div>
                         <div class="product-action mt-2">
                             <div class="d-grid gap-2">
-                                <a href="${url}" class="btn btn-dark btn-ecomm">Product Details</a>
+                                <a href="product-details.html?objectID=${item.objectID}" class="btn btn-dark btn-ecomm">Product Details</a>
                                 <a href="" class="btn btn-light btn-ecomm" data-bs-toggle="modal" data-bs-target="#QuickViewProduct" id="QuickViewModalBtn" onclick="QuickViewModal(item)"><i class="bx bx-zoom-in"></i>Quick View</a>
                             </div>
                         </div>
