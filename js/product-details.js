@@ -16,7 +16,7 @@ index.search(objectID).then( ( {hits} ) => {
        <section class="py-3 border-bottom border-top d-none d-md-flex bg-light">
             <div class="container">
                 <div class="page-breadcrumb d-flex align-items-center">
-                    <h3 class="breadcrumb-title pe-3">${hits.name}</h3>
+                    <h3 class="breadcrumb-title pe-3">${hits[0].name}</h3>
                 </div>
             </div>
        </section>
@@ -61,7 +61,7 @@ index.search(objectID).then( ( {hits} ) => {
                             </div>
                             <div class="col-12 col-lg-7">
                                 <div class="product-info-section p-3">
-                                    <h3 class="mt-3 mt-lg-0 mb-0">${hits.name}</h3>
+                                    <h3 class="mt-3 mt-lg-0 mb-0">${hits[0].name}</h3>
                                     <div class="product-rating d-flex align-items-center mt-2">
                                     <div class="rates cursor-pointer font-13">
                                         <i class="bx bxs-star text-warning"></i>
@@ -76,15 +76,15 @@ index.search(objectID).then( ( {hits} ) => {
                                 </div>
                                 <div class="d-flex align-items-center mt-3 gap-2">
                                     <!-- <h5 class="mb-0 text-decoration-line-through text-light-3">$98.00</h5>-->
-                                    <h4 class="mb-0">\$ ${hits.bucket_price}</h4>
+                                    <h4 class="mb-0">\$ ${hits[0].bucket_price}</h4>
                                 </div>
                                 <div class="mt-3">
                                     <h6>Discription :</h6>
-                                    <p class="mb-0">${hits.description}</p>
+                                    <p class="mb-0">${hits[0].description}</p>
                                 </div>
                                 <dl class="row mt-3">
                                     <dt class="col-sm-3">Product id</dt>
-                                    <dd class="col-sm-9"># ${hits.product_id}</dd>
+                                    <dd class="col-sm-9"># ${hits[0].product_id}</dd>
                                     <dt class="col-sm-3">Delivery</dt>
                                     <dd class="col-sm-9">Russia, USA, and Europe</dd>
                                 </dl>
