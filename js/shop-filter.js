@@ -1,5 +1,5 @@
 import { searchClient } from '../config/config.js';
-import aa from 'search-insights';
+
 
 const search = instantsearch({
     indexName: 'menu-products-demo',
