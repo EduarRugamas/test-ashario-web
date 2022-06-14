@@ -1,6 +1,6 @@
 import { searchClient } from '../config/config.js';
 const urlParams = new URLSearchParams(window.location.search);
-// const product_id = urlParams.get('product_id');
+const product_id = urlParams.get('product_id');
 const objectId = urlParams.get('objectID');
 const indexName = 'menu-products-demo';
 const client = algoliasearch('VFM4X0N23A', 'd16d4804f78c38777368ea8ced79e56e');
@@ -8,17 +8,11 @@ const index = client.initIndex(indexName);
 
 console.log('el objecto id', objectId);
 
-// index.search('query', {
-//     filters: `product_id:${product_id}`
-// }).then( ({hits} )=> {
-//     console.log(hits);
-// });
-
-index.getObject(objectId).then( object => {
-    console.log(object)
+index.search('store_id', {
+    filters: `objectID:${objectId}`
+}).then( ({hits} )=> {
+    console.log(hits);
 });
-
-
 
 // index.search('query', {  }).then( ( {hits} ) => {
 //
