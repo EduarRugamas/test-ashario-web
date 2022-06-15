@@ -35,18 +35,26 @@ index.search('', {
                             <div class="col-12 col-lg-5">
                                 <div class="image-zoom-section">
                                     <div class="product-gallery owl-carousel owl-theme border mb-3 p-3" data-slider-id="1">
-                                        <div class="item">
-                                            <img src="${hits[0].image_urls}" class="img-fluid" alt="">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-item active" style=" width: 431px; margin-right: 10px; ">
+                                                <div class="item"> 
+                                                    <img src="${hits[0].image_urls}" alt="" class="img-fluid">
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="item">
-                                             <img src="../assets/images/product-gallery/02.png" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../assets/images/product-gallery/03.png" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="../assets/images/product-gallery/04.png" class="img-fluid" alt="">
-                                        </div>
+<!--                                    -->
+<!--                                        <div class="item">-->
+<!--                                            <img src="" class="img-fluid" alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="item">-->
+<!--                                             <img src="../assets/images/product-gallery/02.png" class="img-fluid" alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="item">-->
+<!--                                            <img src="../assets/images/product-gallery/03.png" class="img-fluid" alt="">-->
+<!--                                        </div>-->
+<!--                                        <div class="item">-->
+<!--                                            <img src="../assets/images/product-gallery/04.png" class="img-fluid" alt="">-->
+<!--                                        </div>-->
                                     </div>
                                     <div class="owl-thumbs d-flex justify-content-center" data-slider-id="1">
                                         <button class="owl-thumb-item">
