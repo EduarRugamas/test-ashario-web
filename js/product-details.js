@@ -1,10 +1,10 @@
-import { searchClient } from '../config/config.js';
+import {searchClient} from '../config/config.js';
 const urlParams = new URLSearchParams(window.location.search);
-const product_id = urlParams.get('product_id');
+
 const objectId = urlParams.get('objectID');
 const indexName = 'menu-products-demo';
-const client = algoliasearch('VFM4X0N23A', 'd16d4804f78c38777368ea8ced79e56e');
-const index = client.initIndex(indexName);
+// const client = algoliasearch('VFM4X0N23A', 'd16d4804f78c38777368ea8ced79e56e');
+const index = searchClient.initIndex(indexName);
 
 console.log('el objecto id', objectId);
 
