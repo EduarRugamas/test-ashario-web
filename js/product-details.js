@@ -136,25 +136,25 @@ index.search('', {
                                 <a href="javascript:;" class="btn btn-white btn-ecomm"><i class="bx bxs-cart-add"></i>Add to Cart</a> <a href="javascript:;" class="btn btn-light btn-ecomm"><i class="bx bx-heart"></i>Add to Wishlist</a>
                             </div>
                             <hr/>
-                            <div class="product-sharing">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <a href="javascript:;"><i class='bx bxl-facebook'></i></a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="javascript:;"><i class='bx bxl-linkedin'></i></a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="javascript:;"><i class='bx bxl-twitter'></i></a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="javascript:;"><i class='bx bxl-instagram'></i></a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="javascript:;"><i class='bx bxl-google'></i></a>
-                                    </li>
-                                </ul>
-                            </div>
+<!--                            <div class="product-sharing">-->
+<!--                                <ul class="list-inline">-->
+<!--                                    <li class="list-inline-item">-->
+<!--                                        <a href="javascript:;"><i class='bx bxl-facebook'></i></a>-->
+<!--                                    </li>-->
+<!--                                    <li class="list-inline-item">-->
+<!--                                        <a href="javascript:;"><i class='bx bxl-linkedin'></i></a>-->
+<!--                                    </li>-->
+<!--                                    <li class="list-inline-item">-->
+<!--                                        <a href="javascript:;"><i class='bx bxl-twitter'></i></a>-->
+<!--                                    </li>-->
+<!--                                    <li class="list-inline-item">-->
+<!--                                        <a href="javascript:;"><i class='bx bxl-instagram'></i></a>-->
+<!--                                    </li>-->
+<!--                                    <li class="list-inline-item">-->
+<!--                                        <a href="javascript:;"><i class='bx bxl-google'></i></a>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>
