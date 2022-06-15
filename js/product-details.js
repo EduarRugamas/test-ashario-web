@@ -8,7 +8,7 @@ const index = client.initIndex(indexName);
 
 console.log('el objecto id', objectId);
 
-index.search('store_id', {
+index.search('', {
     filters: `objectID:${objectId}`
 }).then( ({hits} )=> {
     console.log(hits);
