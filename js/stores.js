@@ -58,16 +58,7 @@ const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 // widgets de menu o una lista con items
 const RenderMenu = (renderOptions, isFirstRender) => {
 
-    const { items,
-        canRefine,
-        refine,
-        sendEvent,
-        createUrl,
-        isShowingMore,
-        canTogglesShowMore,
-        toggleShowMore,
-        widgetParams
-        } = renderOptions;
+    const { items, canRefine, refine, sendEvent, createUrl, isShowingMore, canTogglesShowMore, toggleShowMore, widgetParams } = renderOptions;
 
     widgetParams.container.innerHTML = `
         ${items.map( item =>
