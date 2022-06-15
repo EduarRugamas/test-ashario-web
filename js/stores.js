@@ -55,25 +55,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
 };
 const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 
-// widgets de menu o una lista con items
-const RenderMenu = (renderOptions, isFirstRender) => {
 
-    const { items, canRefine, refine, sendEvent, createUrl, isShowingMore, canTogglesShowMore, toggleShowMore, widgetParams } = renderOptions;
-
-    widgetParams.container.innerHTML = `
-        ${items.map( item =>
-        `
-        <li>
-            <a href="${createUrl(item.value)}"> ${item.label} 
-                <span class="float-end badge rounded-pill bg-primary">${item.count}</span>
-            </a>
-        </li>   
-        `).join('')}
-    `;
-
-};
-
-const CustomMenu = instantsearch.connectors.connectMenu(RenderMenu);
 
 //   fin de widgets custom o personalizados
 
@@ -98,6 +80,16 @@ search.addWidgets([
             `
             }
         }),
+
+        instantsearch.widgets.rangeSlider({
+            container: '#container-slider-thc',
+            attribute: 'percent_thc',
+            min: 0,
+            cssClasses: {
+                lowerHandle: 'font-weight-bold'
+            }
+        }),
+
         CustomHits({container: document.querySelector('#container-hits')})
     ])
 
