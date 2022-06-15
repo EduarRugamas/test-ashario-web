@@ -85,9 +85,9 @@ search.addWidgets([
             container: '#container-slider-thc',
             attribute: 'percent_thc',
             min: 0,
-            cssClasses: {
-                lowerHandle: 'font-weight-bold'
-            }
+            // cssClasses: {
+            //     lowerHandle: 'font-weight-bold'
+            // }
         }),
 
         CustomHits({container: document.querySelector('#container-hits')})
