@@ -95,7 +95,7 @@ search.addWidgets([
     instantsearch.widgets.index({indexName: 'menu-products-demo'}).addWidgets([
         CustomMenu({container: document.querySelector('#container-menu')}),
 
-        CustomHits({container: document.querySelector('#container-hits')})
+        // CustomHits({container: document.querySelector('#container-hits')})
     ])
 
 
