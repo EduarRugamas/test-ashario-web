@@ -36,7 +36,7 @@ index.search('', {
                                 <div class="image-zoom-section">
                                     <div class="product-gallery owl-carousel owl-theme border mb-3 p-3" data-slider-id="1">
                                         <div class="item">
-                                            <img src="../assets/images/product-gallery/01.png" class="img-fluid" alt="">
+                                            <img src="${hits[0].image_urls}" class="img-fluid" alt="">
                                         </div>
                                         <div class="item">
                                              <img src="../assets/images/product-gallery/02.png" class="img-fluid" alt="">
