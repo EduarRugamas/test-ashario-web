@@ -93,9 +93,8 @@ const CustomMenu = instantsearch.connectors.connectMenu(RenderMenu);
 search.addWidgets([
 
     instantsearch.widgets.index({indexName: 'menu-products-demo'}).addWidgets([
-        CustomMenu({container: document.querySelector('#container-menu')}),
-
-        // CustomHits({container: document.querySelector('#container-hits')})
+        CustomMenu({container: document.querySelector('#container-menu'), attribute: 'category'}),
+        CustomHits({container: document.querySelector('#container-hits')})
     ])
 
 
