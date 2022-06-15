@@ -84,7 +84,20 @@ const CustomMenu = instantsearch.connectors.connectMenu(RenderMenu);
 search.addWidgets([
 
     instantsearch.widgets.index({indexName: 'menu-products-demo'}).addWidgets([
-        CustomMenu({container: document.querySelector('#container-menu'), attribute: 'category'}),
+        instantsearch.widgets.menu({
+            container: '#container-menu',
+            attribute: 'category',
+            templates: {
+                item: `
+            <li>
+            <a href="{{url}}">
+                {{label}} 
+                <span class="float-end badge rounded-pill bg-primary">{{count}}</span>
+            </a>
+            </li>
+            `
+            }
+        }),
         CustomHits({container: document.querySelector('#container-hits')})
     ])
 
