@@ -42,32 +42,31 @@ index.search('', {
                                                 </div>
                                             </div>
                                         </div>
-<!--                                    -->
-<!--                                        <div class="item">-->
-<!--                                            <img src="" class="img-fluid" alt="">-->
-<!--                                        </div>-->
-<!--                                        <div class="item">-->
-<!--                                             <img src="../assets/images/product-gallery/02.png" class="img-fluid" alt="">-->
-<!--                                        </div>-->
-<!--                                        <div class="item">-->
-<!--                                            <img src="../assets/images/product-gallery/03.png" class="img-fluid" alt="">-->
-<!--                                        </div>-->
-<!--                                        <div class="item">-->
-<!--                                            <img src="../assets/images/product-gallery/04.png" class="img-fluid" alt="">-->
-<!--                                        </div>-->
+                                        <div class="item">
+                                            <img src="${hits[0].image_urls}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="item">
+                                             <img src="${hits[0].image_urls}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="item">
+                                            <img src="${hits[0].image_urls}" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="item">
+                                            <img src="${hits[0].image_urls}" class="img-fluid" alt="">
+                                        </div>
                                     </div>
                                     <div class="owl-thumbs d-flex justify-content-center" data-slider-id="1">
                                         <button class="owl-thumb-item">
-                                            <img src="../assets/images/product-gallery/01.png" class="" alt="">
+                                            <img src="${hits[0].image_urls}" class="" alt="">
                                         </button>
                                         <button class="owl-thumb-item">
-                                            <img src="../assets/images/product-gallery/02.png" class="" alt="">
+                                            <img src="${hits[0].image_urls}" class="" alt="">
                                         </button>
                                         <button class="owl-thumb-item">
-                                            <img src="../assets/images/product-gallery/03.png" class="" alt="">
+                                            <img src="${hits[0].image_urls}" class="" alt="">
                                         </button>
                                         <button class="owl-thumb-item">
-                                            <img src="../assets/images/product-gallery/04.png" class="" alt="">
+                                            <img src="${hits[0].image_urls}" class="" alt="">
                                         </button>
                                     </div>
                                 </div>
@@ -98,39 +97,39 @@ index.search('', {
                                 <dl class="row mt-3">
                                     <dt class="col-sm-3">Product id</dt>
                                     <dd class="col-sm-9"># ${hits[0].product_id}</dd>
-                                    <dt class="col-sm-3">Delivery</dt>
-                                    <dd class="col-sm-9">Russia, USA, and Europe</dd>
+<!--                                    <dt class="col-sm-3">Delivery</dt>-->
+<!--                                    <dd class="col-sm-9">Russia, USA, and Europe</dd>-->
                                 </dl>
-                                <div class="row row-cols-auto align-items-center mt-3">
-                                    <div class="col">
-                                        <label class="form-label">Quantity</label>
-                                            <select class="form-select form-select-sm">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                    </div>
-                                    <div class="col">
-                                        <label class="form-label">Size</label>
-                                            <select class="form-select form-select-sm">
-                                                <option>S</option>
-                                                <option>M</option>
-                                                <option>L</option>
-                                                <option>XS</option>
-                                                <option>XL</option>
-                                            </select>
-                                    </div>
-                                    <div class="col">
-                                        <label class="form-label">Colors</label>
-                                            <div class="color-indigators d-flex align-items-center gap-2">
-                                            <div class="color-indigator-item bg-primary"></div>
-                                            <div class="color-indigator-item bg-danger"></div>
-                                            <div class="color-indigator-item bg-success"></div>
-                                            <div class="color-indigator-item bg-warning"></div>
-                                    </div>
-                                </div>
+<!--                                <div class="row row-cols-auto align-items-center mt-3">-->
+<!--                                    <div class="col">-->
+<!--                                        <label class="form-label">Quantity</label>-->
+<!--                                            <select class="form-select form-select-sm">-->
+<!--                                                <option>1</option>-->
+<!--                                                <option>2</option>-->
+<!--                                                <option>3</option>-->
+<!--                                                <option>4</option>-->
+<!--                                                <option>5</option>-->
+<!--                                            </select>-->
+<!--                                    </div>-->
+<!--                                    <div class="col">-->
+<!--                                        <label class="form-label">Size</label>-->
+<!--                                            <select class="form-select form-select-sm">-->
+<!--                                                <option>S</option>-->
+<!--                                                <option>M</option>-->
+<!--                                                <option>L</option>-->
+<!--                                                <option>XS</option>-->
+<!--                                                <option>XL</option>-->
+<!--                                            </select>-->
+<!--                                    </div>-->
+<!--                                    <div class="col">-->
+<!--                                        <label class="form-label">Colors</label>-->
+<!--                                            <div class="color-indigators d-flex align-items-center gap-2">-->
+<!--                                            <div class="color-indigator-item bg-primary"></div>-->
+<!--                                            <div class="color-indigator-item bg-danger"></div>-->
+<!--                                            <div class="color-indigator-item bg-success"></div>-->
+<!--                                            <div class="color-indigator-item bg-warning"></div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
                             </div>
                             <!--end row-->
                             <div class="d-flex gap-2 mt-3">
