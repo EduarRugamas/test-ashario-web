@@ -5,6 +5,9 @@ const search = instantsearch({
     searchClient
 });
 
+//  widgets custom o personalizados
+
+// widgets de hits o mostrar elementos en tarjetas
 const HitsRender = (renderOptions, isFirstRender) => {
     const { hits, results, BindEvent, widgetParams } = renderOptions;
 
@@ -52,9 +55,50 @@ const HitsRender = (renderOptions, isFirstRender) => {
 };
 const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 
+// widgets de menu o una lista con items
+const RenderMenu = (renderOptions, isFirstRender) => {
+
+    const { items,
+        canRefine,
+        refine,
+        sendEvent,
+        createUrl,
+        isShowingMore,
+        canTogglesShowMore,
+        toggleShowMore,
+        widgetParams
+        } = renderOptions;
+
+    widgetParams.container.innerHTML = `
+        ${items.map( item =>
+        `
+        <li>
+            <a href="${createUrl(item.value)}"> ${item.label} 
+                <span class="float-end badge rounded-pill bg-primary">${item.count}</span>
+            </a>
+        </li>   
+        `).join('')}
+    `;
+
+};
+
+const CustomMenu = instantsearch.connectors.connectMenu(RenderMenu);
+
+//   fin de widgets custom o personalizados
+
+
+
+
+
 search.addWidgets([
 
-    CustomHits({container: document.querySelector('#container-hits')})
+    instantsearch.widgets.index({indexName: 'menu-products-demo'}).addWidgets([
+        CustomMenu({container: document.querySelector('#container-menu')}),
+
+        CustomHits({container: document.querySelector('#container-hits')})
+    ])
+
+
 
 ]);
 
@@ -80,4 +124,6 @@ function store_product_4435() {
 
     search.start();
 }
+
+
 
