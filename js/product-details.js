@@ -166,13 +166,12 @@ index.search('', {
 
 });
 
-let select = document.querySelector('#quantity');
-
-console.log(select)
-
-let value = select.options[select.selectedIndex].value();
-
-console.log("la cantidad seleccionada es: => ", value)
+$(document).ready(function () {
+    $('#quantity').each(function () {
+        let select = $(this).find('select').val();
+        alert(select)
+    })
+});
 
 function add_to_cart(productId, priceId, count) {
 
