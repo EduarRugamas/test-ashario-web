@@ -132,7 +132,7 @@ index.search('', {
                             </div>
                             <!--end row-->
                             <div class="d-flex gap-2 mt-3">
-                                <a href="javascript:;" class="btn btn-white btn-ecomm" onclick=""><i class="bx bxs-cart-add"></i>Add to Cart</a> 
+                                <a href="javascript:;" class="btn btn-white btn-ecomm" id="add-to-cart"><i class="bx bxs-cart-add"></i>Add to Cart</a> 
                                 <a href="javascript:;" class="btn btn-light btn-ecomm"><i class="bx bx-heart"></i>Add to Wishlist</a>
                             </div>
                             <hr/>
@@ -166,17 +166,69 @@ index.search('', {
 
 });
 
-$(document).ready(function () {
-    $('#quantity').each(function () {
-        let select = $(this).find('select').val();
-        alert(select)
-    })
-});
+function add_to_cart(productId, priceId) {
 
-function add_to_cart(productId, priceId, count) {
+    $(document).ready(function () {
+        $('#add-to-cart').click( function () {
+            $('#quantity').each( function () {
+                let option = $(this).find('select').val();
+                console.log(option)
 
+                let new_data = data.payload.products.push( { productId: productId, priceId: "eighth_ounce", count: option, } );
+                console.log('agregando la nueva innformacion de un producto ', JSON.stringify(new_data));
+
+            });
+        });
+    });
+
+
+    var data = {
+        messageType: "buildCart",
+        payload: {
+            products: [
+                {
+                    productId: 2089,
+                    priceId: "eighth_ounce",
+                    count: 2,
+                },
+                {
+                    productId: 2030,
+                    priceId: "gram",
+                    count: 1,
+                },
+            ],
+            user: {
+                firstName: "John",   //valores que se reemplazaran por el nombre de la cuenta real
+                lastName: "Smith",
+                birthDate: "1988-04-20",
+                phone: "5556661212",
+                email: "johnsmith@example.com",
+                externalId: "12345",
+            },
+            storeId: 68,
+            headlessPartnerName: "Your Company Name",
+            options: {
+                font: {
+                    fontFamily: "Roboto",
+                    url:
+                        "https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2",
+                },
+                theme: {
+                    themeColor: "#38b1fa",
+                    navigationColor: "#38b1fa",
+                    ctaTextColor: "#ffffff",
+                },
+                redirectUrl: "https://yourwebsite.html",
+                disableAuthFeatures: true,
+                disableLoadingSpinner: false,
+                disableWeightSelection: false,
+                disableMarketingCheckoutAgreements: true
+            },
+        }
+    }
+
+    console.log(JSON.stringify(data.payload.products));
 }
-
 
 
 
