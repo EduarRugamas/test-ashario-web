@@ -16,6 +16,8 @@ index.search('', {
     // usando el hits[0].name etc
     const contenedor = document.getElementById('product-details');
 
+    const product_id = hits[0].product_id;
+
     contenedor.innerHTML=`
        <section class="py-3 border-bottom border-top d-none d-md-flex bg-light">
             <div class="container">
@@ -132,7 +134,7 @@ index.search('', {
                             </div>
                             <!--end row-->
                             <div class="d-flex gap-2 mt-3">
-                                <a href="javascript:;" class="btn btn-white btn-ecomm" id="add-to-cart"><i class="bx bxs-cart-add"></i>Add to Cart</a> 
+                                <a href="javascript:;" class="btn btn-white btn-ecomm"  onclick="javascript:add_to_cart(product_id, )" id="add-to-cart"><i class="bx bxs-cart-add"></i>Add to Cart</a> 
                                 <a href="javascript:;" class="btn btn-light btn-ecomm"><i class="bx bx-heart"></i>Add to Wishlist</a>
                             </div>
                             <hr/>
@@ -166,7 +168,7 @@ index.search('', {
 
 });
 
-function add_to_cart(productId, priceId) {
+function add_to_cart(productId) {
 
     $(document).ready(function () {
         $('#add-to-cart').click( function () {
