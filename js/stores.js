@@ -60,7 +60,7 @@ const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 
 search.addWidgets([
 
-    instantsearch.widgets.index({indexName: 'menu-products-demo'}).addWidgets([
+    instantsearch.widgets.index({indexName: 'menu-products '}).addWidgets([
         instantsearch.widgets.menu({
             container: '#container-menu',
             attribute: 'category',
