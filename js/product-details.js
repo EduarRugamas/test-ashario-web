@@ -102,12 +102,12 @@ index.search('', {
                                 <div class="row row-cols-auto align-items-center mt-3">
                                     <div class="col">
                                         <label class="form-label">Quantity</label>
-                                            <select class="form-select form-select-sm">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
+                                            <select class="form-select form-select-sm" id="select-quantity">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="5">4</option>
+                                                <option value="6">5</option>
                                             </select>
                                     </div>
 <!--                                    <div class="col">-->
@@ -166,8 +166,11 @@ index.search('', {
 
 });
 
+const cantidad = document.getElementById('select-quantity').value;
+console.log("la cantidad seleccionada es: => ", cantidad)
 
 function add_to_cart(productId, priceId, count) {
+    const quantity = document.getElementById('select-quantity').value;
 
 }
 
