@@ -12,5 +12,6 @@
     <orderEntry type="library" name="algoliasearch" level="application" />
     <orderEntry type="library" name="instantsearch.js" level="application" />
     <orderEntry type="library" name="instantsearch.css" level="application" />
+    <orderEntry type="library" name="embed" level="application" />
   </component>
 </module>

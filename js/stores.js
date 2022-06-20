@@ -55,12 +55,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
 };
 const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 
-
-
 //   fin de widgets custom o personalizados
-
-
-
 
 
 search.addWidgets([
@@ -86,7 +81,7 @@ search.addWidgets([
             attribute: 'percent_thc',
             min: 0,
             // cssClasses: {
-            //     lowerHandle: 'font-weight-bold'
+            //     root: 'font-weight-bold'
             // }
         }),
 
@@ -121,12 +116,12 @@ search.addWidgets([
             ]
         }),
 
-        CustomHits({container: document.querySelector('#container-hits')})
-    ]),
+        CustomHits({container: document.querySelector('#container-hits')}),
 
-    instantsearch.widgets.pagination({
-        container: '#pagination-container',
-    })
+        instantsearch.widgets.pagination({
+            container: '#pagination-container',
+        })
+    ]),
 
 ]);
 
