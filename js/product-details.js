@@ -167,7 +167,7 @@ index.search('', {
 });
 
 let cantidad = document.querySelector('#select-quantity');
-let value = cantidad.option[cantidad.selectedIndex].value;
+let value = cantidad.options[cantidad.selectedIndex].value;
 
 console.log("la cantidad seleccionada es: => ", value)
 
