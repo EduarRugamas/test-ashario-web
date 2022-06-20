@@ -103,7 +103,7 @@ index.search('', {
                                     <div class="col">
                                         <label class="form-label">Quantity</label>
                                             <select class="form-select form-select-sm" id="select-quantity">
-                                                <option value="1">1</option>
+                                                <option value="1" selected>1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
                                                 <option value="5">4</option>
@@ -166,8 +166,10 @@ index.search('', {
 
 });
 
-const cantidad = document.getElementById('select-quantity').value;
-console.log("la cantidad seleccionada es: => ", cantidad)
+let cantidad = document.querySelector('#select-quantity');
+let value = cantidad.option[cantidad.selectedIndex].value;
+
+console.log("la cantidad seleccionada es: => ", value)
 
 function add_to_cart(productId, priceId, count) {
     const quantity = document.getElementById('select-quantity').value;
