@@ -134,7 +134,7 @@ index.search('', {
                             </div>
                             <!--end row-->
                             <div class="d-flex gap-2 mt-3">
-                                <a href="javascript:;" class="btn btn-white btn-ecomm"  onclick="javascript:add_to_cart(product_id, )" id="add-to-cart"><i class="bx bxs-cart-add"></i>Add to Cart</a> 
+                                <a href="javascript:;" class="btn btn-white btn-ecomm"  onclick="javascript:add_to_cart(product_id)" id="add-to-cart"><i class="bx bxs-cart-add"></i>Add to Cart</a> 
                                 <a href="javascript:;" class="btn btn-light btn-ecomm"><i class="bx bx-heart"></i>Add to Wishlist</a>
                             </div>
                             <hr/>
