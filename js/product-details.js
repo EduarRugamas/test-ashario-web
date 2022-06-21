@@ -224,11 +224,19 @@ function add_to_cart(product_id, SelectedOption) {
         }
     }
 
+    console.log('Informacion sin agregar al JSON product: ',JSON.stringify(data));
+
+
     data.payload.products.push( { productId: product_id, priceId: "eighth_ounce", count: SelectedOption, } );
 
-    console.log(JSON.stringify(data));
+    console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
 
-    window.addEventListener("message", receiveMessage, false);
+    console.log("Llego hasta aqui");
+    console.log("informacion del json", data)
+    let frame = document.getElementById('jane-menu');
+    frame.contentWindow.postMessage(data, '*');
+    console.log("Se agrego al carrito");
+
 
     // $('#quantity').each( function () {
     //     let option = $(this).find('select').val();
