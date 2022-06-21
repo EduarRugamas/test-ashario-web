@@ -176,6 +176,11 @@ index.search('', {
         });
     });
 
+    console.log(JSON.stringify(data.payload.products));
+
+});
+
+function add_to_cart(product_id, SelectedOption) {
     var data = {
         messageType: "buildCart",
         payload: {
@@ -221,11 +226,6 @@ index.search('', {
         }
     }
 
-    console.log(JSON.stringify(data.payload.products));
-
-});
-
-function add_to_cart(product_id, SelectedOption) {
 
     let new_data = data.payload.products.push( { productId: product_id, priceId: "eighth_ounce", count: SelectedOption, } );
 
