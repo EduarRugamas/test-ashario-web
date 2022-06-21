@@ -206,7 +206,7 @@ function add_to_cart(product_id, SelectedOption) {
                     navigationColor: "#38b1fa",
                     ctaTextColor: "#ffffff",
                 },
-                redirectUrl: "https://harmonious-mooncake-eb8276.netlify.app",
+                redirectUrl: 'https://iheartjane.com/',
                 disableAuthFeatures: true,
                 disableLoadingSpinner: false,
                 disableWeightSelection: false,
@@ -228,15 +228,6 @@ function add_to_cart(product_id, SelectedOption) {
     frame.contentWindow.postMessage(data, '*');
     console.log("Se agrego al carrito");
 
-
-    // $('#quantity').each( function () {
-    //     let option = $(this).find('select').val();
-    //     console.log(option)
-    //
-    //     let new_data = data.payload.products.push( { productId: product_id, priceId: "eighth_ounce", count: option, } );
-    //     console.log('agregando la nueva innformacion de un producto ', JSON.stringify(new_data));
-    //
-    // });
 }
 
 
