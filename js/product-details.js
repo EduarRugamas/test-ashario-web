@@ -169,10 +169,10 @@ index.search('', {
     $(document).ready(function () {
         $('#add-to-cart').click( function () {
             const product_id = hits[0].product_id;
-            const SelectedOption = document.getElementById('quantity').value;
-            const OptionNumber = parseInt(SelectedOption);
-            console.log(OptionNumber)
-            console.log(` Informacion a enviar: -> ${product_id}, ${OptionNumber} `)
+            const SelectedOption = parseInt(document.getElementById('quantity').value)
+            // const OptionNumber = parseInt(SelectedOption);
+            console.log('opcion seleccionada',SelectedOption)
+            console.log(`Informacion a enviar: -> ${product_id}, ${SelectedOption} `)
 
             add_to_cart(product_id, SelectedOption);
         });
