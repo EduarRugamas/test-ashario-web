@@ -228,6 +228,21 @@ function add_to_cart(product_id, SelectedOption) {
 
     console.log(JSON.stringify(data));
 
+    window.addEventListener("message", receiveMessage, false);
+
+    function receiveMessage(event) {
+        var payload = event.data && event.data.messageType;
+        var messageType = event.data && event.data.messageType;
+
+        if (messageType === "loadingEvent" && payload.name === "headlessAppLoaded"){
+            let frame = document.getElementById('jane-menu')
+            frame.contentWindow.postMessage(data, '*')
+        }
+    }
+
+
+
+
     // $('#quantity').each( function () {
     //     let option = $(this).find('select').val();
     //     console.log(option)
