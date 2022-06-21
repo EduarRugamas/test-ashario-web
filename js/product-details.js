@@ -31,7 +31,7 @@ index.search('', {
                 <div class="product-detail-card">
                     <div class="product-detail-body">
                         <div class="row g-0">
-                            <div class="col-12 col-lg-5">
+<!--                            <div class="col-12 col-lg-5">-->
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
@@ -53,7 +53,7 @@ index.search('', {
                                         <span class="sr-only">Next</span>
                                     </a>
                                 </div>
-                            </div>
+<!--                            </div>-->
                             <div class="col-12 col-lg-7">
                                 <div class="product-info-section p-3">
                                     <h3 class="mt-3 mt-lg-0 mb-0">${hits[0].name}</h3>
@@ -120,25 +120,6 @@ index.search('', {
                                 <a href="javascript:;" class="btn btn-light btn-ecomm"><i class="bx bx-heart"></i>Add to Wishlist</a>
                             </div>
                             <hr/>
-<!--                            <div class="product-sharing">-->
-<!--                                <ul class="list-inline">-->
-<!--                                    <li class="list-inline-item">-->
-<!--                                        <a href="javascript:;"><i class='bx bxl-facebook'></i></a>-->
-<!--                                    </li>-->
-<!--                                    <li class="list-inline-item">-->
-<!--                                        <a href="javascript:;"><i class='bx bxl-linkedin'></i></a>-->
-<!--                                    </li>-->
-<!--                                    <li class="list-inline-item">-->
-<!--                                        <a href="javascript:;"><i class='bx bxl-twitter'></i></a>-->
-<!--                                    </li>-->
-<!--                                    <li class="list-inline-item">-->
-<!--                                        <a href="javascript:;"><i class='bx bxl-instagram'></i></a>-->
-<!--                                    </li>-->
-<!--                                    <li class="list-inline-item">-->
-<!--                                        <a href="javascript:;"><i class='bx bxl-google'></i></a>-->
-<!--                                    </li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -147,6 +128,9 @@ index.search('', {
             </div>
        </section>
     `;
+
+    $()
+
 
     $(document).ready(function () {
         $('#add-to-cart').click( function () {
