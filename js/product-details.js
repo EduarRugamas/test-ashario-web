@@ -203,7 +203,7 @@ function add_to_cart(product_id, SelectedOption) {
                 externalId: "12345",
             },
             storeId: 68,
-            headlessPartnerName: "Your Company Name",
+            headlessPartnerName: "Ashario Company",
             options: {
                 font: {
                     fontFamily: "Roboto",
