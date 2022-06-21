@@ -16,8 +16,6 @@ index.search('', {
     // usando el hits[0].name etc
     const contenedor = document.getElementById('product-details');
 
-
-
     contenedor.innerHTML=`
        <section class="py-3 border-bottom border-top d-none d-md-flex bg-light">
             <div class="container">
@@ -37,13 +35,13 @@ index.search('', {
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img class="d-block w-100" src="${hits[0].image_urls}" alt="First slide">
+                                            <img class="d-block w-100" src="${hits[0].image_urls[0]}" alt="First slide">
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block w-100" src="..." alt="Second slide">
+                                            <img class="d-block w-100" src="${hits[0].image_urls[1]}" alt="Second slide">
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block w-100" src="..." alt="Third slide">
+                                            <img class="d-block w-100" src="${hits[0].image_urls[2]}" alt="Third slide">
                                         </div>
                                     </div>
                                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
