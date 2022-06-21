@@ -1,7 +1,7 @@
 import {searchClient} from '../config/config.js';
 
 const search = instantsearch({
-    indexName: 'menu-products',
+    indexName: 'menu-products-demo',
     searchClient
 });
 
@@ -60,7 +60,7 @@ const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 
 search.addWidgets([
 
-    instantsearch.widgets.index({indexName: 'menu-products'}).addWidgets([
+    instantsearch.widgets.index({indexName: 'menu-products-demo'}).addWidgets([
         instantsearch.widgets.menu({
             container: '#container-menu',
             attribute: 'category',
