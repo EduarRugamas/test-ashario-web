@@ -199,7 +199,7 @@ function add_to_cart(product_id, SelectedOption) {
                 lastName: "Smith",
                 birthDate: "1988-04-20",
                 phone: "5556661212",
-                email: "johnsmith@example.com",
+                email: "johnsmith@gmail.com",
                 externalId: "12345",
             },
             storeId: 68,
@@ -215,7 +215,7 @@ function add_to_cart(product_id, SelectedOption) {
                     navigationColor: "#38b1fa",
                     ctaTextColor: "#ffffff",
                 },
-                redirectUrl: "https://harmonious-mooncake-eb8276.netlify.app/views/shop-grid-left-sidebar.html",
+                redirectUrl: "https://harmonious-mooncake-eb8276.netlify.app/",
                 disableAuthFeatures: true,
                 disableLoadingSpinner: false,
                 disableWeightSelection: false,
@@ -235,8 +235,10 @@ function add_to_cart(product_id, SelectedOption) {
         var messageType = event.data && event.data.messageType;
 
         if (messageType === "loadingEvent" && payload.name === "headlessAppLoaded"){
-            let frame = document.getElementById('jane-menu')
-            frame.contentWindow.postMessage(data, '*')
+            console.log("Llego hasta aqui")
+            let frame = document.getElementById('jane-menu');
+            frame.contentWindow.postMessage(data, '*');
+            console.log("Se agrego al carrito");
         }
     }
 
