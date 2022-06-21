@@ -2,7 +2,7 @@ import {searchClient} from '../config/config.js';
 const urlParams = new URLSearchParams(window.location.search);
 
 const objectId = urlParams.get('objectID');
-const indexName = 'menu-products-demo';
+const indexName = 'menu-products-production';
 const index = searchClient.initIndex(indexName);
 
 console.log('el objecto id', objectId);
@@ -33,7 +33,7 @@ index.search('', {
                         <div class="row g-0">
                             <div class="col-12 col-lg-5">
                                 <div id="carousel-images" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
+                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
                                             <img class="d-block w-100" src="${hits[0].image_urls[0]}" alt="First slide">
                                         </div>

@@ -1,7 +1,7 @@
 import {searchClient} from '../config/config.js';
 
 const search = instantsearch({
-    indexName: 'menu-products-demo',
+    indexName: 'menu-products-production',
     searchClient
 });
 
@@ -60,7 +60,7 @@ const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 
 search.addWidgets([
 
-    instantsearch.widgets.index({indexName: 'menu-products-demo', indexId: '4434'}).addWidgets([
+    instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4434'}).addWidgets([
         instantsearch.widgets.menu({
             container: '#container-menu',
             attribute: 'category',
@@ -130,7 +130,7 @@ search.start();
 
 function store_product_4434() {
     search.addWidgets([
-        instantsearch.widgets.index({indexName: 'menu-products-demo', indexId: '4434'}).addWidgets([
+        instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4434'}).addWidgets([
             CustomHits({ container: document.querySelector('') })
         ])
     ]);
@@ -140,7 +140,7 @@ function store_product_4434() {
 
 function store_product_4435() {
     search.addWidgets([
-        instantsearch.widgets.index({indexName: 'menu-products-demo', indexId: '4435'}).addWidgets([
+        instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4435'}).addWidgets([
             CustomHits({ container: document.querySelector('') })
         ])
     ]);
