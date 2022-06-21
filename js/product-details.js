@@ -34,42 +34,26 @@ index.search('', {
                     <div class="product-detail-body">
                         <div class="row g-0">
                             <div class="col-12 col-lg-5">
-                                <div class="image-zoom-section">
-                                    <div class="product-gallery owl-carousel owl-theme border mb-3 p-3" data-slider-id="1">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-item active" style=" width: 431px; margin-right: 10px; ">
-                                                <div class="item"> 
-                                                    <img src="${hits[0].image_urls}" alt="" class="img-fluid">
-                                                </div>
-                                            </div>
+                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="..." alt="First slide">
                                         </div>
-                                        <div class="item">
-                                            <img src="${hits[0].image_urls}" class="img-fluid" alt="">
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="..." alt="Second slide">
                                         </div>
-                                        <div class="item">
-                                             <img src="${hits[0].image_urls}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="${hits[0].image_urls}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="item">
-                                            <img src="${hits[0].image_urls}" class="img-fluid" alt="">
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="..." alt="Third slide">
                                         </div>
                                     </div>
-                                    <div class="owl-thumbs d-flex justify-content-center" data-slider-id="1">
-                                        <button class="owl-thumb-item">
-                                            <img src="${hits[0].image_urls}" class="" alt="">
-                                        </button>
-                                        <button class="owl-thumb-item">
-                                            <img src="${hits[0].image_urls}" class="" alt="">
-                                        </button>
-                                        <button class="owl-thumb-item">
-                                            <img src="${hits[0].image_urls}" class="" alt="">
-                                        </button>
-                                        <button class="owl-thumb-item">
-                                            <img src="${hits[0].image_urls}" class="" alt="">
-                                        </button>
-                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-7">
