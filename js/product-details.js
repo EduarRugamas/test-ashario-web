@@ -31,8 +31,8 @@ index.search('', {
                 <div class="product-detail-card">
                     <div class="product-detail-body">
                         <div class="row g-0">
-<!--                            <div class="col-12 col-lg-5">-->
-                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="col-12 col-lg-5">
+                                <div id="carousel-images" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
                                             <img class="d-block w-100" src="${hits[0].image_urls[0]}" alt="First slide">
@@ -44,16 +44,16 @@ index.search('', {
                                             <img class="d-block w-100" src="${hits[0].image_urls[2]}" alt="Third slide">
                                         </div>
                                     </div>
-                                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <a class="carousel-control-prev" href="#carousel-images" role="button" data-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span class="sr-only">Previous</span>
                                     </a>
-                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <a class="carousel-control-next" href="#carousel-images" role="button" data-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span class="sr-only">Next</span>
                                     </a>
                                 </div>
-<!--                            </div>-->
+                            </div>
                             <div class="col-12 col-lg-7">
                                 <div class="product-info-section p-3">
                                     <h3 class="mt-3 mt-lg-0 mb-0">${hits[0].name}</h3>
