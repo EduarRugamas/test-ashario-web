@@ -16,7 +16,7 @@ index.search('', {
     // usando el hits[0].name etc
     const contenedor = document.getElementById('product-details');
 
-    const product_id = hits[0].product_id;
+
 
     contenedor.innerHTML=`
        <section class="py-3 border-bottom border-top d-none d-md-flex bg-light">
@@ -168,7 +168,11 @@ index.search('', {
 
     $(document).ready(function () {
         $('#add-to-cart').click( function () {
-            add_to_cart();
+            const product_id = hits[0].product_id;
+            const SelectedOption = document.getElementById('quantity').value;
+            console.log(` Informacion a enviar: -> ${product_id}, ${SelectedOption} `)
+
+            add_to_cart(product_id, SelectedOption);
         });
     });
 
@@ -221,11 +225,11 @@ index.search('', {
 
 });
 
-function add_to_cart() {
+function add_to_cart(product_id, SelectedOption) {
 
-    let opcion = document.getElementById("quantity").value;
+    let new_data = data.payload.products.push( { productId: product_id, priceId: "eighth_ounce", count: SelectedOption, } );
 
-    console.log(opcion);
+    console.log(new_data);
 
     // $('#quantity').each( function () {
     //     let option = $(this).find('select').val();
