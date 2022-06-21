@@ -215,7 +215,7 @@ function add_to_cart(product_id, SelectedOption) {
                     navigationColor: "#38b1fa",
                     ctaTextColor: "#ffffff",
                 },
-                redirectUrl: "https://yourwebsite.html",
+                redirectUrl: "https://harmonious-mooncake-eb8276.netlify.app/views/shop-grid-left-sidebar.html",
                 disableAuthFeatures: true,
                 disableLoadingSpinner: false,
                 disableWeightSelection: false,
