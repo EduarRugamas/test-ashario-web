@@ -168,14 +168,7 @@ index.search('', {
 
     $(document).ready(function () {
         $('#add-to-cart').click( function () {
-            $('#quantity').each( function () {
-                let option = $(this).find('select').val();
-                console.log(option)
-
-                let new_data = data.payload.products.push( { productId: product_id, priceId: "eighth_ounce", count: option, } );
-                console.log('agregando la nueva innformacion de un producto ', JSON.stringify(new_data));
-
-            });
+            add_to_cart();
         });
     });
 
@@ -227,6 +220,22 @@ index.search('', {
     console.log(JSON.stringify(data.payload.products));
 
 });
+
+function add_to_cart() {
+
+    let opcion = document.getElementById("quantity").value;
+
+    console.log(opcion);
+
+    // $('#quantity').each( function () {
+    //     let option = $(this).find('select').val();
+    //     console.log(option)
+    //
+    //     let new_data = data.payload.products.push( { productId: product_id, priceId: "eighth_ounce", count: option, } );
+    //     console.log('agregando la nueva innformacion de un producto ', JSON.stringify(new_data));
+    //
+    // });
+}
 
 
 
