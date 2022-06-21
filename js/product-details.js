@@ -170,7 +170,9 @@ index.search('', {
         $('#add-to-cart').click( function () {
             const product_id = hits[0].product_id;
             const SelectedOption = document.getElementById('quantity').value;
-            console.log(` Informacion a enviar: -> ${product_id}, ${SelectedOption} `)
+            const OptionNumber = parseInt(SelectedOption);
+            console.log(OptionNumber)
+            console.log(` Informacion a enviar: -> ${product_id}, ${OptionNumber} `)
 
             add_to_cart(product_id, SelectedOption);
         });
@@ -182,18 +184,7 @@ function add_to_cart(product_id, SelectedOption) {
     var data = {
         messageType: "buildCart",
         payload: {
-            products: [
-                {
-                    productId: 2089,
-                    priceId: "eighth_ounce",
-                    count: 2,
-                },
-                {
-                    productId: 2030,
-                    priceId: "gram",
-                    count: 1,
-                },
-            ],
+            products: [],
             user: {
                 firstName: "John",   //valores que se reemplazaran por el nombre de la cuenta real
                 lastName: "Smith",
@@ -202,7 +193,7 @@ function add_to_cart(product_id, SelectedOption) {
                 email: "johnsmith@gmail.com",
                 externalId: "12345",
             },
-            storeId: 68,
+            storeId: 4434,
             headlessPartnerName: "Ashario Company",
             options: {
                 font: {
@@ -215,7 +206,7 @@ function add_to_cart(product_id, SelectedOption) {
                     navigationColor: "#38b1fa",
                     ctaTextColor: "#ffffff",
                 },
-                redirectUrl: "https://harmonious-mooncake-eb8276.netlify.app/",
+                redirectUrl: "https://harmonious-mooncake-eb8276.netlify.app",
                 disableAuthFeatures: true,
                 disableLoadingSpinner: false,
                 disableWeightSelection: false,
