@@ -230,21 +230,6 @@ function add_to_cart(product_id, SelectedOption) {
 
     window.addEventListener("message", receiveMessage, false);
 
-    function receiveMessage(event) {
-        var payload = event.data && event.data.messageType;
-        var messageType = event.data && event.data.messageType;
-
-        if (messageType === "loadingEvent" && payload.name === "headlessAppLoaded"){
-            console.log("Llego hasta aqui")
-            let frame = document.getElementById('jane-menu');
-            frame.contentWindow.postMessage(data, '*');
-            console.log("Se agrego al carrito");
-        }
-    }
-
-
-
-
     // $('#quantity').each( function () {
     //     let option = $(this).find('select').val();
     //     console.log(option)
@@ -253,6 +238,20 @@ function add_to_cart(product_id, SelectedOption) {
     //     console.log('agregando la nueva innformacion de un producto ', JSON.stringify(new_data));
     //
     // });
+}
+
+
+function receiveMessage(event) {
+    let payload = event.data && event.data.messageType;
+    let messageType = event.data && event.data.messageType;
+
+    if (messageType === "loadingEvent" && payload.name === "headlessAppLoaded"){
+        console.log("Llego hasta aqui");
+        console.log("informacion del json",event.data)
+        let frame = document.getElementById('jane-menu');
+        frame.contentWindow.postMessage(event.data, '*');
+        console.log("Se agrego al carrito");
+    }
 }
 
 
