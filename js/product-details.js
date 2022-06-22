@@ -16,6 +16,47 @@ index.search('', {
     // usando el hits[0].name etc
     const contenedor = document.getElementById('product-details');
 
+
+    window.onload = function () {
+        const images = hits[0].image_urls;
+
+        const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;
+        let posicionActual = 0;
+        let container_imagen = document.querySelector('#imagen');
+        let intervalo;
+
+        function nextPhoto () {
+            if (posicionActual >= images.length - 1){
+                posicionActual = 0;
+            }else {
+                posicionActual ++;
+            }
+            renderizarImagen();
+        }
+
+        function backPhoto() {
+            if (posicionActual <= 0) {
+                posicionActual = images.length - 1;
+            }else {
+                posicionActual--;
+            }
+            renderizarImagen();
+        }
+
+
+        function renderizarImagen () {
+
+            if (images.length < 0 ){
+                container_imagen.style.backgroundImage = `url(../assets/images/errors-images/image-not-found.jpeg)`
+            }else {
+                container_imagen.style.backgroundImage = `url(${images[posicionActual]})`
+            }
+        }
+
+        renderizarImagen();
+
+    }
+
     contenedor.innerHTML=`
        <section class="py-3 border-bottom border-top d-none d-md-flex bg-light">
             <div class="container">
@@ -32,26 +73,8 @@ index.search('', {
                     <div class="product-detail-body">
                         <div class="row g-0">
                             <div class="col-12 col-lg-5">
-                                <div id="carousel-images" class="carousel slide" data-ride="carousel">
-                                     <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" src="${hits[0].image_urls[0]}" alt="First slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="${hits[0].image_urls[1]}" alt="Second slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src="${hits[0].image_urls[2]}" alt="Third slide">
-                                        </div>
-                                    </div>
-                                    <a class="carousel-control-prev" href="#carousel-images" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carousel-images" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
+                                <div class="carousel" style="max-width: 800px; margin: 0 auto; display: flex;">
+                                     <div id="imagen" style="width: 100%; height: 400px; background-size: cover;"></div>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-7">

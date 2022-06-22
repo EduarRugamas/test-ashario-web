@@ -11,7 +11,7 @@ const search = instantsearch({
 const HitsRender = (renderOptions, isFirstRender) => {
     const { hits, results, BindEvent, widgetParams } = renderOptions;
 
-    console.log(hits);
+    console.log('aqui estan los objetos de el hits',hits);
 
     widgetParams.container.innerHTML = `
             ${hits.map( item =>
