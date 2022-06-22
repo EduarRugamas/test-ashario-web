@@ -20,41 +20,6 @@ index.search('', {
     window.onload = function () {
         const images = hits[0].image_urls;
 
-        const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;
-        let posicionActual = 0;
-        let container_imagen = document.querySelector('#imagen');
-        let intervalo;
-
-        function nextPhoto () {
-            if (posicionActual >= images.length - 1){
-                posicionActual = 0;
-            }else {
-                posicionActual ++;
-            }
-            renderizarImagen();
-        }
-
-        function backPhoto() {
-            if (posicionActual <= 0) {
-                posicionActual = images.length - 1;
-            }else {
-                posicionActual--;
-            }
-            renderizarImagen();
-        }
-
-
-        function renderizarImagen () {
-
-            if (images.length < 0 ){
-                container_imagen.style.backgroundImage = `url('../assets/images/errors-images/image-not-found.jpeg')`
-            }else {
-                container_imagen.style.backgroundImage = `url(${images[posicionActual]})`
-            }
-        }
-
-        renderizarImagen();
-
     }
 
     contenedor.innerHTML=`
@@ -73,9 +38,17 @@ index.search('', {
                     <div class="product-detail-body">
                         <div class="row g-0">
                             <div class="col-12 col-lg-5">
-                                <div class="carousel" style="max-width: 800px; margin: 0 auto; display: flex;">
-                                     <div id="imagen" style="width: 100%; height: 100%; background-size: cover;"></div>
-                                </div>
+                                <div class="image-zoom-section">
+                                    <div class="product-gallery owl-carousel owl-theme border mb-3 p-3 owl-loaded owl-drag">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-item" style="width: 506px; margin-right: 10px;">
+                                                <div class="item">
+                                                    <img src="" alt="" class="img-fluid" id="imagen_carusel_1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                
                             </div>
                             <div class="col-12 col-lg-7">
                                 <div class="product-info-section p-3">
