@@ -16,10 +16,11 @@ const HitsRender = (renderOptions, isFirstRender) => {
     widgetParams.container.innerHTML = `
             ${hits.map( item =>
         `
+    <a href="product-details.html?objectID=${item.objectID}">
         <div class="col">
             <div class="card rounded-0 product-card">
                 <img src="${item.image_urls}" class="card-img-top" alt="${item.name}" id="imagen-product">
-                <a href="product-details.html?objectID=${item.objectID}">
+                
                     <div class="card-body">
                         <div class="product-info">
                             <a href="javascript:;">
@@ -50,9 +51,9 @@ const HitsRender = (renderOptions, isFirstRender) => {
                             </div>
                         </div>
                     </div>
-                </a>  
             </div>
         </div>
+    </a>      
         `
     ).join('')}
     `;
