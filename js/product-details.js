@@ -46,7 +46,7 @@ index.search('', {
 
         function renderizarImagen () {
 
-            if (images.length <= 0 ){
+            if (images.length < 0 ){
                 container_imagen.style.backgroundImage = `url('../assets/images/errors-images/image-not-found.jpeg')`
             }else {
                 container_imagen.style.backgroundImage = `url(${images[posicionActual]})`
