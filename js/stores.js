@@ -23,12 +23,12 @@ const HitsRender = (renderOptions, isFirstRender) => {
                 
                     <div class="card-body">
                         <div class="product-info">
-                            <a href="javascript:;">
+                            <a href="#">
                                 <p class="product-catergory font-13 mb-1">${item.brand}</p>
                                 <p class="product-catergory font-13 mb-1">${item.brand_subtype}</p>
                             <!--- <p class="product-catergory font-13 mb-1">${item.objectID}</p> --->
                             </a>
-                            <a href="javascript:;">
+                            <a href="#">
                                 <h6 class="product-name mb-2">${instantsearch.highlight({ attribute: 'name', hit: item })}</h6>
                             </a>
                             <div class="d-flex align-items-center">
