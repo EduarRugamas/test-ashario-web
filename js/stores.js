@@ -18,8 +18,8 @@ const HitsRender = (renderOptions, isFirstRender) => {
         `
         <div class="col">
             <div class="card rounded-0 product-card">
+              <a href="product-details.html?objectID=${item.objectID}">
                 <img src="${item.image_urls}" class="card-img-top" alt="${item.name}" id="imagen-product">
-                
                     <div class="card-body">
                         <div class="product-info">
                             <a href="#">
@@ -50,6 +50,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
                             </div>
                         </div>
                     </div>
+                  </a>
             </div>
         </div>    
         `
