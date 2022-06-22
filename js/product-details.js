@@ -74,7 +74,7 @@ index.search('', {
                         <div class="row g-0">
                             <div class="col-12 col-lg-5">
                                 <div class="carousel" style="max-width: 800px; margin: 0 auto; display: flex;">
-                                     <div id="imagen" style="width: 100%; height: 400px; background-size: cover;"></div>
+                                     <div id="imagen" style="width: 100%; height: 100%; background-size: cover;"></div>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-7">
