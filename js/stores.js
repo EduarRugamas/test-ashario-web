@@ -17,17 +17,18 @@ const HitsRender = (renderOptions, isFirstRender) => {
             ${hits.map( item =>
         `
         <div class="col">
-        <a href="product-details.html?objectID=${item.objectID}">
             <div class="card rounded-0 product-card">
-                <img src="${item.image_urls}" class="card-img-top" alt="${item.name}" id="imagen-product">
+                        <a href="product-details.html?objectID=${item.objectID}">
+                            <img src="${item.image_urls}" class="card-img-top" alt="${item.name}" id="imagen-product">
+                        </a>
                     <div class="card-body">
                         <div class="product-info">
-                            <a href="#">
+                            <a href="product-details.html?objectID=${item.objectID}">
                                 <p class="product-catergory font-13 mb-1">${item.brand}</p>
                                 <p class="product-catergory font-13 mb-1">${item.brand_subtype}</p>
                             <!--- <p class="product-catergory font-13 mb-1">${item.objectID}</p> --->
                             </a>
-                            <a href="#">
+                            <a href="product-details.html?objectID=${item.objectID}">
                                 <h6 class="product-name mb-2">${instantsearch.highlight({ attribute: 'name', hit: item })}</h6>
                             </a>
                             <div class="d-flex align-items-center">
@@ -51,7 +52,6 @@ const HitsRender = (renderOptions, isFirstRender) => {
                         </div>
                     </div>
                 </div>
-            <a/> 
         </div>    
         `
     ).join('')}
