@@ -20,7 +20,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
         <div class="col">
             <div class="card rounded-0 product-card">
                         <a href="product-details.html?objectID=${item.objectID}">
-                            <img src="" class="card-img-top" alt="${item.name}" id="imagen-product">
+                            <img src="${item.image_urls === 0 ? '../assets/images/errors-images/image-not-found.jpeg' : item.image_urls }" class="card-img-top" alt="${item.name}" id="imagen-product">
                         </a>
                     <div class="card-body">
                         <div class="product-info">
@@ -58,17 +58,17 @@ const HitsRender = (renderOptions, isFirstRender) => {
     ).join('')}
     `;
 
-    hits.map(item => {
-        let posicionActual = 0;
-        const container_img = document.querySelector('#imagen-product');
-        let img = item.image_urls;
-        if (img.length === 0) {
-            container_img.src = '../assets/images/errors-images/image-not-found.jpeg'
-        } else {
-            container_img.src = `${img[posicionActual]}`
-        }
-
-    });
+    // hits.map(item => {
+    //     let posicionActual = 0;
+    //     const container_img = document.querySelector('#imagen-product');
+    //     let img = item.image_urls;
+    //     if (img.length === 0) {
+    //         container_img.src = '../assets/images/errors-images/image-not-found.jpeg'
+    //     } else {
+    //         container_img.src = `${img[posicionActual]}`
+    //     }
+    //
+    // });
 
 
 };
