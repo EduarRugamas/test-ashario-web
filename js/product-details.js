@@ -16,43 +16,6 @@ index.search('', {
     // usando el hits[0].name etc
     const contenedor = document.getElementById('product-details');
 
-        const images = hits[0].image_urls;
-        console.log(images);
-
-        const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;
-        let posicionActual = 0;
-        let $btn_retroceder = document.querySelector('.slider_btn__left');
-        let $btn_siguiente = document.querySelector('.slider_btn__right');
-        let $container_img = document.querySelector('#imagen');
-        let intervalo;
-
-        function nextPhoto(){
-            if (posicionActual >= images.length - 1){
-                posicionActual = 0;
-            } else {
-                posicionActual++;
-            }
-            renderImages();
-        }
-
-        function backPhoto() {
-            if (posicionActual <= 0){
-                posicionActual = images.length - 1;
-            }else {
-                posicionActual--;
-            }
-            renderImages();
-        }
-
-        function renderImages(){
-            $container_img.src = `${images[posicionActual]}`
-        }
-
-        $btn_siguiente.addEventListener('click', nextPhoto);
-        $btn_retroceder.addEventListener('click', backPhoto);
-
-        renderImages();
-
     contenedor.innerHTML=`
        <section class="py-3 border-bottom border-top d-none d-md-flex bg-light">
             <div class="container">
@@ -159,8 +122,6 @@ index.search('', {
        </section>
     `;
 
-    $()
-
 
     $(document).ready(function () {
         $('#add-to-cart').click( function () {
@@ -173,6 +134,46 @@ index.search('', {
             add_to_cart(product_id, SelectedOption);
         });
     });
+
+    const images = hits[0].image_urls;
+    console.log(images);
+
+    const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;
+    let posicionActual = 0;
+    let $btn_retroceder = document.querySelector('.slider_btn__left');
+    let $btn_siguiente = document.querySelector('.slider_btn__right');
+    let $container_img = document.querySelector('#imagen');
+    let intervalo;
+
+    function nextPhoto(){
+        if (posicionActual >= images.length - 1){
+            posicionActual = 0;
+        } else {
+            posicionActual++;
+        }
+        renderImages();
+    }
+
+    function backPhoto() {
+        if (posicionActual <= 0){
+            posicionActual = images.length - 1;
+        }else {
+            posicionActual--;
+        }
+        renderImages();
+    }
+
+    function renderImages(){
+        $container_img.src = `${images[posicionActual]}`
+    }
+
+    $btn_siguiente.addEventListener('click', nextPhoto);
+    $btn_retroceder.addEventListener('click', backPhoto);
+
+    renderImages();
+
+
+
 
 });
 
