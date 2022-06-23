@@ -43,8 +43,10 @@ index.search('', {
                                         <div class="owl-stage-outer">
                                             <div class="owl-item" style="width: 506px; margin-right: 10px;">
                                                 <div class="item">
-                                                    <img src="" alt="" class="img-fluid" id="imagen_carusel_1">
+                                                    <img src="" alt="" class="img-fluid" id="imagen_carusel_1" style="object-fit: cover;">
                                                 </div>
+                                                <div class="slider__btn slider_btn__right">&#60;</div>
+                                                <div class="slider__btn slider_btn__left">&#62;</div>
                                             </div>
                                         </div>
                                     </div>
