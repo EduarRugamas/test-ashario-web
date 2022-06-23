@@ -38,7 +38,7 @@ index.search('', {
                                             <div class="owl-item" style="width: 506px; margin-right: 10px;">
                                                 <div class="item d-flex">
 <!--                                                    <img src="" alt="" class="img-fluid" id="imagen_carusel" style="object-fit: cover;">-->
-                                                        <div class="img-fluid" id="imagen" style="object-fit: cover; width: 100%; height: 400px; background-size: cover;"></div>
+                                                        <div class="img-fluid" id="imagen" style="object-fit: cover; background-size: cover;"></div>
                                                 </div>
                                                 <div class="slider__btn slider_btn__right">&#60;</div>
                                                 <div class="slider__btn slider_btn__left">&#62;</div>
@@ -146,6 +146,7 @@ index.search('', {
     let intervalo;
 
     function nextPhoto(){
+        console.log('click right');
         if (posicionActual >= images.length - 1){
             posicionActual = 0;
         } else {
@@ -155,6 +156,7 @@ index.search('', {
     }
 
     function backPhoto() {
+        console.log('click left');
         if (posicionActual <= 0){
             posicionActual = images.length - 1;
         }else {
