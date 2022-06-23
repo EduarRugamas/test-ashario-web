@@ -80,6 +80,15 @@ const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 search.addWidgets([
 
     instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4434'}).addWidgets([
+
+        instantsearch.widgets.searchBox({
+            container: '#searchBox',
+            placeholder: 'Search for Products',
+            cssClasses: {
+                input: 'form-control bg-transparent'
+            }
+        }),
+
         instantsearch.widgets.menu({
             container: '#container-menu',
             attribute: 'category',
