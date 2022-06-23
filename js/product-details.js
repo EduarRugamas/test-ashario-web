@@ -37,11 +37,11 @@ index.search('', {
                                         <div class="owl-stage-outer">
                                             <div class="owl-item" style="width: 506px; margin-right: 10px;">
                                                 <div class="item d-flex">
-<!--                                                    <img src="" alt="" class="img-fluid" id="imagen_carusel" style="object-fit: cover;">-->
-                                                        <div class="img-fluid" id="imagen" style="object-fit: cover; width: 100%; background-size: cover;"></div>
+                                                    <img src="" alt="" class="img-fluid" id="imagen_carusel" style="object-fit: cover;">
+<!--                                                        <div class="img-fluid" id="imagen" style="object-fit: cover; width: 100%; background-size: cover;"></div>-->
                                                 </div>
-                                                <div class="slider__btn slider_btn__right">&#60;</div>
-                                                <div class="slider__btn slider_btn__left">&#62;</div>
+                                                <div class="slider__btn slider_btn__right" id="slider_btn__right">&#62;</div>
+                                                <div class="slider__btn slider_btn__left" id="slider_btn__left" style="right: 10px;">&#60;</div>
                                             </div>
                                         </div>
                                     </div>
@@ -142,7 +142,7 @@ index.search('', {
     let posicionActual = 0;
     let $btn_retroceder = document.querySelector('.slider_btn__left');
     let $btn_siguiente = document.querySelector('.slider_btn__right');
-    let $container_img = document.querySelector('#imagen');
+    let $container_img = document.querySelector('#imagen_carusel');
     let intervalo;
 
     function nextPhoto(){
@@ -166,7 +166,7 @@ index.search('', {
     }
 
     function renderImages(){
-        $container_img.style.backgroundImage = `url(${images[posicionActual]})`
+        $container_img.src = `${images[posicionActual]}`
     }
 
     $btn_siguiente.addEventListener('click', nextPhoto);
