@@ -35,7 +35,7 @@ index.search('', {
                                 <div class="image-zoom-section">
                                     <div class="product-gallery owl-carousel owl-theme border mb-3 p-3 owl-loaded owl-drag">
                                         <div class="owl-stage-outer">
-                                            <div class="owl-item" style="width: 350px;">
+                                            <div class="owl-item" style="width: 450px; height: 100%;">
                                                 <div class="item">
                                                     <img src="" alt="" class="img-fluid" id="imagen_carusel" style="object-fit: cover;">
                                                 </div>
