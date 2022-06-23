@@ -135,13 +135,8 @@ index.search('', {
     const images = hits[0].image_urls;
     console.log(images);
 
-    const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;
     let posicionActual = 0;
-    let $btn_retroceder = document.querySelector('.slider_btn__left');
-    let $btn_siguiente = document.querySelector('.slider_btn__right');
     let $container_img = document.querySelector('#imagen_carusel');
-    let intervalo;
-
     function nextPhoto(){
         console.log('click right');
         if (posicionActual >= images.length - 1){
@@ -171,8 +166,8 @@ index.search('', {
 
     }
 
-    $btn_siguiente.addEventListener('click', nextPhoto);
-    $btn_retroceder.addEventListener('click', backPhoto);
+    // $btn_siguiente.addEventListener('click', nextPhoto);
+    // $btn_retroceder.addEventListener('click', backPhoto);
 
     renderImages();
 
