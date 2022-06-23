@@ -19,6 +19,41 @@ index.search('', {
 
     window.onload = function () {
         const images = hits[0].image_urls;
+        console.log(images);
+
+        const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;
+        let posicionActual = 0;
+        let $btn_retroceder = document.querySelector('.slider_btn__left');
+        let $btn_siguiente = document.querySelector('.slider_btn__right');
+        let $container_img = document.querySelector('#imagen_carusel');
+        let intervalo;
+
+        function nextPhoto(){
+            if (posicionActual >= images.length - 1){
+                posicionActual = 0;
+            } else {
+                posicionActual++;
+            }
+            renderImages();
+        }
+
+        function backPhoto() {
+            if (posicionActual <= 0){
+                posicionActual = images.length - 1;
+            }else {
+                posicionActual--;
+            }
+            renderImages();
+        }
+
+        function renderImages(){
+            $container_img.src = `${images[posicionActual]}`
+        }
+
+        $btn_siguiente.addEventListener('click', nextPhoto);
+        $btn_retroceder.addEventListener('click', backPhoto);
+
+        renderImages();
 
     }
 
@@ -43,7 +78,7 @@ index.search('', {
                                         <div class="owl-stage-outer">
                                             <div class="owl-item" style="width: 506px; margin-right: 10px;">
                                                 <div class="item">
-                                                    <img src="" alt="" class="img-fluid" id="imagen_carusel_1" style="object-fit: cover;">
+                                                    <img src="" alt="" class="img-fluid" id="imagen_carusel" style="object-fit: cover;">
                                                 </div>
                                                 <div class="slider__btn slider_btn__right">&#60;</div>
                                                 <div class="slider__btn slider_btn__left">&#62;</div>
