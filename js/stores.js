@@ -9,16 +9,13 @@ const search = instantsearch({
 
 // widgets de hits o mostrar elementos en tarjetas
 const HitsRender = (renderOptions, isFirstRender) => {
-    const { hits, results, BindEvent, widgetParams } = renderOptions;
+    const {hits, results, BindEvent, widgetParams} = renderOptions;
 
-    console.log('aqui estan los objetos de el hits',hits);
-
-
-
+    console.log('aqui estan los objetos de el hits', hits);
 
 
     widgetParams.container.innerHTML = `
-            ${hits.map( item =>
+            ${hits.map(item =>
         `
         <div class="col">
             <div class="card rounded-0 product-card">
@@ -33,7 +30,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
                             <!--- <p class="product-catergory font-13 mb-1">${item.objectID}</p> --->
                             </a>
                             <a href="product-details.html?objectID=${item.objectID}">
-                                <h6 class="product-name mb-2">${instantsearch.highlight({ attribute: 'name', hit: item })}</h6>
+                                <h6 class="product-name mb-2">${instantsearch.highlight({attribute: 'name', hit: item})}</h6>
                             </a>
                             <div class="d-flex align-items-center">
                                 <div class="mb-1 product-price">
@@ -61,20 +58,18 @@ const HitsRender = (renderOptions, isFirstRender) => {
     ).join('')}
     `;
 
-    function renderImage() {
-        hits.map( item => {
-                let posicionActual = 0;
-                const container_img = document.querySelector('#imagen-product');
-                let img = item.image_urls;
-            if(img.length === 0 ){
-                container_img.src = '../assets/images/errors-images/image-not-found.jpeg'
-            }else {
-                container_img.src = `${img[posicionActual]}`
-            }
+    hits.map(item => {
+        let posicionActual = 0;
+        const container_img = document.querySelector('#imagen-product');
+        let img = item.image_urls;
+        if (img.length === 0) {
+            container_img.src = '../assets/images/errors-images/image-not-found.jpeg'
+        } else {
+            container_img.src = `${img[posicionActual]}`
+        }
 
-        });
-    }
-    renderImage();
+    });
+
 
 };
 const CustomHits = instantsearch.connectors.connectHits(HitsRender);
@@ -118,7 +113,7 @@ search.addWidgets([
         instantsearch.widgets.numericMenu({
             container: '#container-price',
             attribute: 'bucket_price',
-            items : [
+            items: [
                 {
                     label: 'All'
                 },
@@ -155,7 +150,7 @@ search.start();
 function store_product_4434() {
     search.addWidgets([
         instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4434'}).addWidgets([
-            CustomHits({ container: document.querySelector('') })
+            CustomHits({container: document.querySelector('')})
         ])
     ]);
 
@@ -165,7 +160,7 @@ function store_product_4434() {
 function store_product_4435() {
     search.addWidgets([
         instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4435'}).addWidgets([
-            CustomHits({ container: document.querySelector('') })
+            CustomHits({container: document.querySelector('')})
         ])
     ]);
 
