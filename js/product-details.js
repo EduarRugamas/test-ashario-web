@@ -158,6 +158,9 @@ index.search('', {
     }
 
     function renderImages(){
+        $container_img.width = 50;
+        $container_img.height = 50;
+
         if(images.length === 0 ){
             $container_img.src = '../assets/images/errors-images/image-not-found.jpeg'
         }else {
