@@ -164,7 +164,7 @@ index.search('', {
     }
 
     function renderImages(){
-        $container_img.src = `${images[posicionActual]}`
+        $container_img.style.backgroundImage = `url(${images[posicionActual]})`
     }
 
     $btn_siguiente.addEventListener('click', nextPhoto);
