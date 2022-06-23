@@ -16,8 +16,6 @@ index.search('', {
     // usando el hits[0].name etc
     const contenedor = document.getElementById('product-details');
 
-
-    window.onload = function () {
         const images = hits[0].image_urls;
         console.log(images);
 
@@ -25,7 +23,7 @@ index.search('', {
         let posicionActual = 0;
         let $btn_retroceder = document.querySelector('.slider_btn__left');
         let $btn_siguiente = document.querySelector('.slider_btn__right');
-        let $container_img = document.querySelector('#imagen_carusel');
+        let $container_img = document.querySelector('#imagen');
         let intervalo;
 
         function nextPhoto(){
@@ -55,8 +53,6 @@ index.search('', {
 
         renderImages();
 
-    }
-
     contenedor.innerHTML=`
        <section class="py-3 border-bottom border-top d-none d-md-flex bg-light">
             <div class="container">
@@ -77,8 +73,9 @@ index.search('', {
                                     <div class="product-gallery owl-carousel owl-theme border mb-3 p-3 owl-loaded owl-drag">
                                         <div class="owl-stage-outer">
                                             <div class="owl-item" style="width: 506px; margin-right: 10px;">
-                                                <div class="item">
-                                                    <img src="" alt="" class="img-fluid" id="imagen_carusel" style="object-fit: cover;">
+                                                <div class="item d-flex">
+<!--                                                    <img src="" alt="" class="img-fluid" id="imagen_carusel" style="object-fit: cover;">-->
+                                                        <div class="img-fluid" id="imagen" style="object-fit: cover; width: 100%; height: 400px; background-size: cover;"></div>
                                                 </div>
                                                 <div class="slider__btn slider_btn__right">&#60;</div>
                                                 <div class="slider__btn slider_btn__left">&#62;</div>
