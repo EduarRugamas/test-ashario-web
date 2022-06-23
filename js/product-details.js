@@ -166,7 +166,12 @@ index.search('', {
     }
 
     function renderImages(){
-        $container_img.src = `${images[posicionActual]}`
+        if(images.length === 0 ){
+            $container_img.src = '../assets/images/errors-images/image-not-found.jpeg'
+        }else {
+            $container_img.src = `${images[posicionActual]}`
+        }
+
     }
 
     $btn_siguiente.addEventListener('click', nextPhoto);
