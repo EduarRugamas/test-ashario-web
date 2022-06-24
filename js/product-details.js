@@ -119,7 +119,7 @@ index.search('', {
     }else {
         let max_cart_quantity = hits[0].max_cart_quantity;
         console.log('cantidad maxima para enviar al carrito: ',max_cart_quantity);
-        for (max_cart_quantity; max_cart_quantity <= max_cart_quantity; max_cart_quantity++) {
+        for (max_cart_quantity; max_cart_quantity <= max_cart_quantity;) {
             console.log(max_cart_quantity);
         }
     }
