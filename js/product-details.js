@@ -77,13 +77,7 @@ index.search('', {
                                 <div class="row row-cols-auto align-items-center mt-3">
                                     <div class="col">
                                         <label class="form-label">Quantity</label>
-                                            <select class="form-select form-select-sm" id="quantity">
-                                                <option value="1" selected>1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
+                                            <select class="form-select form-select-sm" id="quantity"></select>
                                     </div>
                                     <div class="col">
                                         <label class="form-label">weight</label>
@@ -117,13 +111,18 @@ index.search('', {
     if (hits[0].max_cart_quantity === 0 || hits[0].max_cart_quantity === null || hits[0].max_cart_quantity === undefined) {
         console.log('No hay cantidad disponible para el carrito');
     }else {
+
+        const container_select_quantity = document.querySelector('#quantity');
         let max_cart_quantity = hits[0].max_cart_quantity;
+
         console.log('cantidad maxima para enviar al carrito: ',max_cart_quantity);
-        // for (let item of hits[0].max_cart_quantity) {
-        //     console.log(item);
-        // }
+
         for ( let item = 1; item <= max_cart_quantity; item++ ) {
             console.log(item);
+            const options_quantity = document.createElement('option');
+            options.value = item;
+            options.text = item;
+            container_select_quantity.appendChild(options_quantity);
         }
     }
 
