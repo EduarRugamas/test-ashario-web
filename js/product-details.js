@@ -84,16 +84,12 @@ index.search('', {
                                                 <option value="5">5</option>
                                             </select>
                                     </div>
-<!--                                    <div class="col">-->
-<!--                                        <label class="form-label">Size</label>-->
-<!--                                            <select class="form-select form-select-sm">-->
-<!--                                                <option>S</option>-->
-<!--                                                <option>M</option>-->
-<!--                                                <option>L</option>-->
-<!--                                                <option>XS</option>-->
-<!--                                                <option>XL</option>-->
-<!--                                            </select>-->
-<!--                                    </div>-->
+                                    <div class="col">
+                                        <label class="form-label">weight</label>
+                                            <select class="form-select form-select-sm" id="select-weight">
+                                           
+                                            </select>
+                                    </div>
 <!--                                    <div class="col">-->
 <!--                                        <label class="form-label">Colors</label>-->
 <!--                                            <div class="color-indigators d-flex align-items-center gap-2">-->
@@ -118,6 +114,16 @@ index.search('', {
             </div>
        </section>
     `;
+
+    if (hits[0].available_weights.length === 0 ) {
+        let container_select_weight = document.querySelector('#select-weight');
+        console.log('No existe ningun elemento en el available weight')
+    }else {
+        let container_select_weight = document.querySelector('#select-weight');
+        hits[0].available_weights.forEach( item => {
+            console.log('elementos del array avaleable weight', item);
+        });
+    }
 
 
     $(document).ready(function () {
