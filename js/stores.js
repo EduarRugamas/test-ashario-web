@@ -95,7 +95,7 @@ search.addWidgets([
             templates: {
                 item: `
             <li>
-            <a href="{{url}}">
+            <a href="{{url}}" style="text-transform: uppercase;">
                 {{label}} 
                 <span class="float-end badge rounded-pill bg-primary">{{count}}</span>
             </a>
