@@ -122,6 +122,9 @@ index.search('', {
         let container_select_weight = document.querySelector('#select-weight');
         hits[0].available_weights.forEach( item => {
             console.log('elementos del array avaleable weight', item);
+            container_select_weight.innerHTML= `
+                <option value="${item}">${item}</option>
+            `
         });
     }
 
