@@ -122,7 +122,7 @@ index.search('', {
         // for (let item of hits[0].max_cart_quantity) {
         //     console.log(item);
         // }
-        for ( let item = 0; item <= max_cart_quantity; item++ ) {
+        for ( let item = 1; item <= max_cart_quantity; item++ ) {
             console.log(item);
         }
     }
