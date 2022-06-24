@@ -114,17 +114,34 @@ index.search('', {
        </section>
     `;
 
+    if (hits[0].max_cart_quantity === 0 || hits[0].max_cart_quantity === null || hits[0].max_cart_quantity === undefined) {
+        console.log('No hay cantidad disponible para el carrito');
+    }else {
+        let max_cart_quantity = hits[0].max_cart_quantity;
+        console.log('cantidad maxima para enviar al carrito: ',max_cart_quantity);
+        for (max_cart_quantity; max_cart_quantity <= max_cart_quantity; max_cart_quantity++) {
+            console.log(max_cart_quantity);
+        }
+    }
+
+
     if (hits[0].available_weights.length === 0) {
+
         let container_select_weight = document.querySelector('#select-weight');
         console.log('No existe ningun elemento en el available weight');
+
     } else {
+
         let container_select_weight = document.querySelector('#select-weight');
+
         for (let item of hits[0].available_weights) {
+
             console.log('weight: ', item);
             const options = document.createElement('option');
             options.value = item;
             options.text = item;
             container_select_weight.appendChild(options);
+
         }
     }
 
