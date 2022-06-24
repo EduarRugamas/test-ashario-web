@@ -1,4 +1,5 @@
 import {searchClient} from '../config/config.js';
+
 const urlParams = new URLSearchParams(window.location.search);
 
 const objectId = urlParams.get('objectID');
@@ -9,14 +10,14 @@ console.log('el objecto id', objectId);
 
 index.search('', {
     filters: `objectID:${objectId}`
-}).then( ({hits} )=> {
+}).then(({hits}) => {
     // console.log(hits);
 
     console.log(hits);
     // usando el hits[0].name etc
     const contenedor = document.getElementById('product-details');
 
-    contenedor.innerHTML=`
+    contenedor.innerHTML = `
        <section class="py-3 border-bottom border-top d-none d-md-flex bg-light">
             <div class="container">
                 <div class="page-breadcrumb d-flex align-items-center">
@@ -86,9 +87,7 @@ index.search('', {
                                     </div>
                                     <div class="col">
                                         <label class="form-label">weight</label>
-                                            <select class="form-select form-select-sm" id="select-weight">
-                                           
-                                            </select>
+                                            <select class="form-select form-select-sm" id="select-weight"></select>
                                     </div>
 <!--                                    <div class="col">-->
 <!--                                        <label class="form-label">Colors</label>-->
@@ -115,12 +114,12 @@ index.search('', {
        </section>
     `;
 
-    if (hits[0].available_weights.length === 0 ) {
+    if (hits[0].available_weights.length === 0) {
         let container_select_weight = document.querySelector('#select-weight');
         console.log('No existe ningun elemento en el available weight');
-    }else {
+    } else {
         let container_select_weight = document.querySelector('#select-weight');
-        for( let item of hits[0].available_weights ){
+        for (let item of hits[0].available_weights) {
             console.log('weight: ', item);
             const options = document.createElement('option');
             options.value = item;
@@ -131,63 +130,34 @@ index.search('', {
 
 
     $(document).ready(function () {
-        $('#add-to-cart').click( function () {
-            const product_id = hits[0].product_id;
-            const SelectedOption = parseInt(document.getElementById('quantity').value)
-            // const OptionNumber = parseInt(SelectedOption);
-            console.log('opcion seleccionada',SelectedOption)
-            console.log(`Informacion a enviar: -> ${product_id}, ${SelectedOption} `)
+        $('#add-to-cart').click(function () {
 
-            add_to_cart(product_id, SelectedOption);
+            const product_id = hits[0].product_id;
+            const selected_option_quantity = parseInt(document.getElementById('quantity').value);
+            const selected_option_weight = document.getElementById('select-weight').value;
+
+            console.log(`Informacion a enviar: -> ${product_id}, ${selected_option_quantity}, ${selected_option_weight} `)
+
+            // add_to_cart(product_id, selected_option_quantity, selected_option_weight);
         });
     });
 
     const images = hits[0].image_urls;
-    console.log(images);
 
     let posicionActual = 0;
     let $container_img = document.querySelector('#imagen_carusel');
-    function nextPhoto(){
-        console.log('click right');
-        if (posicionActual >= images.length - 1){
-            posicionActual = 0;
-        } else {
-            posicionActual++;
-        }
-        renderImages();
+
+    if (images.length === 0) {
+        $container_img.src = '../assets/images/errors-images/image-not-found.jpeg';
+    } else {
+        $container_img.src = `${images[posicionActual]}`;
     }
-
-    function backPhoto() {
-        console.log('click left');
-        if (posicionActual <= 0){
-            posicionActual = images.length - 1;
-        }else {
-            posicionActual--;
-        }
-        renderImages();
-    }
-
-    function renderImages(){
-        if(images.length === 0 ){
-            $container_img.src = '../assets/images/errors-images/image-not-found.jpeg'
-        }else {
-            $container_img.src = `${images[posicionActual]}`
-        }
-
-    }
-
-    // $btn_siguiente.addEventListener('click', nextPhoto);
-    // $btn_retroceder.addEventListener('click', backPhoto);
-
-    renderImages();
-
-
 
 
 });
 
-function add_to_cart(product_id, SelectedOption) {
-    var data = {
+function add_to_cart(product_id, select_option_quantity, select_option_weight) {
+    let data = {
         messageType: "buildCart",
         payload: {
             products: [],
@@ -200,7 +170,7 @@ function add_to_cart(product_id, SelectedOption) {
                 externalId: "12345",
             },
             storeId: 4434,
-            headlessPartnerName: "Ashario Company",
+            headlessPartnerName: "AsharioCompany",
             options: {
                 font: {
                     fontFamily: "Roboto",
@@ -212,7 +182,7 @@ function add_to_cart(product_id, SelectedOption) {
                     navigationColor: "#38b1fa",
                     ctaTextColor: "#ffffff",
                 },
-                redirectUrl: 'https://iheartjane.com/',
+                redirectUrl: 'https://harmonious-mooncake-eb8276.netlify.app/',
                 disableAuthFeatures: true,
                 disableLoadingSpinner: false,
                 disableWeightSelection: false,
@@ -221,10 +191,10 @@ function add_to_cart(product_id, SelectedOption) {
         }
     }
 
-    console.log('Informacion sin agregar al JSON product: ',JSON.stringify(data));
+    console.log('Informacion sin agregar al JSON product: ', JSON.stringify(data));
 
 
-    data.payload.products.push( { productId: product_id, priceId: "eighth_ounce", count: SelectedOption, } );
+    data.payload.products.push({productId: product_id, priceId: select_option_weight, count: select_option_quantity,});
 
     console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
 
@@ -241,16 +211,37 @@ function receiveMessage(event) {
     let payload = event.data && event.data.messageType;
     let messageType = event.data && event.data.messageType;
 
-    if (messageType === "loadingEvent" && payload.name === "headlessAppLoaded"){
+    if (messageType === "loadingEvent" && payload.name === "headlessAppLoaded") {
         console.log("Llego hasta aqui");
-        console.log("informacion del json",event.data)
+        console.log("informacion del json", event.data)
         let frame = document.getElementById('jane-menu');
         frame.contentWindow.postMessage(event.data, '*');
         console.log("Se agrego al carrito");
     }
 }
 
-
+// function nextPhoto(){
+//     console.log('click right');
+//     if (posicionActual >= images.length - 1){
+//         posicionActual = 0;
+//     } else {
+//         posicionActual++;
+//     }
+//     renderImages();
+// }
+//
+// function backPhoto() {
+//     console.log('click left');
+//     if (posicionActual <= 0){
+//         posicionActual = images.length - 1;
+//     }else {
+//         posicionActual--;
+//     }
+//     renderImages();
+// }
+//
+// $btn_siguiente.addEventListener('click', nextPhoto);
+// $btn_retroceder.addEventListener('click', backPhoto);
 
 
 
