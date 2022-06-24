@@ -117,11 +117,11 @@ index.search('', {
 
         console.log('cantidad maxima para enviar al carrito: ',max_cart_quantity);
 
-        for ( let item = 1; item <= max_cart_quantity; item++ ) {
-            console.log(item);
+        for ( let quantity_select = 1; quantity_select <= max_cart_quantity; quantity_select++ ) {
+            console.log(quantity_select);
             const options_quantity = document.createElement('option');
-            options.value = item;
-            options.text = item;
+            options_quantity.value = quantity_select;
+            options_quantity.text = quantity_select;
             container_select_quantity.appendChild(options_quantity);
         }
     }
