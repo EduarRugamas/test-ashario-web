@@ -117,15 +117,12 @@ index.search('', {
 
     if (hits[0].available_weights.length === 0 ) {
         let container_select_weight = document.querySelector('#select-weight');
-        console.log('No existe ningun elemento en el available weight')
+        console.log('No existe ningun elemento en el available weight');
     }else {
         let container_select_weight = document.querySelector('#select-weight');
-        hits[0].available_weights.forEach( item => {
-            console.log('elementos del array avaleable weight', item);
-            container_select_weight.innerHTML= `
-                <option value="${item}">${item}</option>
-            `
-        });
+        for( let item of hits[0].available_weights ){
+            console.log('weight: ', item);
+        }
     }
 
 
