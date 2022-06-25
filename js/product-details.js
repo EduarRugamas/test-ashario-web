@@ -207,7 +207,9 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
                 disableAuthFeatures: true,
                 disableLoadingSpinner: false,
                 disableWeightSelection: false,
-                disableMarketingCheckoutAgreements: true
+                disablePrepayment: false,
+                disableMarketingCheckoutAgreements: true,
+                kiosk: false
             },
         }
     }
