@@ -129,7 +129,7 @@ index.search('', {
 
     if (hits[0].available_weights.length === 0) {
 
-        let container_select_weight = document.querySelector('#container_quantity');
+        let container_select_weight = document.querySelector('#container_weight');
         container_select_weight.style = 'display: none;';
         console.log('No existe ningun elemento en el available weight');
 
