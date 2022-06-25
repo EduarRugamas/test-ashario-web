@@ -62,7 +62,7 @@ index.search('', {
                                 </div>
                                 <div class="d-flex align-items-center mt-3 gap-2">
                                     <!-- <h5 class="mb-0 text-decoration-line-through text-light-3">$98.00</h5>-->
-                                    <h4 class="mb-0">\$ ${hits[0].bucket_price}</h4>
+                                    <h4 class="mb-0" id="text_price"></h4>
                                 </div>
                                 <div class="mt-3">
                                     <h6>Discription :</h6>
@@ -108,6 +108,7 @@ index.search('', {
        </section>
     `;
 
+
     if (hits[0].max_cart_quantity === 0 || hits[0].max_cart_quantity === null || hits[0].max_cart_quantity === undefined) {
         console.log('No hay cantidad disponible para el carrito');
     }else {
@@ -147,6 +148,26 @@ index.search('', {
 
         }
     }
+
+    const $select_weight = document.querySelector('#select-weight');
+    const $select_quantity = document.querySelector('#quantity');
+
+    function selected_weight_change() {
+        let selected_option_weight = document.getElementById('select-weight').value;
+        if (hits[0].available_weights.length === 0) {
+            let container_price = document.getElementById('text_price');
+            container_price.textContent=`${hits[0].price_each}`;
+        }else {
+
+        }
+    }
+
+    function selected_quantity_change() {
+
+    }
+
+    $select_weight.addEventListener('change', selected_weight_change);
+
 
 
     $(document).ready(function () {
