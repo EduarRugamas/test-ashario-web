@@ -151,18 +151,19 @@ index.search('', {
 
     const $select_weight = document.querySelector('#select-weight');
     const $select_quantity = document.querySelector('#quantity');
+    let container_price = document.getElementById('text_price');
 
-    function selected_weight_change() {
+    if (hits[0].available_weights.length === 0) {
+        let text_price = document.createElement('h4');
+        text_price.className = "mb-0";
+        text_price.textContent = `$ ${hits[0].price_each}`;
+        container_price.appendChild(text_price);
+    }
+
+        function selected_weight_change() {
         let selected_option_weight = document.getElementById('select-weight').value;
-        let container_price = document.getElementById('text_price');
-        if (hits[0].available_weights.length === 0) {
-            let text_price = document.createElement('h4');
-            text_price.className="mb-0";
-            text_price.textContent=`$ ${hits[0].price_each}`;
-            container_price.appendChild(text_price);
-        }else {
 
-        }
+
     }
 
     function selected_quantity_change() {
