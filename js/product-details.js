@@ -159,7 +159,7 @@ index.search('', {
 
             console.log(`Informacion a enviar: -> ${product_id}, ${selected_option_quantity}, ${selected_option_weight} `)
 
-            // add_to_cart(product_id, selected_option_quantity, selected_option_weight);
+            add_to_cart(product_id, selected_option_quantity, selected_option_weight);
         });
     });
 
