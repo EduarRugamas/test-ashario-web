@@ -159,6 +159,44 @@ index.search('', {
         text_price.id="h4_price";
         text_price.textContent = `$ ${hits[0].price_each}`;
         container_price.appendChild(text_price);
+    }else {
+        let option_weigh_current = document.getElementById('select-weight').value;
+        if (option_weigh_current === 'gram'){
+            let text_price = document.createElement('h4');
+            text_price.className = "mb-0";
+            text_price.id="h4_price";
+            text_price.textContent = `$ ${hits[0].price_gram}`;
+            container_price.appendChild(text_price);
+        }else if (option_weigh_current === 'eighth ounce') {
+            let text_price = document.createElement('h4');
+            text_price.className = "mb-0";
+            text_price.id="h4_price";
+            text_price.textContent = `$ ${hits[0].price_eighth_ounce}`;
+            container_price.appendChild(text_price);
+        }else if (option_weigh_current === 'quarter ounce') {
+            let text_price = document.createElement('h4');
+            text_price.className = "mb-0";
+            text_price.id="h4_price";
+            text_price.textContent = `$ ${hits[0].price_quarter_ounce}`;
+            container_price.appendChild(text_price);
+        }else if (option_weigh_current === 'half ounce') {
+            let text_price = document.createElement('h4');
+            text_price.className = "mb-0";
+            text_price.id="h4_price";
+            text_price.textContent = `$ ${hits[0].price_half_ounce}`;
+            container_price.appendChild(text_price);
+        }else if (option_weigh_current === 'ounce') {
+            let text_price = document.createElement('h4');
+            text_price.className = "mb-0";
+            text_price.id="h4_price";
+            text_price.textContent = `$ ${hits[0].price_ounce}`;
+            container_price.appendChild(text_price);
+        }else if (option_weigh_current === 'half ounce') {
+            let text_price = document.createElement('h4');
+            text_price.className = "mb-0";
+            text_price.id="h4_price";
+            text_price.textContent = `$ ${hits[0].price_half_gram}`;
+        }
     }
 
     function selected_weight_change() {
