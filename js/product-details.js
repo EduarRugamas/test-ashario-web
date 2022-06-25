@@ -214,9 +214,10 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
     console.log('Informacion sin agregar al JSON product: ', JSON.stringify(data));
 
 
-    if ( (product_id === null || product_id === undefined) || (select_option_quantity === 0 || select_option_quantity === null || select_option_quantity === undefined) || (select_option_weight === "" || select_option_weight === null || select_option_weight === undefined) ) {
+    if ( (product_id === null || product_id === undefined) || (select_option_quantity === 0 || select_option_quantity === null || select_option_quantity === undefined) ) {
             console.log("los datos vienen vacios o null o undefined");
-    }else if (select_option_weight === "" ){
+            console.log("El productId esta vacio y el count esta vacio");
+    }else if (select_option_weight === "" || select_option_weight === null || select_option_weight === undefined){
         data.payload.products.push({productId: product_id, priceId: "each", count: select_option_quantity});
 
         console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
