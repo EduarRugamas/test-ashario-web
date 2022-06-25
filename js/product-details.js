@@ -153,12 +153,13 @@ index.search('', {
         $('#add-to-cart').click(function () {
 
             const product_id = hits[0].product_id;
-            const selected_option_quantity = parseInt(document.getElementById('quantity').value);
-            const selected_option_weight = document.getElementById('select-weight').value;
+            let selected_option_quantity = parseInt(document.getElementById('quantity').value);
+            let selected_option_weight = document.getElementById('select-weight').value;
+            selected_option_weight = selected_option_weight.replace(/ /g, '_');
 
             console.log(`Informacion a enviar: -> ${product_id}, ${selected_option_quantity}, ${selected_option_weight} `)
 
-            add_to_cart(product_id, selected_option_quantity, selected_option_weight);
+            // add_to_cart(product_id, selected_option_quantity, selected_option_weight);
         });
     });
 
