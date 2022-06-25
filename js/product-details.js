@@ -156,21 +156,30 @@ index.search('', {
     if (hits[0].available_weights.length === 0) {
         let text_price = document.createElement('h4');
         text_price.className = "mb-0";
+        text_price.id="h4_price";
         text_price.textContent = `$ ${hits[0].price_each}`;
         container_price.appendChild(text_price);
     }
 
-        function selected_weight_change() {
+    function selected_weight_change() {
         let selected_option_weight = document.getElementById('select-weight').value;
 
 
     }
 
     function selected_quantity_change() {
+        let selec_option_quantity = parseInt(document.getElementById('quantity').value);
+        let h4_price_replace = document.getElementById('h4_price');
+        let price_each_int = parseInt(hits[0].price_each);
+        if (hits[0].available_weights.length === 0) {
+            let price_each_string = (price_each_int * selec_option_quantity);
+            h4_price_replace.textContent=`$ ${price_each_string}`;
+        }
 
     }
 
     $select_weight.addEventListener('change', selected_weight_change);
+    $select_quantity.addEventListener('change', selected_quantity_change);
 
 
 
