@@ -60,9 +60,9 @@ index.search('', {
                                         <p class="mb-0">(24 Ratings)</p>
                                     </div>
                                 </div>
-                                <div class="d-flex align-items-center mt-3 gap-2">
+                                <div class="d-flex align-items-center mt-3 gap-2" id="text_price" >
                                     <!-- <h5 class="mb-0 text-decoration-line-through text-light-3">$98.00</h5>-->
-                                    <h4 class="mb-0" id="text_price"></h4>
+                                    <!--  <h4 class="mb-0" ></h4>-->
                                 </div>
                                 <div class="mt-3">
                                     <h6>Discription :</h6>
@@ -154,9 +154,12 @@ index.search('', {
 
     function selected_weight_change() {
         let selected_option_weight = document.getElementById('select-weight').value;
+        let container_price = document.getElementById('text_price');
         if (hits[0].available_weights.length === 0) {
-            let container_price = document.getElementById('text_price');
-            container_price.textContent=`${hits[0].price_each}`;
+            let text_price = document.createElement('h4');
+            text_price.className="mb-0";
+            text_price.textContent=`$ ${hits[0].price_each}`;
+            container_price.appendChild(text_price);
         }else {
 
         }
