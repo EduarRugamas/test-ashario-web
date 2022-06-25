@@ -172,7 +172,7 @@ index.search('', {
         let h4_price_replace = document.getElementById('h4_price');
         let price_each_int = parseFloat(hits[0].price_each);
         if (hits[0].available_weights.length === 0) {
-            let price_each_string = (price_each_int * selec_option_quantity);
+            let price_each_string = (price_each_int * selec_option_quantity).toFixed(2);
             h4_price_replace.textContent=`$ ${price_each_string}`;
         }
 
