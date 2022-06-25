@@ -170,7 +170,7 @@ index.search('', {
     function selected_quantity_change() {
         let selec_option_quantity = parseInt(document.getElementById('quantity').value);
         let h4_price_replace = document.getElementById('h4_price');
-        let price_each_int = parseInt(hits[0].price_each);
+        let price_each_int = parseFloat(hits[0].price_each);
         if (hits[0].available_weights.length === 0) {
             let price_each_string = (price_each_int * selec_option_quantity);
             h4_price_replace.textContent=`$ ${price_each_string}`;
