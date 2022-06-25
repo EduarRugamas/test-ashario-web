@@ -75,11 +75,11 @@ index.search('', {
 <!--                                    <dd class="col-sm-9">Russia, USA, and Europe</dd>-->
                                 </dl>
                                 <div class="row row-cols-auto align-items-center mt-3">
-                                    <div class="col">
+                                    <div class="col" id="container_quantity">
                                         <label class="form-label">Quantity</label>
                                             <select class="form-select form-select-sm" id="quantity"></select>
                                     </div>
-                                    <div class="col">
+                                    <div class="col" id="container_weight">
                                         <label class="form-label">weight</label>
                                             <select class="form-select form-select-sm" id="select-weight"></select>
                                     </div>
@@ -129,7 +129,8 @@ index.search('', {
 
     if (hits[0].available_weights.length === 0) {
 
-        let container_select_weight = document.querySelector('#select-weight');
+        let container_select_weight = document.querySelector('#container_quantity');
+        container_select_weight.style = 'display: none;';
         console.log('No existe ningun elemento en el available weight');
 
     } else {
