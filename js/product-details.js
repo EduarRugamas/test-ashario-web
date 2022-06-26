@@ -309,14 +309,14 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
             products: [
                 {
                     productId: 2089,
-                    priceId: 'eighth_ounce',
+                    priceId: "eighth_ounce",
                     count: 2,
                 },
                 {
-                    productId: 1,
-                    priceId: 'eighth_ounce',
+                    productId: 2030,
+                    priceId: "gram",
                     count: 1,
-                }
+                },
             ],
             user: {
                 firstName: "John",   //valores que se reemplazaran por el nombre de la cuenta real
