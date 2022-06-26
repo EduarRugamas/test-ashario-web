@@ -192,11 +192,6 @@ index.search('', {
             text_price.id="h4_price";
             text_price.textContent = `$ ${hits[0].price_ounce}`;
             container_price.appendChild(text_price);
-        }else if (option_weigh_current === 'half ounce') {
-            let text_price = document.createElement('h4');
-            text_price.className = "mb-0";
-            text_price.id="h4_price";
-            text_price.textContent = `$ ${hits[0].price_half_ounce}`;
         }else if (option_weigh_current === 'half gram') {
             let text_price = document.createElement('h4');
             text_price.className = "mb-0";
