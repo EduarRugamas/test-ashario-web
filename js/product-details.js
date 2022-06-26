@@ -161,6 +161,7 @@ index.search('', {
         container_price.appendChild(text_price);
     }else {
         let option_weigh_current = document.getElementById('select-weight').value;
+        console.log(option_weigh_current)
         if (option_weigh_current === 'gram'){
             let text_price = document.createElement('h4');
             text_price.className = "mb-0";
