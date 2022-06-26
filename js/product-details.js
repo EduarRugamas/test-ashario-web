@@ -195,9 +195,10 @@ index.search('', {
         }
 
         if (option_weigh_current === "half gram" || (hist[0].available_weights.length === 1 && hits[0].available_weights  === "half gram") ) {
-            let container_price = document.getElementById('text_price').
-            console.log('esta aqui en el half gram');
+            let container_price = document.getElementById('text_price')
+                console.log('esta aqui',option_weigh_current);
              container_price.innerHTML=`<h4 class="mb-0" id="h4_price">$ ${hits[0].price_half_gram}</h4>`;
+             console.log('paso a aqui ')
         }
     }
 
