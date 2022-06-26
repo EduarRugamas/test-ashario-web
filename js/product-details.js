@@ -161,7 +161,7 @@ index.search('', {
         container_price.appendChild(text_price);
     }else {
         let option_weigh_current = document.getElementById('select-weight').value;
-        console.log(option_weigh_current)
+        console.log(option_weigh_current);
         if (option_weigh_current === 'gram'){
             let text_price = document.createElement('h4');
             text_price.className = "mb-0";
@@ -201,8 +201,21 @@ index.search('', {
     }
 
     function selected_weight_change() {
-        let selected_option_weight = document.getElementById('select-weight').value;
-
+        let current_option_weight = document.getElementById('select-weight').value;
+        let h4_price_string = document.getElementById('h4_price');
+        if (current_option_weight === 'gram'){
+            h4_price_string.textContent=`$ ${hits[0].price_gram}`;
+        }else if (current_option_weight === 'eighth ounce') {
+            h4_price_string.textContent=`$ ${hits[0].price_eighth_ounce}`
+        }else if (current_option_weight === 'quarter ounce') {
+            h4_price_string.textContent=`$ ${hits[0].price_quarter_ounce}`
+        }else if (current_option_weight === 'half ounce') {
+            h4_price_string.textContent=`$ ${hits[0].price_half_ounce}`
+        }else if (current_option_weight === 'half gram') {
+            h4_price_string.textContent=`$ ${hits[0].price_half_gram}`
+        }else if (current_option_weight === 'ounce') {
+            h4_price_string.textContent=`$ ${hits[0].price_ounce}`
+        }
 
     }
 
