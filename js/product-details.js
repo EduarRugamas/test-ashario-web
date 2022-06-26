@@ -389,7 +389,7 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
     //     console.log("Se agrego al carrito");
     // }
 
-
+    window.addEventListener("message", receiveMessage, false);
         let frame = document.getElementById('jane-menu');
         frame.contentWindow.postMessage(data, '*');
 
@@ -397,14 +397,63 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
 
 
 function receiveMessage(event) {
-    let payload = event.data && event.data.messageType;
+
+    let data = {
+        messageType: "buildCart",
+        payload: {
+            products: [
+                {
+                    productId: 2089,
+                    priceId: "eighth_ounce",
+                    count: 2,
+                },
+                {
+                    productId: 2030,
+                    priceId: "gram",
+                    count: 1,
+                },
+            ],
+            user: {
+                firstName: "John",   //valores que se reemplazaran por el nombre de la cuenta real
+                lastName: "Smith",
+                birthDate: "1988-04-20",
+                phone: "5556661212",
+                email: "johnsmith@gmail.com",
+                externalId: "12345",
+            },
+            storeId: 68,
+            headlessPartnerName: "AsharioCompany",
+            headlessCheckoutPartnerId: '1234-asdf-5678-ghjk',
+            options: {
+                font: {
+                    fontFamily: "Roboto",
+                    url:
+                        "https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2",
+                },
+                theme: {
+                    themeColor: "#38b1fa",
+                    navigationColor: "#38b1fa",
+                    ctaTextColor: "#ffffff",
+                },
+                redirectUrl: 'https://harmonious-mooncake-eb8276.netlify.app/',
+                disableAuthFeatures: true,
+                disableLoadingSpinner: false,
+                disableWeightSelection: false,
+                disablePrepayment: false,
+                disableMarketingCheckoutAgreements: true,
+                kiosk: false
+            },
+        }
+    }
+
+    let payload = event.data && event.data.payload;
     let messageType = event.data && event.data.messageType;
 
     if (messageType === "loadingEvent" && payload.name === "headlessAppLoaded") {
         console.log("Llego hasta aqui");
-        console.log("informacion del json", event.data)
+        console.log("informacion del json", data)
         let frame = document.getElementById('jane-menu');
-        frame.contentWindow.postMessage(event.data, '*');
+        frame.contentWindow.postMessage(data, '*');
         console.log("Se agrego al carrito");
     }
 }
