@@ -195,6 +195,7 @@ index.search('', {
         }
 
         if (option_weigh_current === 'half gram') {
+            console.log('esta aqui en el half gram');
             let text_price = document.createElement('h4');
             text_price.className = "mb-0";
             text_price.id = "h4_price";
