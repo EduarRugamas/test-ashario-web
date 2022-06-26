@@ -194,11 +194,16 @@ index.search('', {
             container_price.appendChild(text_price);
         }
     //|| (hist[0].available_weights.length === 1 && hits[0].available_weights  === "half gram")
-        if (option_weigh_current === "half gram"  ) {
-            let container_price = document.getElementById('text_price')
-                console.log('esta aqui',option_weigh_current);
-             container_price.innerHTML=`<h4 class="mb-0" id="h4_price">$ ${hits[0].price_half_gram}</h4>`;
-             console.log('paso a aqui ')
+        if (option_weigh_current === "half gram") {
+            //  let container_price = document.getElementById('text_price')
+            //  console.log('esta aqui',option_weigh_current);
+            //  container_price.innerHTML=`<h4 class="mb-0" id="h4_price">$ ${hits[0].price_half_gram}</h4>`;
+            //  console.log('paso a aqui ')
+            let text_price = document.createElement('h4');
+            text_price.className = "mb-0";
+            text_price.id = "h4_price";
+            text_price.textContent = `$ ${hits[0].price_half_gram}`;
+            container_price.appendChild(text_price);
         }
     }
 
