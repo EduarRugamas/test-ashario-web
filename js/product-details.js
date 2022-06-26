@@ -390,8 +390,6 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
     // }
 
     window.addEventListener("message", receiveMessage, false);
-        let frame = document.getElementById('jane-menu');
-        frame.contentWindow.postMessage(data, '*');
 
 }
 
