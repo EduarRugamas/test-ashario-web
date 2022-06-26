@@ -220,6 +220,7 @@ index.search('', {
     }
 
     function selected_quantity_change() {
+        let option_select_quantity = document.getElementById('quantity');
         let selec_option_quantity = parseInt(document.getElementById('quantity').value);
         let select_option_weight = document.getElementById('select-weight').value;
         let h4_price_replace = document.getElementById('h4_price');
@@ -229,34 +230,34 @@ index.search('', {
             h4_price_replace.textContent = `$ ${price_each_string}`;
         } else if (select_option_weight === 'gram') {
             let price_gram_int = parseFloat(hits[0].price_gram);
-            let selec_option_quantity_current = parseInt(document.getElementById('quantity').value);
-            let price_gram_string = (price_gram_int * selec_option_quantity_current).toFixed(2);
+            let price_gram_string = (price_gram_int * selec_option_quantity).toFixed(2);
             h4_price_replace.textContent = `$ ${price_gram_string}`;
+            option_select_quantity.selectedIndex = 0;
         } else if (select_option_weight === 'eighth ounce') {
             let price_eighth_ounce_int = parseFloat(hits[0].price_eighth_ounce);
-            let selec_option_quantity_current = parseInt(document.getElementById('quantity').value);
-            let price_eighth_ounce_string = (price_eighth_ounce_int * selec_option_quantity_current).toFixed(2);
+            let price_eighth_ounce_string = (price_eighth_ounce_int * selec_option_quantity).toFixed(2);
             h4_price_replace.textContent = `$ ${price_eighth_ounce_string}`;
+            option_select_quantity.selectedIndex = 0;
         } else if (select_option_weight === 'quarter ounce') {
             let price_quarter_ounce_int = parseFloat(hits[0].price_quarter_ounce);
-            let selec_option_quantity_current = parseInt(document.getElementById('quantity').value);
-            let price_quarter_ounce_string = (price_quarter_ounce_int * selec_option_quantity_current).toFixed(2);
+            let price_quarter_ounce_string = (price_quarter_ounce_int * selec_option_quantity).toFixed(2);
             h4_price_replace.textContent = `$ ${price_quarter_ounce_string}`;
+            option_select_quantity.selectedIndex = 0;
         } else if (select_option_weight === 'half ounce') {
             let price_half_ounce_int = parseFloat(hits[0].price_half_ounce);
-            let selec_option_quantity_current = parseInt(document.getElementById('quantity').value);
-            let price_half_ounce_string = (price_half_ounce_int * selec_option_quantity_current).toFixed(2);
+            let price_half_ounce_string = (price_half_ounce_int * selec_option_quantity).toFixed(2);
             h4_price_replace.textContent = `$ ${price_half_ounce_string}`;
+            option_select_quantity.selectedIndex = 0;
         } else if (select_option_weight === 'half gram') {
             let price_half_gram_int = parseFloat(hits[0].price_half_gram);
-            let selec_option_quantity_current = parseInt(document.getElementById('quantity').value);
-            let price_half_gram_string = (price_half_gram_int * selec_option_quantity_current).toFixed(2);
+            let price_half_gram_string = (price_half_gram_int * selec_option_quantity).toFixed(2);
             h4_price_replace.textContent = `$ ${price_half_gram_string}`;
+            option_select_quantity.selectedIndex = 0;
         } else if (select_option_weight === 'ounce') {
             let price_ounce_int = parseFloat(hits[0].price_ounce);
-            let selec_option_quantity_current = parseInt(document.getElementById('quantity').value);
-            let price_ounce_string = (price_ounce_int * selec_option_quantity_current).toFixed(2);
+            let price_ounce_string = (price_ounce_int * selec_option_quantity).toFixed(2);
             h4_price_replace.textContent = `$ ${price_ounce_string}`;
+            option_select_quantity.selectedIndex = 0;
         }
 
     }
