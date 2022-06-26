@@ -351,7 +351,7 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
         }
     }
 
-    console.log('test de prueba de carrito cambiando : ', JSON.stringify(data));
+    console.log('test de prueba de carrito cambiando : ', data);
 
     //
     // if ((product_id === null || product_id === undefined) || (select_option_quantity === 0 || select_option_quantity === null || select_option_quantity === undefined)) {
