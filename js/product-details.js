@@ -306,7 +306,18 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
     let data = {
         messageType: "buildCart",
         payload: {
-            products: [],
+            products: [
+                {
+                    productId: 2089,
+                    priceId: 'eighth_ounce',
+                    count: 2,
+                },
+                {
+                    productId: 1,
+                    priceId: 'eighth_ounce',
+                    count: 1,
+                }
+            ],
             user: {
                 firstName: "John",   //valores que se reemplazaran por el nombre de la cuenta real
                 lastName: "Smith",
@@ -315,8 +326,9 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
                 email: "johnsmith@gmail.com",
                 externalId: "12345",
             },
-            storeId: 4435,
+            storeId: 68,
             headlessPartnerName: "AsharioCompany",
+            headlessCheckoutPartnerId: '1234-asdf-5678-ghjk',
             options: {
                 font: {
                     fontFamily: "Roboto",
@@ -339,39 +351,47 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
         }
     }
 
-    console.log('Informacion sin agregar al JSON product: ', JSON.stringify(data));
+    console.log('test de prueba de carrito cambiando : ', JSON.stringify(data));
+
+    //
+    // if ((product_id === null || product_id === undefined) || (select_option_quantity === 0 || select_option_quantity === null || select_option_quantity === undefined)) {
+    //     console.log("los datos vienen vacios o null o undefined");
+    //     console.log("El productId esta vacio y el count esta vacio");
+    // } else if (select_option_weight === "" || select_option_weight === null || select_option_weight === undefined) {
+    //     data.payload.products.push({
+    //         productId: product_id,
+    //         priceId: "each",
+    //         count: select_option_quantity
+    //     });
+    //
+    //     console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
+    //
+    //     console.log("Llego hasta aqui");
+    //     console.log("informacion del json", data);
+    //     let frame = document.getElementById('jane-menu');
+    //     frame.contentWindow.postMessage(data, '*');
+    //     console.log("Se agrego al carrito");
+    //
+    // } else {
+    //
+    //     data.payload.products.push({
+    //         productId: product_id,
+    //         priceId: select_option_weight,
+    //         count: select_option_quantity
+    //     });
+    //
+    //     console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
+    //
+    //     console.log("Llego hasta aqui");
+    //     console.log("informacion del json", data);
+    //     let frame = document.getElementById('jane-menu');
+    //     frame.contentWindow.postMessage(data, '*');
+    //     console.log("Se agrego al carrito");
+    // }
 
 
-    if ((product_id === null || product_id === undefined) || (select_option_quantity === 0 || select_option_quantity === null || select_option_quantity === undefined)) {
-        console.log("los datos vienen vacios o null o undefined");
-        console.log("El productId esta vacio y el count esta vacio");
-    } else if (select_option_weight === "" || select_option_weight === null || select_option_weight === undefined) {
-        data.payload.products.push({productId: product_id, priceId: "each", count: select_option_quantity});
-
-        console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
-
-        console.log("Llego hasta aqui");
-        console.log("informacion del json", data);
         let frame = document.getElementById('jane-menu');
         frame.contentWindow.postMessage(data, '*');
-        console.log("Se agrego al carrito");
-
-    } else {
-
-        data.payload.products.push({
-            productId: product_id,
-            priceId: select_option_weight,
-            count: select_option_quantity
-        });
-
-        console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
-
-        console.log("Llego hasta aqui");
-        console.log("informacion del json", data);
-        let frame = document.getElementById('jane-menu');
-        frame.contentWindow.postMessage(data, '*');
-        console.log("Se agrego al carrito");
-    }
 
 }
 
