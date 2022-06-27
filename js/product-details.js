@@ -60,7 +60,7 @@ index.search('', {
                                             <p class="mb-0">${hits[0].description}</p>
                                         
                                             <h6>Description:</h6>
-                                             <p class="mb-0">${hits[0].description}</p>
+                                             <p class="mb-0">${hits[0]._highlightResult.description.value}</p>
                                         </div>
                                         <dl class="row mt-3">
                                             <dt class="col-sm-3">Product id</dt>
