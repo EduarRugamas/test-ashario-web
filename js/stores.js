@@ -60,15 +60,17 @@ const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 //   fin de widgets custom o personalizados
 
 
+    index.search('', {
+        filters: 'category:flowers'
+    }).then( ({hits}) => {
+        console.log(hits);
+        search.addWidgets(CustomHits({container: document.querySelector('#container-hits')}))
+    })
+
+
 search.addWidgets([
 
     instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4435'}).addWidgets([
-
-        index.search('', {
-            filters: 'category:flowers'
-        }).then( ({hits}) => {
-            console.log(hits)
-        }),
 
         instantsearch.widgets.searchBox({
             container: '#searchBox',
@@ -133,7 +135,7 @@ search.addWidgets([
             ]
         }),
 
-        CustomHits({container: document.querySelector('#container-hits')}),
+
 
         instantsearch.widgets.pagination({
             container: '#pagination-container',
