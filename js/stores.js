@@ -18,7 +18,7 @@ const index = searchClient.initIndex(indexName);
 
     index.search('', {
         filters: 'kind:flower AND store_id:4434'
-    }).then( ({hits}) => {
+    }).then( ({hits_result}) => {
 
         console.log('intento de result con kind flower',hits);
 
@@ -67,7 +67,7 @@ const index = searchClient.initIndex(indexName);
             ).join('')}
     `;
         };
-        const CustomHits = instantsearch.connectors.connectHits(HitsRender);
+        const CustomHits = index.connectors.connectHits(HitsRender);
 
 
         search.addWidgets([
