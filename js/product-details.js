@@ -47,13 +47,13 @@ index.search('', {
                             </div>
                             <div class="col-12 col-lg-7">
                                 <div class="product-info-section p-3">
-                                        <div class="badge bg-success mb-2">
+                                        <div class="badge bg-badge-category mb-2">
                                             <p style="text-transform: uppercase;" class="m-1 align-content-center font-14">${hits[0].category}</p>
                                         </div>
                                         <h3 class="mt-3 mt-lg-0 mb-0">${hits[0].name}</h3>
                                         <div class="d-inline-block">
-                                            <p class="mt-3 badge bg-color-brand">${hits[0].brand}</p>
-                                            <p class="mt-3 badge bg-color-brand-subtype">${hits[0].brand_subtype}</p>
+                                            <p class="mt-3 badge bg-success">${hits[0].brand}</p>
+                                            <p class="mt-3 badge bg-success">${hits[0].brand_subtype}</p>
                                         </div>
                                         <div class="d-flex align-items-center mt-3 gap-2" id="text_price" >
                                             <!-- <h5 class="mb-0 text-decoration-line-through text-light-3">$98.00</h5>-->

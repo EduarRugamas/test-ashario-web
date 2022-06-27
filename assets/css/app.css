@@ -962,6 +962,10 @@ ul.categories-list li {
 	background: rgb(255 255 255 / 45%)!important;
 }
 
+.bg-badge-category {
+	background: #852778;
+}
+
 .bg-color-brand-subtype {
 	background: rgb(255 255 255 / 55%)!important;
 }
