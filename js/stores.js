@@ -61,7 +61,7 @@ const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 
 
     index.search('', {
-        filters: 'category:flower'
+        filters: 'brand:flower'
     }).then( ({hits}) => {
         console.log(hits);
         search.addWidgets([CustomHits({container: document.querySelector('#container-hits')})])
