@@ -18,9 +18,9 @@ const index = searchClient.initIndex(indexName);
 
     index.search('', {
         filters: 'kind:flower AND store_id:4434'
-    }).then( ({hits_result}) => {
+    }).then( ({hits}) => {
 
-        console.log('intento de result con kind flower',hits_result);
+        console.log('intento de result con kind flower',hits);
 
 
         // widgets de hits o mostrar elementos en tarjetas
