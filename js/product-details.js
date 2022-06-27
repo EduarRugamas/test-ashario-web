@@ -105,7 +105,7 @@ index.search('', {
     } else {
         let container_details = document.getElementById('container-details-dl');
         let dt_title = document.createElement('dt');
-        let dd_string = document.getElementById('dd');
+        let dd_string = document.createElement('dd');
         dt_title.className = 'col-sm-3';
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'cbd';
@@ -120,7 +120,7 @@ index.search('', {
     } else {
         let container_details = document.getElementById('container-details-dl');
         let dt_title = document.createElement('dt');
-        let dd_string = document.getElementById('dd');
+        let dd_string = document.createElement('dd');
         dt_title.className = 'col-sm-3';
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'cbda';
@@ -135,7 +135,7 @@ index.search('', {
     } else {
         let container_details = document.getElementById('container-details-dl');
         let dt_title = document.createElement('dt');
-        let dd_string = document.getElementById('dd');
+        let dd_string = document.createElement('dd');
         dt_title.className = 'col-sm-3';
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'tac';
@@ -150,7 +150,7 @@ index.search('', {
     }else {
         let container_details = document.getElementById('container-details-dl');
         let dt_title = document.createElement('dt');
-        let dd_string = document.getElementById('dd');
+        let dd_string = document.createElement('dd');
         dt_title.className = 'col-sm-3';
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'tac';
@@ -166,7 +166,7 @@ index.search('', {
     }else {
         let container_details = document.getElementById('container-details-dl');
         let dt_title = document.createElement('dt');
-        let dd_string = document.getElementById('dd');
+        let dd_string = document.createElement('dd');
         dt_title.className = 'col-sm-3';
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'tac';
