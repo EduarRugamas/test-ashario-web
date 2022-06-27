@@ -51,7 +51,7 @@ index.search('', {
                                             <p style="text-transform: uppercase;" class="m-1 align-content-center font-14">${hits[0].category}</p>
                                         </div>
                                         <h3 class="mt-3 mt-lg-0 mb-0">${hits[0].name}</h3>
-                                        <h6 class="text-uppercase">${hits[0].brand}\${hits[0].bran_subtype}</h6>
+                                        <h6 class="text-uppercase">${hits[0].brand}\ ${hits[0].bran_subtype}</h6>
                                         <div class="d-flex align-items-center mt-3 gap-2" id="text_price" >
                                             <!-- <h5 class="mb-0 text-decoration-line-through text-light-3">$98.00</h5>-->
                                             <!--  <h4 class="mb-0" ></h4>-->
