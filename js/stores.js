@@ -63,7 +63,7 @@ const CustomHits = instantsearch.connectors.connectHits(HitsRender);
     index.search('', {
         filters: 'kind:flower'
     }).then( ({hits}) => {
-        console.log(hits);
+        console.log('intento de result con kind flower',hits);
         search.addWidgets([
             instantsearch.widgets.searchBox({
                 container: '#searchBox',
