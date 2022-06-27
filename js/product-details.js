@@ -47,8 +47,8 @@ index.search('', {
                             </div>
                             <div class="col-12 col-lg-7">
                                 <div class="product-info-section p-3">
-                                        <div class="badge bg-success mb-2">
-                                            <p style="text-transform: uppercase;" class="m-1 align-content-center">${hits[0].category}</p>
+                                        <div class="badge bg-success mb-2 w-50">
+                                            <p style="text-transform: uppercase;" class="m-1 align-content-center font-14">${hits[0].category}</p>
                                         </div>
                                         <h3 class="mt-3 mt-lg-0 mb-0">${hits[0].name}</h3>
                                         <div class="d-flex align-items-center mt-3 gap-2" id="text_price" >
