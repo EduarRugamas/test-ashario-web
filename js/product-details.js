@@ -48,7 +48,7 @@ index.search('', {
                             <div class="col-12 col-lg-7">
                                 <div class="product-info-section p-3">
                                         <div class="badge bg-badge-category mb-2">
-                                            <p style="text-transform: uppercase;" class="m-1 align-content-center font-14">${hits[0].category}</p>
+                                            <p style="text-transform: uppercase;" class="m-1 align-content-center font-14">${hits[0].type}</p>
                                         </div>
                                         <h3 class="mt-4 mt-lg-0 mb-0">${hits[0].name}</h3>
                                         <div class="d-inline-block mt-2" >
@@ -110,7 +110,7 @@ index.search('', {
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'cbd';
         dd_string.className = 'col-sm-9';
-        dd_string.textContent = `${hits[0].percent_cbd}.00%`;
+        dd_string.textContent = `${hits[0].percent_cbd}%`;
         container_details.appendChild(dt_title);
         container_details.appendChild(dd_string);
     }
@@ -125,7 +125,7 @@ index.search('', {
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'cbda';
         dd_string.className = 'col-sm-9';
-        dd_string.textContent = `${hits[0].percent_cbda}.00%`;
+        dd_string.textContent = `${hits[0].percent_cbda}%`;
         container_details.appendChild(dt_title);
         container_details.appendChild(dd_string);
     }
@@ -140,7 +140,7 @@ index.search('', {
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'tac';
         dd_string.className = 'col-sm-9';
-        dd_string.textContent = `${hits[0].percent_tac}.00%`;
+        dd_string.textContent = `${hits[0].percent_tac}%`;
         container_details.appendChild(dt_title);
         container_details.appendChild(dd_string);
     }
@@ -155,7 +155,7 @@ index.search('', {
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'tac';
         dd_string.className = 'col-sm-9';
-        dd_string.textContent = `${hits[0].percent_thc}.00%`;
+        dd_string.textContent = `${hits[0].percent_thc}%`;
         container_details.appendChild(dt_title);
         container_details.appendChild(dd_string);
     }
@@ -171,7 +171,7 @@ index.search('', {
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'tac';
         dd_string.className = 'col-sm-9';
-        dd_string.textContent = `${hits[0].percent_thca}.00%`;
+        dd_string.textContent = `${hits[0].percent_thca}%`;
         container_details.appendChild(dt_title);
         container_details.appendChild(dd_string);
     }
