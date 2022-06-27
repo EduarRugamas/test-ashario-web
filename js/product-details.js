@@ -51,7 +51,7 @@ index.search('', {
                                             <p style="text-transform: uppercase;" class="m-1 align-content-center font-14">${hits[0].category}</p>
                                         </div>
                                         <h3 class="mt-3 mt-lg-0 mb-0">${hits[0].name}</h3>
-                                        <div class="d-inline-block mb-0">
+                                        <div class="d-inline-block mb-0 p-0" >
                                             <p class="badge bg-success m-1 font-12">${hits[0].brand}</p>
                                             <p class="badge bg-success m-1 font-12">${hits[0].brand_subtype}</p>
                                         </div>
