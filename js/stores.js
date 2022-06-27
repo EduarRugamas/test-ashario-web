@@ -67,7 +67,7 @@ const index = searchClient.initIndex(indexName);
             ).join('')}
     `;
         };
-        const CustomHits = index.connectors.connectHits(HitsRender);
+        const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 
 
         search.addWidgets([
