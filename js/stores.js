@@ -60,6 +60,10 @@ search.addWidgets([
 
     instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4435'}).addWidgets([
 
+        instantsearch.widgets.configure({
+            filters: 'categorie: flowers'
+        }),
+
         instantsearch.widgets.searchBox({
             container: '#searchBox',
             placeholder: 'Search for Products',
