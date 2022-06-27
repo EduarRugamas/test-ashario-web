@@ -52,10 +52,10 @@ index.search('', {
                                         </div>
                                         <h3 class="mt-4 mt-lg-0 mb-0">${hits[0].name}</h3>
                                         <div class="d-inline-block mb-2 mt-2" >
-                                            <p class="badge bg-success font-13 p-1">${hits[0].brand}</p>
-                                            <p class="badge bg-success font-13 p-1">${hits[0].brand_subtype}</p>
+                                            <p class="badge bg-success font-13 ">${hits[0].brand}</p>
+                                            <p class="badge bg-success font-13 ">${hits[0].brand_subtype}</p>
                                         </div>
-                                        <div class="d-flex align-items-center mt-2 gap-2" id="text_price" >
+                                        <div class="d-flex align-items-center mt-0 gap-2" id="text_price" >
                                             <!-- <h5 class="mb-0 text-decoration-line-through text-light-3">$98.00</h5>-->
                                             <!--  <h4 class="mb-0" ></h4>-->
                                         </div>
