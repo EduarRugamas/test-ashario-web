@@ -36,13 +36,6 @@ const HitsRender = (renderOptions, isFirstRender) => {
                                 <div class="mb-1 product-price">
                                     <span class="fs-5">\$ ${item.bucket_price}</span>
                                 </div>
-                                <div class="cursor-pointer ms-auto">
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                    <i class="bx bxs-star text-warning"></i>
-                                </div>
                             </div>
                             <div class="product-action mt-2">
                                 <div class="d-grid gap-2">
@@ -57,20 +50,6 @@ const HitsRender = (renderOptions, isFirstRender) => {
         `
     ).join('')}
     `;
-
-    // hits.map(item => {
-    //     let posicionActual = 0;
-    //     const container_img = document.querySelector('#imagen-product');
-    //     let img = item.image_urls;
-    //     if (img.length === 0) {
-    //         container_img.src = '../assets/images/errors-images/image-not-found.jpeg'
-    //     } else {
-    //         container_img.src = `${img[posicionActual]}`
-    //     }
-    //
-    // });
-
-
 };
 const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 

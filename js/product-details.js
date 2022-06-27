@@ -47,63 +47,45 @@ index.search('', {
                             </div>
                             <div class="col-12 col-lg-7">
                                 <div class="product-info-section p-3">
-                                    <h3 class="mt-3 mt-lg-0 mb-0">${hits[0].name}</h3>
-                                    <div class="product-rating d-flex align-items-center mt-2">
-                                    <div class="rates cursor-pointer font-13">
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-warning"></i>
-                                        <i class="bx bxs-star text-light-4"></i>
-                                    </div>
-                                    <div class="ms-1">
-                                        <p class="mb-0">(24 Ratings)</p>
-                                    </div>
+                                        <div class="badge bg-success">
+                                            <p style="text-transform: uppercase;">${hits[0].category}</p>
+                                        </div>
+                                        <h3 class="mt-3 mt-lg-0 mb-0">${hits[0].name}</h3>
+                                        <div class="d-flex align-items-center mt-3 gap-2" id="text_price" >
+                                            <!-- <h5 class="mb-0 text-decoration-line-through text-light-3">$98.00</h5>-->
+                                            <!--  <h4 class="mb-0" ></h4>-->
+                                        </div>
+                                        <div class="mt-3">
+                                            <h6>Details:</h6>
+                                            <p class="mb-0">${hits[0].description}</p>
+                                        
+                                            <h6>Description:</h6>
+                                             <p class="mb-0">${hits[0].description}</p>
+                                        </div>
+                                        <dl class="row mt-3">
+                                            <dt class="col-sm-3">Product id</dt>
+                                            <dd class="col-sm-9"># ${hits[0].product_id}</dd>
+                                        </dl>
+                                        <div class="row row-cols-auto align-items-center mt-3">
+                                            <div class="col" id="container_quantity">
+                                                <label class="form-label">Quantity</label>
+                                                    <select class="form-select form-select-sm" id="quantity"></select>
+                                            </div>
+                                            <div class="col" id="container_weight">
+                                                <label class="form-label">weight</label>
+                                                    <select class="form-select form-select-sm" id="select-weight"></select>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2 mt-3">
+                                            <a href="#" class="btn btn-white btn-ecomm" id="add-to-cart"><i class="bx bxs-cart-add"></i>Add to Cart</a> 
+                                            <a href="javascript:;" class="btn btn-light btn-ecomm"><i class="bx bx-heart"></i>Add to Wishlist</a>
+                                        </div>
+                                        <hr/>
                                 </div>
-                                <div class="d-flex align-items-center mt-3 gap-2" id="text_price" >
-                                    <!-- <h5 class="mb-0 text-decoration-line-through text-light-3">$98.00</h5>-->
-                                    <!--  <h4 class="mb-0" ></h4>-->
-                                </div>
-                                <div class="mt-3">
-                                    <h6>Discription :</h6>
-                                    <p class="mb-0">${hits[0].description}</p>
-                                </div>
-                                <dl class="row mt-3">
-                                    <dt class="col-sm-3">Product id</dt>
-                                    <dd class="col-sm-9"># ${hits[0].product_id}</dd>
-<!--                                    <dt class="col-sm-3">Delivery</dt>-->
-<!--                                    <dd class="col-sm-9">Russia, USA, and Europe</dd>-->
-                                </dl>
-                                <div class="row row-cols-auto align-items-center mt-3">
-                                    <div class="col" id="container_quantity">
-                                        <label class="form-label">Quantity</label>
-                                            <select class="form-select form-select-sm" id="quantity"></select>
-                                    </div>
-                                    <div class="col" id="container_weight">
-                                        <label class="form-label">weight</label>
-                                            <select class="form-select form-select-sm" id="select-weight"></select>
-                                    </div>
-<!--                                    <div class="col">-->
-<!--                                        <label class="form-label">Colors</label>-->
-<!--                                            <div class="color-indigators d-flex align-items-center gap-2">-->
-<!--                                            <div class="color-indigator-item bg-primary"></div>-->
-<!--                                            <div class="color-indigator-item bg-danger"></div>-->
-<!--                                            <div class="color-indigator-item bg-success"></div>-->
-<!--                                            <div class="color-indigator-item bg-warning"></div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
                             </div>
-                            <!--end row-->
-                            <div class="d-flex gap-2 mt-3">
-                                <a href="#" class="btn btn-white btn-ecomm" id="add-to-cart"><i class="bx bxs-cart-add"></i>Add to Cart</a> 
-                                <a href="javascript:;" class="btn btn-light btn-ecomm"><i class="bx bx-heart"></i>Add to Wishlist</a>
-                            </div>
-                            <hr/>
                         </div>
                     </div>
                 </div>
-            </div>
-            </div>
             </div>
        </section>
     `;
@@ -192,7 +174,7 @@ index.search('', {
             text_price.id = "h4_price";
             text_price.textContent = `$ ${hits[0].price_ounce}`;
             container_price.appendChild(text_price);
-        }else if (option_weigh_current === "half gram") {
+        } else if (option_weigh_current === "half gram") {
             let text_price = document.createElement('h4');
             text_price.className = "mb-0";
             text_price.id = "h4_price";
