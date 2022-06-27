@@ -110,7 +110,7 @@ index.search('', {
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'cbd';
         dd_string.className = 'col-sm-9';
-        dd_string.textContent = `${hits[0].percent_cbd}%`;
+        dd_string.textContent = `${hits[0].percent_cbd.toFixed(2)}%`;
         container_details.appendChild(dt_title);
         container_details.appendChild(dd_string);
     }
