@@ -20,7 +20,7 @@ const index = searchClient.initIndex(indexName);
         filters: 'kind:flower AND store_id:4434'
     }).then( ({hits_result}) => {
 
-        console.log('intento de result con kind flower',hits);
+        console.log('intento de result con kind flower',hits_result);
 
 
         // widgets de hits o mostrar elementos en tarjetas
