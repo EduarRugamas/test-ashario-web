@@ -957,6 +957,15 @@ ul.categories-list li {
 .bg-gradient-moonlit {
 	background: linear-gradient(to right, #0f2027, #203a43, #2c5364)!important
 }
+
+.bg-color-brand {
+	background: rgb(255 255 255 / 45%)!important;
+}
+
+.bg-color-brand-subtype {
+	background: rgb(255 255 255 / 55%)!important;
+}
+
 .split-bg-primary {
 	background-color: #0c62e0;
 	border-color: #0c62e0
