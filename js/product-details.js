@@ -51,7 +51,7 @@ index.search('', {
                                             <p style="text-transform: uppercase;" class="m-1 align-content-center font-14">${hits[0].category}</p>
                                         </div>
                                         <h3 class="mt-4 mt-lg-0 mb-0">${hits[0].name}</h3>
-                                        <div class="d-inline-block  mt-2" >
+                                        <div class="d-inline-block mt-2" >
                                             <p class="badge bg-success font-13 ">${hits[0].brand}</p>
                                             <p class="badge bg-success font-13 ">${hits[0].brand_subtype}</p>
                                         </div>
@@ -61,15 +61,15 @@ index.search('', {
                                         </div>
                                         <div class="mt-3">
                                             <h6>Details:</h6>
-                                            <p class="mb-0">${hits[0].description}</p>
+                                            <dl class="row mt-3">
+                                                <dt class="col-sm-3">Product id</dt>
+                                                <dd class="col-sm-9"># ${hits[0].product_id}</dd>
+                                            </dl>
+                                            <!--<p class="mb-0">${hits[0].description}</p>-->
                                         
                                             <h6>Description:</h6>
                                              <p class="mb-0">${hits[0]._highlightResult.description.value}</p>
                                         </div>
-                                        <dl class="row mt-3">
-                                            <dt class="col-sm-3">Product id</dt>
-                                            <dd class="col-sm-9"># ${hits[0].product_id}</dd>
-                                        </dl>
                                         <div class="row row-cols-auto align-items-center mt-3">
                                             <div class="col" id="container_quantity">
                                                 <label class="form-label">Quantity</label>
