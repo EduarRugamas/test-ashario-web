@@ -66,6 +66,8 @@ search.addWidgets([
 
         index.search('', {
             filters: 'category:flowers'
+        }).then( ({hits}) => {
+            console.log(hits)
         }),
 
         instantsearch.widgets.searchBox({
