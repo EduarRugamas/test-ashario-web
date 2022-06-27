@@ -60,8 +60,8 @@ const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 //   fin de widgets custom o personalizados
 
 
-    index.search('flowers', {
-        filters: 'brand_subtype:flowers'
+    index.search('', {
+        filters: 'kind:flower'
     }).then( ({hits}) => {
         console.log(hits);
         search.addWidgets([
