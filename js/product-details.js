@@ -110,7 +110,7 @@ index.search('', {
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'cbd';
         dd_string.className = 'col-sm-9';
-        dd_string.textContent = `${hits[0].percent_cbd.toFixed(2)}%`;
+        dd_string.textContent = `${hits[0].percent_cbd}.00%`;
         container_details.appendChild(dt_title);
         container_details.appendChild(dd_string);
     }
@@ -125,7 +125,7 @@ index.search('', {
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'cbda';
         dd_string.className = 'col-sm-9';
-        dd_string.textContent = `${hits[0].percent_cbda}%`;
+        dd_string.textContent = `${hits[0].percent_cbda}.00%`;
         container_details.appendChild(dt_title);
         container_details.appendChild(dd_string);
     }
@@ -140,7 +140,7 @@ index.search('', {
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'tac';
         dd_string.className = 'col-sm-9';
-        dd_string.textContent = `${hits[0].percent_tac}%`;
+        dd_string.textContent = `${hits[0].percent_tac}.00%`;
         container_details.appendChild(dt_title);
         container_details.appendChild(dd_string);
     }
@@ -155,7 +155,7 @@ index.search('', {
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'tac';
         dd_string.className = 'col-sm-9';
-        dd_string.textContent = `${hits[0].percent_thc}%`;
+        dd_string.textContent = `${hits[0].percent_thc}.00%`;
         container_details.appendChild(dt_title);
         container_details.appendChild(dd_string);
     }
@@ -171,7 +171,7 @@ index.search('', {
         dt_title.style = 'text-transform: uppercase;';
         dt_title.textContent = 'tac';
         dd_string.className = 'col-sm-9';
-        dd_string.textContent = `${hits[0].percent_thca}%`;
+        dd_string.textContent = `${hits[0].percent_thca}.00%`;
         container_details.appendChild(dt_title);
         container_details.appendChild(dd_string);
     }
