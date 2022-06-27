@@ -11,16 +11,28 @@ const index = searchClient.initIndex(indexName);
 
 //  widgets custom o personalizados
 
-// widgets de hits o mostrar elementos en tarjetas
-const HitsRender = (renderOptions, isFirstRender) => {
-    const {hits, results, BindEvent, widgetParams} = renderOptions;
-
-    console.log('aqui estan los objetos de el hits', hits);
 
 
-    widgetParams.container.innerHTML = `
+//   fin de widgets custom o personalizados
+
+
+    index.search('', {
+        filters: 'kind:flower AND store_id:4434'
+    }).then( ({hits}) => {
+
+        console.log('intento de result con kind flower',hits);
+
+
+        // widgets de hits o mostrar elementos en tarjetas
+        const HitsRender = (renderOptions, isFirstRender) => {
+            const {hits, results, BindEvent, widgetParams} = renderOptions;
+
+            console.log('aqui estan los objetos de el hits', hits);
+
+
+            widgetParams.container.innerHTML = `
             ${hits.map(item =>
-        `
+                `
         <div class="col">
             <div class="card rounded-0 product-card">
                         <a href="product-details.html?objectID=${item.objectID}">
@@ -52,19 +64,14 @@ const HitsRender = (renderOptions, isFirstRender) => {
                 </div>
         </div>    
         `
-    ).join('')}
+            ).join('')}
     `;
-};
-const CustomHits = instantsearch.connectors.connectHits(HitsRender);
-
-//   fin de widgets custom o personalizados
+        };
+        const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 
 
-    index.search('', {
-        filters: 'kind:flower'
-    }).then( ({hits}) => {
-        console.log('intento de result con kind flower',hits);
         search.addWidgets([
+
             instantsearch.widgets.searchBox({
                 container: '#searchBox',
                 placeholder: 'Search for Products',
@@ -72,6 +79,7 @@ const CustomHits = instantsearch.connectors.connectHits(HitsRender);
                     input: 'form-control bg-transparent'
                 }
             }),
+
             CustomHits({container: document.querySelector('#container-hits')})
         ])
     })
