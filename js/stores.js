@@ -5,6 +5,10 @@ const search = instantsearch({
     searchClient
 });
 
+const indexName = 'menu-products-production';
+const index = searchClient.initIndex(indexName);
+
+
 //  widgets custom o personalizados
 
 // widgets de hits o mostrar elementos en tarjetas
@@ -60,8 +64,8 @@ search.addWidgets([
 
     instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4435'}).addWidgets([
 
-        instantsearch.widgets.configure({
-            filters: 'brand:flowers'
+        index.search('', {
+            filters: 'category:flowers'
         }),
 
         instantsearch.widgets.searchBox({
