@@ -22,7 +22,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
         `
         <div class="col">
             <div class="card rounded-0 product-card">
-                        <a href="product-details.html?objectID=${item.objectID}">
+                        <a href="product-details.html?objectID=${item.objectID}" id="container_carrousel_imgs">
                             <img src="" onload="javascript:play_carrousel(item.image_urls[0])" class="card-img-top" alt="${item.name}" id="imagen-product">
                         </a>
                     <div class="card-body">
@@ -53,6 +53,9 @@ const HitsRender = (renderOptions, isFirstRender) => {
         `
     ).join('')}
     `;
+
+    let container = document.querySelector('#container_carrousel_imgs');
+
 
 };
 const CustomHits = instantsearch.connectors.connectHits(HitsRender);
@@ -163,7 +166,7 @@ function store_product_4435() {
 
 function play_carrousel (array_images) {
 
-
+    console.log('se llama a la funcion');
     const TIEMPO_INTERVALO_MILESIMAS_SEG = 3000;
     let intervalo = 0;
     let posicionActual = 0;
