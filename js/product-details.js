@@ -1,4 +1,5 @@
 import {searchClient} from '../config/config.js';
+import { data } from '../config/data.js';
 
 const urlParams = new URLSearchParams(window.location.search);
 
@@ -398,42 +399,7 @@ if (images.length === 0) {
 ;
 
 function add_to_cart(product_id, select_option_quantity, select_option_weight) {
-    let data = {
-        messageType: "buildCart",
-        payload: {
-            products: [],
-            user: {
-                firstName: "John",   //valores que se reemplazaran por el nombre de la cuenta real
-                lastName: "Smith",
-                birthDate: "1988-04-20",
-                phone: "5556661212",
-                email: "johnsmith@gmail.com",
-                externalId: "12345",
-            },
-            storeId: 4434,
-            headlessPartnerName: "AsharioCompany",
-            headlessCheckoutPartnerId: '1234-asdf-5678-ghjk',
-            options: {
-                font: {
-                    fontFamily: "Roboto",
-                    url:
-                        "https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2",
-                },
-                theme: {
-                    themeColor: "#38b1fa",
-                    navigationColor: "#38b1fa",
-                    ctaTextColor: "#ffffff",
-                },
-                redirectUrl: 'https://harmonious-mooncake-eb8276.netlify.app/',
-                disableAuthFeatures: true,
-                disableLoadingSpinner: false,
-                disableWeightSelection: false,
-                disablePrepayment: false,
-                disableMarketingCheckoutAgreements: true,
-                kiosk: false
-            },
-        }
-    }
+    let data_cart = data;
 
     console.log('JSON sin agregar producto al carrito : ', data);
 
@@ -442,7 +408,7 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
         console.log("los datos vienen vacios o null o undefined");
         console.log("El productId esta vacio y el count esta vacio");
     } else if (select_option_weight === "" || select_option_weight === null || select_option_weight === undefined) {
-        data.payload.products.push({
+        data_cart.payload.products.push({
             productId: product_id,
             priceId: "each",
             count: select_option_quantity
@@ -451,14 +417,14 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
         //console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
 
         console.log("Llego hasta aqui");
-        console.log("Informacion ya agregada al json products:", data);
+        console.log("Informacion ya agregada al json products:", data_cart);
         let frame = document.getElementById('jane-menu');
-        frame.contentWindow.postMessage(data, '*');
+        frame.contentWindow.postMessage(data_cart, '*');
         console.log("Se agrego al carrito");
 
     } else {
 
-        data.payload.products.push({
+        data_cart.payload.products.push({
             productId: product_id,
             priceId: select_option_weight,
             count: select_option_quantity
@@ -469,7 +435,7 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
         console.log("Llego hasta aqui");
         console.log("Informacion ya agregada al json products:", data);
         let frame = document.getElementById('jane-menu');
-        frame.contentWindow.postMessage(data, '*');
+        frame.contentWindow.postMessage(data_cart, '*');
         console.log("Se agrego al carrito");
     }
 

@@ -1,18 +1,7 @@
 export const data = {
     messageType: "buildCart",
     payload: {
-        products: [
-            {
-                productId: 2089,
-                priceId: "eighth_ounce",
-                count: 2,
-            },
-            {
-                productId: 2030,
-                priceId: "gram",
-                count: 1,
-            },
-        ],
+        products: [],
         user: {
             firstName: "John",   //valores que se reemplazaran por el nombre de la cuenta real
             lastName: "Smith",
@@ -21,7 +10,7 @@ export const data = {
             email: "johnsmith@example.com",
             externalId: "12345",
         },
-        storeId: 68,
+        storeId: 4434,
         headlessPartnerName: "Your Company Name",
         options: {
             font: {
@@ -34,7 +23,7 @@ export const data = {
                 navigationColor: "#38b1fa",
                 ctaTextColor: "#ffffff",
             },
-            redirectUrl: "https://yourwebsite.html",
+            redirectUrl: "https://harmonious-mooncake-eb8276.netlify.app/views/shop-grid-left-sidebar.html",
             disableAuthFeatures: true,
             disableLoadingSpinner: false,
             disableWeightSelection: false,
