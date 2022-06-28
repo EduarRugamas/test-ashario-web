@@ -13,5 +13,6 @@ function receiveMessage(event) {
     if (messageType === "loadingEvent" && payload.name === "headlessAppLoaded") {
         let frame = document.getElementById("jane-menu");
         frame.contentWindow.postMessage(datos, "*");
+        LocalStorage.clear();
     }
 }
