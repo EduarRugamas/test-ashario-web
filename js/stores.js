@@ -54,8 +54,25 @@ const HitsRender = (renderOptions, isFirstRender) => {
     ).join('')}
     `;
 
-    let container = document.querySelector('#container_carrousel_imgs');
+    function play_carrousel (array_images) {
 
+        console.log('se llama a la funcion');
+        const TIEMPO_INTERVALO_MILESIMAS_SEG = 5000;
+        let intervalo ;
+        let posicionActual = 0;
+        let container_img = document.querySelector('#imagen-product');
+        function pasarFoto() {
+            if(posicionActual >= array_images.length - 1) {
+                posicionActual = 0;
+            } else {
+                posicionActual++;
+            }
+            container_img.src = `${array_images[posicionActual]}`;
+        }
+        container_img.src = `${array_images[posicionActual]}`;
+        intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
+
+    }
 
 };
 const CustomHits = instantsearch.connectors.connectHits(HitsRender);
@@ -164,25 +181,7 @@ function store_product_4435() {
     search.start();
 }
 
-function play_carrousel (array_images) {
 
-    console.log('se llama a la funcion');
-    const TIEMPO_INTERVALO_MILESIMAS_SEG = 5000;
-    let intervalo ;
-    let posicionActual = 0;
-    let container_img = document.querySelector('#imagen-product');
-            function pasarFoto() {
-                if(posicionActual >= array_images.length - 1) {
-                    posicionActual = 0;
-                } else {
-                    posicionActual++;
-                }
-                container_img.src = `${array_images[posicionActual]}`;
-            }
-            container_img.src = `${array_images[posicionActual]}`;
-            intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
-
-}
 
 
 
