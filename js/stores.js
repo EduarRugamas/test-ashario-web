@@ -14,6 +14,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
 
     console.log('aqui estan los objetos de el hits', hits);
 
+    //${ item.image_urls.length > 0 ? item.image_urls[0] : '../assets/images/errors-images/image-not-found.jpeg'}
 
     widgetParams.container.innerHTML = `
             ${hits.map(item =>
@@ -21,7 +22,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
         <div class="col">
             <div class="card rounded-0 product-card">
                         <a href="product-details.html?objectID=${item.objectID}">
-                            <img src="${ item.image_urls.length > 0 ? item.image_urls[0] : '../assets/images/errors-images/image-not-found.jpeg'}" class="card-img-top" alt="${item.name}" id="imagen-product">
+                            <img src="" onload="javascript:play_carrousel(item.image_urls)" class="card-img-top" alt="${item.name}" id="imagen-product">
                         </a>
                     <div class="card-body">
                         <div class="product-info">
@@ -51,6 +52,40 @@ const HitsRender = (renderOptions, isFirstRender) => {
         `
     ).join('')}
     `;
+
+    let intervalo = 0;
+    let posicionActual = 0;
+    let container_img = document.querySelector('#imagen-product');
+
+    function pasarFoto() {
+        if(posicionActual >= IMAGENES.length - 1) {
+            posicionActual = 0;
+        } else {
+            posicionActual++;
+        }
+        renderizarImagen();
+    }
+
+    function renderizarImagen (array_img) {
+        const imgs = array_img;
+
+        if (imgs.length === 0) {
+            container_img.src = '../assets/images/errors-images/image-not-found.jpeg';
+        } else {
+            container_img.src = `${imgs[posicionActual]}`;
+        }
+
+    }
+
+    function play_carrousel (array_img) {
+
+        const TIEMPO_INTERVALO_MILESIMAS_SEG = 3000;
+        renderizarImagen(array_img);
+        intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
+
+    }
+
+
 };
 const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 
@@ -59,7 +94,7 @@ const CustomHits = instantsearch.connectors.connectHits(HitsRender);
 
 search.addWidgets([
 
-    instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4435'}).addWidgets([
+    instantsearch.widgets.index({indexName: 'menu-products-production'}).addWidgets([
 
         instantsearch.widgets.configure({filters: 'kind:flower AND store_id:4434'}),
 
