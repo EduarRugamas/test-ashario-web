@@ -16,6 +16,9 @@ const HitsRender = (renderOptions, isFirstRender) => {
 
     //${ item.image_urls.length > 0 ? item.image_urls[0] : '../assets/images/errors-images/image-not-found.jpeg'}
     let container_id_img = 'imagen-product';
+    const TIEMPO_INTERVALO_MILESIMAS_SEG = 5000;
+    let intervalo ;
+    let posicionActual = 0;
 
     widgetParams.container.innerHTML = `
             ${hits.map(item =>
@@ -23,7 +26,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
         <div class="col">
             <div class="card rounded-0 product-card">
                         <a href="product-details.html?objectID=${item.objectID}" id="container_carrousel_imgs">
-                            <img src="${ item.image_urls.length > 0 ? play_carrousel(item.image_urls) : '../assets/images/errors-images/image-not-found.jpeg'}" class="card-img-top" alt="${item.name}" id="imagen-product">
+                            <img src="${ item.image_urls.length > 0 ? () => {  let container = document.getElementById('imagen-product');  function nextPhoto () { if(posicionActual >= item.image_urls.length - 1) {posicionActual = 0; } else {posicionActual++;} container.src = `${item.image_urls[posicionActual]}`; }  container.src = `${item.image_urls[posicionActual]}`;intervalo = setInterval(nextPhoto, TIEMPO_INTERVALO_MILESIMAS_SEG);  } : '../assets/images/errors-images/image-not-found.jpeg'}" class="card-img-top" alt="${item.name}" id="imagen-product">
                         </a>
                     <div class="card-body">
                         <div class="product-info">
