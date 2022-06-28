@@ -15,6 +15,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
     console.log('aqui estan los objetos de el hits', hits);
 
     //${ item.image_urls.length > 0 ? item.image_urls[0] : '../assets/images/errors-images/image-not-found.jpeg'}
+    let container_id_img = 'imagen-product';
 
     widgetParams.container.innerHTML = `
             ${hits.map(item =>
@@ -52,39 +53,6 @@ const HitsRender = (renderOptions, isFirstRender) => {
         `
     ).join('')}
     `;
-
-    let intervalo = 0;
-    let posicionActual = 0;
-    let container_img = document.querySelector('#imagen-product');
-
-    function pasarFoto() {
-        if(posicionActual >= IMAGENES.length - 1) {
-            posicionActual = 0;
-        } else {
-            posicionActual++;
-        }
-        renderizarImagen();
-    }
-
-    function renderizarImagen (array_img) {
-        const imgs = array_img;
-
-        if (imgs.length === 0) {
-            container_img.src = '../assets/images/errors-images/image-not-found.jpeg';
-        } else {
-            container_img.src = `${imgs[posicionActual]}`;
-        }
-
-    }
-
-    function play_carrousel (array_img) {
-
-        const TIEMPO_INTERVALO_MILESIMAS_SEG = 3000;
-        renderizarImagen(array_img);
-        intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
-
-    }
-
 
 };
 const CustomHits = instantsearch.connectors.connectHits(HitsRender);
@@ -192,6 +160,49 @@ function store_product_4435() {
 
     search.start();
 }
+
+function play_carrousel (array_images) {
+
+
+    const TIEMPO_INTERVALO_MILESIMAS_SEG = 3000;
+    let intervalo = 0;
+    let posicionActual = 0;
+    let container_img = document.querySelector('#imagen-product');
+
+        if (array_images.length === 0 || array_images.length === null ) {
+            container_img.src = '../assets/images/errors-images/image-not-found.jpeg';
+        }else {
+            function pasarFoto() {
+                if(posicionActual >= array_images.length - 1) {
+                    posicionActual = 0;
+                } else {
+                    posicionActual++;
+                }
+                container_img.src = `${array_images[posicionActual]}`;
+            }
+
+            intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
+        }
+
+
+
+}
+
+
+
+function renderizarImagen (array_img) {
+    const imgs = array_img;
+
+    if (imgs.length === 0) {
+        container_img.src = '../assets/images/errors-images/image-not-found.jpeg';
+    } else {
+
+    }
+
+}
+
+
+
 
 
 
