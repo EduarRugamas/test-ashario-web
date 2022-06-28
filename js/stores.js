@@ -23,7 +23,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
         <div class="col">
             <div class="card rounded-0 product-card">
                         <a href="product-details.html?objectID=${item.objectID}" id="container_carrousel_imgs">
-                            <img src="" onload="javascript:play_carrousel(item.image_urls[0])" class="card-img-top" alt="${item.name}" id="imagen-product">
+                            <img src="${ item.image_urls.length > 0 ? item.image_urls[0] : '../assets/images/errors-images/image-not-found.jpeg'}" class="card-img-top" alt="${item.name}" id="imagen-product">
                         </a>
                     <div class="card-body">
                         <div class="product-info">
