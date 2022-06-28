@@ -81,7 +81,8 @@ index.search('', {
                                             </div>
                                         </div>
                                         <div class="d-flex gap-2 mt-3">
-                                            <a href="" class="btn btn-white btn-ecomm" id="add-to-cart"><i class="bx bxs-cart-add"></i>Add to Cart</a> 
+<!--                                            <a href="" class="btn btn-white btn-ecomm" id="add-to-cart"><i class="bx bxs-cart-add"></i>Add to Cart</a>-->
+                                            <button type="submit" class="btn btn-white btn-ecomm" id="add-to-cart"><i class="bx bxs-cart-add"></i>Add to Cart</button> 
                                             <a href="javascript:;" class="btn btn-light btn-ecomm"><i class="bx bx-heart"></i>Add to Wishlist</a>
                                         </div>
                                         <hr/>
