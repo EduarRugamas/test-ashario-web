@@ -24,7 +24,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
     widgetParams.container.innerHTML = `
             ${hits.map(item =>
         `
-        <div class="col">
+            <div class="col">
             <div class="card rounded-0 product-card">
                         <a href="product-details.html?objectID=${item.objectID}" id="container_carrousel_imgs">
                             <img src="${ item.image_urls.length > 0 ? item.image_urls[posicionActual]: '../assets/images/errors-images/image-not-found.jpeg'}" class="card-img-top" alt="${item.name}" id="imagen-product">

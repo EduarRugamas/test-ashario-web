@@ -356,6 +356,7 @@ $(document).ready(function () {
         console.log(`Informacion a enviar: -> ${product_id}, ${selected_option_quantity}, ${selected_option_weight} `)
 
         add_to_cart(product_id, selected_option_quantity, selected_option_weight);
+
     });
 });
 
@@ -399,7 +400,7 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
                 email: "johnsmith@gmail.com",
                 externalId: "12345",
             },
-            storeId: 4435,
+            storeId: 4434,
             headlessPartnerName: "AsharioCompany",
             headlessCheckoutPartnerId: '1234-asdf-5678-ghjk',
             options: {
