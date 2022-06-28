@@ -165,6 +165,10 @@ search.addWidgets([
 search.start();
 
 
+let frame = document.getElementById('jane-menu');
+frame.style='display: none;';
+
+
 function store_product_4434() {
     search.addWidgets([
         instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4434'}).addWidgets([
