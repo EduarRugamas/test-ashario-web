@@ -1,7 +1,13 @@
 export const data = {
     messageType: "buildCart",
     payload: {
-        products: [],
+        products: [
+            {
+                productId: 684700,
+                priceId: "eighth_ounce",
+                count: 1
+            }
+        ],
         user: {
             firstName: "John",   //valores que se reemplazaran por el nombre de la cuenta real
             lastName: "Smith",
