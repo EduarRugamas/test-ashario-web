@@ -360,7 +360,7 @@ const images = hits[0].image_urls;
 
 let posicionActual = 0;
 let $container_img = document.querySelector('#imagen_carusel');
-const TIEMPO_INTERVALO_MILESIMAS_SEG = 3000;
+const TIEMPO_INTERVALO_MILESIMAS_SEG = 50000;
 let intervalo;
 
 if (images.length === 0) {
