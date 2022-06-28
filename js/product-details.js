@@ -100,6 +100,9 @@ index.search('', {
     // percent_thc: 26
     // percent_thca: 0
 
+    let frame = document.getElementById('jane-menu');
+    frame.style= 'display: none;';
+
     if (hits[0].percent_cbd === 0 || hits[0].percent_cbd === null) {
         console.log('no tiene cbd');
     } else {
