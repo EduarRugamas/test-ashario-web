@@ -1,4 +1,4 @@
-import { searchClient } from '../config/config.js';
+
 import { data } from '../config/data.js';
 
 let frame = document.getElementById("jane-menu");
