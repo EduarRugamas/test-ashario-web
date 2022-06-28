@@ -11,7 +11,7 @@ export const data = {
             externalId: "12345",
         },
         storeId: 4434,
-        headlessPartnerName: "Your Company Name",
+        headlessPartnerName: "AsharioCompany",
         options: {
             font: {
                 fontFamily: "Roboto",
