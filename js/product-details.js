@@ -408,11 +408,16 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
         console.log("los datos vienen vacios o null o undefined");
         console.log("El productId esta vacio y el count esta vacio");
     } else if (select_option_weight === "" || select_option_weight === null || select_option_weight === undefined) {
+
         data_cart.payload.products.push({
             productId: product_id,
             priceId: "each",
             count: select_option_quantity
         });
+
+        let LocalStorage = window.localStorage;
+
+        LocalStorage.setItem('data_cart', JSON.stringify(data_cart));
 
         //console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
 
@@ -432,8 +437,12 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
 
         //console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
 
+        let LocalStorage = window.localStorage;
+
+        LocalStorage.setItem('data_cart', JSON.stringify(data_cart));
+
         console.log("Llego hasta aqui");
-        console.log("Informacion ya agregada al json products:", data);
+        console.log("Informacion ya agregada al json products:", data_cart);
         let frame = document.getElementById('jane-menu');
         frame.contentWindow.postMessage(data_cart, '*');
         console.log("Se agrego al carrito");

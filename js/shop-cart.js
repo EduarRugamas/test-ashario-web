@@ -1,8 +1,8 @@
+// import { data } from '../config/data.js';
 
-import { data } from '../config/data.js';
+let LocalStorage = window.localStorage;
 
-// let frame = document.getElementById("jane-menu");
-// frame.contentWindow.postMessage(data, "*");
+let datos = JSON.parse(LocalStorage.getItem('data_cart'));
 
 window.addEventListener("message", receiveMessage, false);
 
@@ -12,6 +12,6 @@ function receiveMessage(event) {
 
     if (messageType === "loadingEvent" && payload.name === "headlessAppLoaded") {
         let frame = document.getElementById("jane-menu");
-        frame.contentWindow.postMessage(data, "*");
+        frame.contentWindow.postMessage(datos, "*");
     }
 }
