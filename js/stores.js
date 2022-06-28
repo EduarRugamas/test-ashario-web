@@ -23,7 +23,7 @@ const HitsRender = (renderOptions, isFirstRender) => {
         <div class="col">
             <div class="card rounded-0 product-card">
                         <a href="product-details.html?objectID=${item.objectID}" id="container_carrousel_imgs">
-                            <img src="${ item.image_urls.length > 0 ? item.image_urls[0] : '../assets/images/errors-images/image-not-found.jpeg'}" class="card-img-top" alt="${item.name}" id="imagen-product">
+                            <img src="${ item.image_urls.length > 0 ? play_carrousel(item.image_urls) : '../assets/images/errors-images/image-not-found.jpeg'}" class="card-img-top" alt="${item.name}" id="imagen-product">
                         </a>
                     <div class="card-body">
                         <div class="product-info">
@@ -167,14 +167,10 @@ function store_product_4435() {
 function play_carrousel (array_images) {
 
     console.log('se llama a la funcion');
-    const TIEMPO_INTERVALO_MILESIMAS_SEG = 3000;
-    let intervalo = 0;
+    const TIEMPO_INTERVALO_MILESIMAS_SEG = 5000;
+    let intervalo ;
     let posicionActual = 0;
     let container_img = document.querySelector('#imagen-product');
-
-        if (array_images.length === 0 || array_images.length === null ) {
-            container_img.src = '../assets/images/errors-images/image-not-found.jpeg';
-        }else {
             function pasarFoto() {
                 if(posicionActual >= array_images.length - 1) {
                     posicionActual = 0;
@@ -183,26 +179,11 @@ function play_carrousel (array_images) {
                 }
                 container_img.src = `${array_images[posicionActual]}`;
             }
-
+            container_img.src = `${array_images[posicionActual]}`;
             intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
-        }
-
-
 
 }
 
-
-
-function renderizarImagen (array_img) {
-    const imgs = array_img;
-
-    if (imgs.length === 0) {
-        container_img.src = '../assets/images/errors-images/image-not-found.jpeg';
-    } else {
-
-    }
-
-}
 
 
 
