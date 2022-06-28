@@ -81,7 +81,7 @@ index.search('', {
                                             </div>
                                         </div>
                                         <div class="d-flex gap-2 mt-3">
-                                            <a href="#" class="btn btn-white btn-ecomm" id="add-to-cart"><i class="bx bxs-cart-add"></i>Add to Cart</a> 
+                                            <a href="" class="btn btn-white btn-ecomm" id="add-to-cart"><i class="bx bxs-cart-add"></i>Add to Cart</a> 
                                             <a href="javascript:;" class="btn btn-light btn-ecomm"><i class="bx bx-heart"></i>Add to Wishlist</a>
                                         </div>
                                         <hr/>
@@ -345,20 +345,29 @@ $select_weight.addEventListener('change', selected_weight_change);
 $select_quantity.addEventListener('change', selected_quantity_change);
 
 
-$(document).ready(function () {
-    $('#add-to-cart').click(function () {
+// $(document).ready(function () {
+//     $('#add-to-cart').click(function () {
+//
+//
+//
+//     });
+// });
 
-        const product_id = hits[0].product_id;
-        let selected_option_quantity = parseInt(document.getElementById('quantity').value);
-        let selected_option_weight = document.getElementById('select-weight').value;
-        selected_option_weight = selected_option_weight.replace(/ /g, '_');
+ let btn_add_to_cart = document.getElementById('add-to-cart');
 
-        console.log(`Informacion a enviar: -> ${product_id}, ${selected_option_quantity}, ${selected_option_weight} `)
+ function btn_add_cart () {
+     const product_id = hits[0].product_id;
+     let selected_option_quantity = parseInt(document.getElementById('quantity').value);
+     let selected_option_weight = document.getElementById('select-weight').value;
+     selected_option_weight = selected_option_weight.replace(/ /g, '_');
 
-        add_to_cart(product_id, selected_option_quantity, selected_option_weight);
+     console.log(`Informacion a enviar: -> ${product_id}, ${selected_option_quantity}, ${selected_option_weight} `)
 
-    });
-});
+     add_to_cart(product_id, selected_option_quantity, selected_option_weight);
+ }
+
+ btn_add_to_cart.addEventListener('click', btn_add_cart);
+
 
 const images = hits[0].image_urls;
 
