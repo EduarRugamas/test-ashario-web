@@ -428,9 +428,10 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
                 priceId: "each",
                 count: select_option_quantity
             };
-            console.log('el count es distinto al se que tenia ')
+            console.log('el count es distinto al se que tenia se guarda en el localstorage');
             // local_storage.setItem('item_product_1', JSON.stringify(json_product));
         }else {
+            console.log('el json_product no cambio:', json_product);
             // local_storage.setItem('item_product_1', JSON.stringify(json_product));
         }
 
@@ -468,6 +469,7 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
             console.log('nueva informacion: ', json_product);
             // local_storage.setItem('item_product_2', JSON.stringify(json_product));
         }else {
+            console.log('el json_product no cambio : ', json_product);
             // local_storage.setItem('item_product_2', JSON.stringify(json_product));
         }
 
