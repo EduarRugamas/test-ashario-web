@@ -399,6 +399,7 @@ if (images.length === 0) {
 ;
 
 function add_to_cart(product_id, select_option_quantity, select_option_weight) {
+    let local_storage = window.localStorage;
     let data_cart = data;
 
     console.log('JSON sin agregar producto al carrito : ', data);
@@ -409,44 +410,80 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
         console.log("El productId esta vacio y el count esta vacio");
     } else if (select_option_weight === "" || select_option_weight === null || select_option_weight === undefined) {
 
-        data_cart.payload.products.push({
+        // data_cart.payload.products.push({
+        //     productId: product_id,
+        //     priceId: "each",
+        //     count: select_option_quantity
+        // });
+        let json_product = {
             productId: product_id,
             priceId: "each",
             count: select_option_quantity
-        });
+        };
+        console.log('json del producto a guardar en local_storage --> ', json_product);
 
-        let LocalStorage = window.localStorage;
+        if (json_product.count !== select_option_quantity ){
+            let json_product = {
+                productId: product_id,
+                priceId: "each",
+                count: select_option_quantity
+            };
+            console.log('el count es distinto al se que tenia ')
+            // local_storage.setItem('item_product_1', JSON.stringify(json_product));
+        }else {
+            // local_storage.setItem('item_product_1', JSON.stringify(json_product));
+        }
 
-        LocalStorage.setItem('data_cart', JSON.stringify(data_cart));
+        // local_storage.setItem('item_product_1', JSON.stringify(json_product));
 
         //console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
 
-        console.log("Llego hasta aqui");
-        console.log("Informacion ya agregada al json products:", data_cart);
-        let frame = document.getElementById('jane-menu');
-        frame.contentWindow.postMessage(data_cart, '*');
-        console.log("Se agrego al carrito");
+        // console.log("Llego hasta aqui");
+        // console.log("Informacion ya agregada al json products:", data_cart);
+        // let frame = document.getElementById('jane-menu');
+        // frame.contentWindow.postMessage(data_cart, '*');
+        // console.log("Se agrego al carrito");
 
     } else {
 
-        data_cart.payload.products.push({
+        // data_cart.payload.products.push({
+        //     productId: product_id,
+        //     priceId: select_option_weight,
+        //     count: select_option_quantity
+        // });
+
+        let json_product = {
             productId: product_id,
             priceId: select_option_weight,
             count: select_option_quantity
-        });
+        }
+
+        if (json_product.count !== select_option_quantity || json_product.priceId !== select_option_weight){
+            let json_product = {
+                productId: product_id,
+                priceId: select_option_weight,
+                count: select_option_quantity
+            };
+            console.log('el count es distinto al se que tenia y el weight cambio tambien ');
+            console.log('nueva informacion: ', json_product);
+            // local_storage.setItem('item_product_2', JSON.stringify(json_product));
+        }else {
+            // local_storage.setItem('item_product_2', JSON.stringify(json_product));
+        }
+
 
         //console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
 
-        let LocalStorage = window.localStorage;
 
-        LocalStorage.setItem('data_cart', JSON.stringify(data_cart));
 
-        console.log("Llego hasta aqui");
-        console.log("Informacion ya agregada al json products:", data_cart);
-        let frame = document.getElementById('jane-menu');
-        frame.contentWindow.postMessage(data_cart, '*');
-        console.log("Se agrego al carrito");
-        LocalStorage.clear();
+        local_storage.setItem('data_cart', JSON.stringify(data_cart));
+
+        // console.log("Llego hasta aqui");
+        // console.log("Informacion ya agregada al json products:", data_cart);
+        // let frame = document.getElementById('jane-menu');
+        // frame.contentWindow.postMessage(data_cart, '*');
+        // console.log("Se agrego al carrito");
+
     }
 
     // window.addEventListener("message", receiveMessage, false);
