@@ -474,7 +474,7 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
 
             console.log('el json_product no cambio:', item_product_2);
 
-            // local_storage.setItem('item_product_2', JSON.stringify(json_product));
+            local_storage.setItem('item_product_2', JSON.stringify(json_product));
         }else {
             let quantity_new = select_option_quantity;
             let weight_new = select_option_weight;
@@ -487,7 +487,7 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
             console.log('el count es distinto al se que tenia o el weight cambio');
             console.log('nueva informacion: ', json_product);
 
-            // local_storage.setItem('item_product_2', JSON.stringify(json_product));
+            local_storage.setItem('item_product_2_update', JSON.stringify(json_product));
         }
 
 
