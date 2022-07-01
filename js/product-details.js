@@ -410,36 +410,19 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
         console.log("El productId esta vacio y el count esta vacio");
     } else if (select_option_weight === "" || select_option_weight === null || select_option_weight === undefined) {
 
-        // data_cart.payload.products.push({
-        //     productId: product_id,
-        //     priceId: "each",
-        //     count: select_option_quantity
-        // });
-        let json_product = {
+        data_cart.payload.products.push({
             productId: product_id,
             priceId: "each",
             count: select_option_quantity
-        };
-        console.log('json del producto a guardar en local_storage --> ', json_product);
-        local_storage.setItem('item_product_1', JSON.stringify(json_product));
+        });
+        // let json_product = {
+        //     productId: product_id,
+        //     priceId: "each",
+        //     count: select_option_quantity
+        // };
+        // console.log('json del producto a guardar en local_storage --> ', json_product);
+        // local_storage.setItem('item_product_1', JSON.stringify(json_product));
 
-        let item_product_1 = JSON.parse(local_storage.getItem('item_product_1'));
-
-        if (select_option_quantity === item_product_1.count ){
-            console.log('el json_product no cambio:', item_product_1);
-            // local_storage.setItem('item_product_1', JSON.stringify(json_product));
-        }else {
-            let quantity_new = select_option_quantity;
-            console.log('el count es distinto al se que tenia se guarda en el localstorage');
-            console.log(item_product_1);
-            let json_product = {
-                productId: product_id,
-                priceId: "each",
-                count: quantity_new
-            };
-            console.log('el json_product cambiado:', json_product);
-            // local_storage.setItem('item_product_1', JSON.stringify(json_product));
-        }
 
         // local_storage.setItem('item_product_1', JSON.stringify(json_product));
 
@@ -453,42 +436,20 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
 
     } else {
 
-        // data_cart.payload.products.push({
-        //     productId: product_id,
-        //     priceId: select_option_weight,
-        //     count: select_option_quantity
-        // });
-
-        let json_product = {
+        data_cart.payload.products.push({
             productId: product_id,
             priceId: select_option_weight,
             count: select_option_quantity
-        }
+        });
 
-        console.log('json del producto a guardar en local_storage --> ', json_product);
-        local_storage.setItem('item_product_2', JSON.stringify(json_product));
-
-        let item_product_2 = JSON.parse(local_storage.getItem('item_product_2'));
-
-        if (item_product_2.count === select_option_quantity || item_product_2.priceId === select_option_weight){
-
-            console.log('el json_product no cambio:', item_product_2);
-
-            local_storage.setItem('item_product_2', JSON.stringify(json_product));
-        }else {
-            let quantity_new = select_option_quantity;
-            let weight_new = select_option_weight;
-
-            let json_product = {
-                productId: product_id,
-                priceId: weight_new,
-                count: quantity_new
-            };
-            console.log('el count es distinto al se que tenia o el weight cambio');
-            console.log('nueva informacion: ', json_product);
-
-            local_storage.setItem('item_product_2_update', JSON.stringify(json_product));
-        }
+        // let json_product = {
+        //     productId: product_id,
+        //     priceId: select_option_weight,
+        //     count: select_option_quantity
+        // }
+        //
+        // console.log('json del producto a guardar en local_storage --> ', json_product);
+        // local_storage.setItem('item_product_2', JSON.stringify(json_product));
 
 
         //console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
