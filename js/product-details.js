@@ -1,5 +1,6 @@
 import {searchClient} from '../config/config.js';
 import { data } from '../config/data.js';
+import data_json from '../config/data.json';
 
 const urlParams = new URLSearchParams(window.location.search);
 
@@ -424,11 +425,11 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
         console.log("El productId esta vacio y el count esta vacio");
     } else if (select_option_weight === "" || select_option_weight === null || select_option_weight === undefined) {
 
-        data.payload.products.push({
-            productId: product_id,
-            priceId: "each",
-            count: select_option_quantity
-        });
+        // data.payload.products.push({
+        //     productId: product_id,
+        //     priceId: "each",
+        //     count: select_option_quantity
+        // });
         // let json_product = {
         //     productId: product_id,
         //     priceId: "each",
@@ -448,9 +449,15 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
         // frame.contentWindow.postMessage(data_cart, '*');
         // console.log("Se agrego al carrito");
 
+        data_json.payload.products.push({
+                productId: product_id,
+                priceId: "each",
+                count: select_option_quantity
+        });
+
     } else {
 
-        data.payload.products.push({
+        data_json.payload.products.push({
             productId: product_id,
             priceId: select_option_weight,
             count: select_option_quantity
