@@ -1,6 +1,5 @@
 import {searchClient} from '../config/config.js';
 import { data } from '../config/data.js';
-// import data_json from '../config/data.json';
 
 const urlParams = new URLSearchParams(window.location.search);
 
@@ -13,10 +12,7 @@ console.log('el objecto id', objectId);
 index.search('', {
     filters: `objectID:${objectId}`
 }).then(({hits}) => {
-    // console.log(hits);
-
     console.log(hits);
-    // usando el hits[0].name etc
     const contenedor = document.getElementById('product-details');
 
     contenedor.innerHTML = `
@@ -72,8 +68,6 @@ index.search('', {
                                             <p class="badge bg-success font-13 ">${hits[0].brand_subtype}</p>
                                         </div>
                                         <div class="d-flex align-items-center mt-0 gap-2" id="text_price" >
-                                            <!-- <h5 class="mb-0 text-decoration-line-through text-light-3">$98.00</h5>-->
-                                            <!--  <h4 class="mb-0" ></h4>-->
                                         </div>
                                         <div class="mt-3">
                                             <h6>Details:</h6>
@@ -110,12 +104,6 @@ index.search('', {
             </div>
        </section>
     `;
-
-    // percent_cbd: 0
-    // percent_cbda: 0
-    // percent_tac: 0
-    // percent_thc: 26
-    // percent_thca: 0
 
     let frame = document.getElementById('jane-menu');
     frame.style= 'display: none;';
@@ -361,15 +349,6 @@ function selected_quantity_change() {
 $select_weight.addEventListener('change', selected_weight_change);
 $select_quantity.addEventListener('change', selected_quantity_change);
 
-
-// $(document).ready(function () {
-//     $('#add-to-cart').click(function () {
-//
-//
-//
-//     });
-// });
-
  let btn_add_to_cart = document.getElementById('add-to-cart');
 
  function btn_add_cart () {
@@ -430,32 +409,7 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
             priceId: "each",
             count: select_option_quantity
         });
-        // let json_product = {
-        //     productId: product_id,
-        //     priceId: "each",
-        //     count: select_option_quantity
-        // };
-        // console.log('json del producto a guardar en local_storage --> ', json_product);
-        // local_storage.setItem('item_product_1', JSON.stringify(json_product));
-
-
-        // local_storage.setItem('item_product_1', JSON.stringify(json_product));
-
-        //console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
-
-        // console.log("Llego hasta aqui");
-        // console.log("Informacion ya agregada al json products:", data_cart);
-        // let frame = document.getElementById('jane-menu');
-        // frame.contentWindow.postMessage(data_cart, '*');
-        // console.log("Se agrego al carrito");
-
-        // data.payload.products.push({
-        //         productId: product_id,
-        //         priceId: "each",
-        //         count: select_option_quantity
-        // });
         console.log('data', data);
-
     } else {
 
         data.payload.products.push({
@@ -464,129 +418,10 @@ function add_to_cart(product_id, select_option_quantity, select_option_weight) {
             count: select_option_quantity
         });
 
-
-
-
-        // let json_product = {
-        //     productId: product_id,
-        //     priceId: select_option_weight,
-        //     count: select_option_quantity
-        // };
-
-        // fetch('../config/data.js', {
-        //     method: 'POST',
-        //
-        // })
-
-
-        //
-        // console.log('json del producto a guardar en local_storage --> ', json_product);
-        // local_storage.setItem('item_product_2', JSON.stringify(json_product));
-
-
-        //console.log('Informacion ya agregada al json products: ', JSON.stringify(data));
-
-
-
-        // local_storage.setItem('data_cart', JSON.stringify(data_cart));
-
-        // console.log("Llego hasta aqui");
-        // console.log("Informacion ya agregada al json products:", data_cart);
-        // let frame = document.getElementById('jane-menu');
-        // frame.contentWindow.postMessage(data_cart, '*');
-        // console.log("Se agrego al carrito");
         console.log('data', data);
     }
 
-    // window.addEventListener("message", receiveMessage, false);
-
 }
-
-
-function receiveMessage(event) {
-
-    let data = {
-        messageType: "buildCart",
-        payload: {
-            products: [
-                {
-                    productId: 2089,
-                    priceId: "eighth_ounce",
-                    count: 2,
-                },
-                {
-                    productId: 2030,
-                    priceId: "gram",
-                    count: 1,
-                },
-            ],
-            user: {
-                firstName: "John",   //valores que se reemplazaran por el nombre de la cuenta real
-                lastName: "Smith",
-                birthDate: "1988-04-20",
-                phone: "5556661212",
-                email: "johnsmith@gmail.com",
-                externalId: "12345",
-            },
-            storeId: 68,
-            headlessPartnerName: "AsharioCompany",
-            headlessCheckoutPartnerId: '1234-asdf-5678-ghjk',
-            options: {
-                font: {
-                    fontFamily: "Roboto",
-                    url:
-                        "https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2",
-                },
-                theme: {
-                    themeColor: "#38b1fa",
-                    navigationColor: "#38b1fa",
-                    ctaTextColor: "#ffffff",
-                },
-                redirectUrl: 'https://harmonious-mooncake-eb8276.netlify.app/',
-                disableAuthFeatures: true,
-                disableLoadingSpinner: false,
-                disableWeightSelection: false,
-                disablePrepayment: false,
-                disableMarketingCheckoutAgreements: true,
-                kiosk: false
-            },
-        }
-    }
-
-    let payload = event.data && event.data.payload;
-    let messageType = event.data && event.data.messageType;
-
-    if (messageType === "loadingEvent" && payload.name === "headlessAppLoaded") {
-        console.log("Llego hasta aqui");
-        console.log("informacion del json", data)
-        let frame = document.getElementById('jane-menu');
-        frame.contentWindow.postMessage(data, '*');
-        console.log("Se agrego al carrito");
-    }
-}
-
-// function nextPhoto(){
-//     console.log('click right');
-//     if (posicionActual >= images.length - 1){
-//         posicionActual = 0;
-//     } else {
-//         posicionActual++;
-//     }
-//     renderImages();
-// }
-//
-// function backPhoto() {
-//     console.log('click left');
-//     if (posicionActual <= 0){
-//         posicionActual = images.length - 1;
-//     }else {
-//         posicionActual--;
-//     }
-//     renderImages();
-// }
-//
-// $btn_siguiente.addEventListener('click', nextPhoto);
-// $btn_retroceder.addEventListener('click', backPhoto);
 
 
 

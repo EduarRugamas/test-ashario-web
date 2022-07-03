@@ -5,7 +5,6 @@ const search = instantsearch({
     searchClient
 });
 
-
 //  widgets custom o personalizados
 
 // widgets de hits o mostrar elementos en tarjetas
@@ -16,9 +15,6 @@ const HitsRender = (renderOptions, isFirstRender) => {
 
     //${ item.image_urls.length > 0 ? item.image_urls[0] : '../assets/images/errors-images/image-not-found.jpeg'}
     // ${ item.image_urls.length > 0 ? intervalo = setInterval(() => { let container = document.getElementById('imagen-product'); if (posicionActual >= item.image_urls.length - 1) {posicionActual = 0;}else { posicionActual++;}  container.src = `${item.image_urls[posicionActual]}`; }, TIEMPO_INTERVALO_MILESIMAS_SEG) : '../assets/images/errors-images/image-not-found.jpeg'}
-    let container_id_img = 'imagen-product';
-    const TIEMPO_INTERVALO_MILESIMAS_SEG = 5000;
-    let intervalo ;
     let posicionActual = 0;
 
     widgetParams.container.innerHTML = `
@@ -34,7 +30,6 @@ const HitsRender = (renderOptions, isFirstRender) => {
                             <a href="product-details.html?objectID=${item.objectID}">
                                 <p class="product-catergory font-13 mb-1">${item.brand}</p>
                                 <p class="product-catergory font-13 mb-1">${item.brand_subtype}</p>
-                            <!--- <p class="product-catergory font-13 mb-1">${item.objectID}</p> --->
                             </a>
                             <a href="product-details.html?objectID=${item.objectID}">
                                 <h6 class="product-name mb-2">${instantsearch.highlight({attribute: 'name', hit: item})}</h6>
@@ -57,26 +52,6 @@ const HitsRender = (renderOptions, isFirstRender) => {
         `
     ).join('')}
     `;
-
-    function play_carrousel (array_images) {
-
-        console.log('se llama a la funcion');
-        const TIEMPO_INTERVALO_MILESIMAS_SEG = 5000;
-        let intervalo ;
-        let posicionActual = 0;
-        let container_img = document.querySelector('#imagen-product');
-        function pasarFoto() {
-            if(posicionActual >= array_images.length - 1) {
-                posicionActual = 0;
-            } else {
-                posicionActual++;
-            }
-            container_img.src = `${array_images[posicionActual]}`;
-        }
-        container_img.src = `${array_images[posicionActual]}`;
-        intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG);
-
-    }
 
 };
 const CustomHits = instantsearch.connectors.connectHits(HitsRender);
@@ -117,9 +92,6 @@ search.addWidgets([
             container: '#container-slider-thc',
             attribute: 'percent_thc',
             min: 0,
-            // cssClasses: {
-            //     root: 'font-weight-bold'
-            // }
         }),
 
         instantsearch.widgets.rangeSlider({
@@ -166,28 +138,9 @@ search.start();
 
 
 let frame = document.getElementById('jane-menu');
-frame.style='display: none;';
+frame.style = 'display: none;';
 
 
-function store_product_4434() {
-    search.addWidgets([
-        instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4434'}).addWidgets([
-            CustomHits({container: document.querySelector('')})
-        ])
-    ]);
-
-    search.start();
-}
-
-function store_product_4435() {
-    search.addWidgets([
-        instantsearch.widgets.index({indexName: 'menu-products-production', indexId: '4435'}).addWidgets([
-            CustomHits({container: document.querySelector('')})
-        ])
-    ]);
-
-    search.start();
-}
 
 
 
